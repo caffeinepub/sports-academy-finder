@@ -1,11 +1,10 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Sports website enhancement with images and location features",
   "architectural_notes": [],
   "known_issues": [],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Action photo of basketball game with players jumping (basketball.dim_800x600.png)\n- Soccer players in action on field (soccer.dim_800x600.png)\n- Tennis player serving on court (tennis.dim_800x600.png)\n- Swimming pool with swimmer doing freestyle (swimming.dim_800x600.png)\n- Volleyball match at the net (volleyball.dim_800x600.png)\n- Modern sports academy building exterior (academy-1.dim_600x400.png)\n- Indoor training facility with equipment (academy-2.dim_600x400.png)\n- Outdoor sports complex with multiple fields (academy-3.dim_600x400.png)",
   "existing_features": [
     {
       "id": "feature-display-high-quality-photos-for-each-sport-category-throughout-the-website",
@@ -28,6 +27,14 @@
       "title": "Render all generated sport category images and academy location images as static assets in frontend/public/assets/generated",
       "reqIds": [
         "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-website-name-displayed-in-the-header-from-sports-academy-finder-to-sports-management-hub-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-div-1-div-1-span-1",
+      "title": "Update the website name displayed in the header from 'Sports Academy Finder' to 'SPORTS MANAGEMENT HUB' at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/span[1]",
+      "reqIds": [
+        "REQ-4"
       ],
       "version": 1
     }

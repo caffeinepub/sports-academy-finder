@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-display-high-quality-photos-for-each-sport-category-throughout-the-website",
-      "featureTitle": "Display high-quality photos for each sport category throughout the website",
+      "featureId": "feature-update-the-website-name-displayed-in-the-header-from-sports-academy-finder-to-sports-management-hub-at-xpath-html-1-body-1-div-1-div-1-header-1-div-1-div-1-div-1-span-1",
+      "featureTitle": "Update the website name displayed in the header from 'Sports Academy Finder' to 'SPORTS MANAGEMENT HUB' at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/span[1]",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/SportCard.tsx",
-        "frontend/src/components/SportsGrid.tsx"
+        "frontend/src/components/Header.tsx"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -17,47 +15,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-display-nearby-academy-places-with-their-locations-on-the-website",
-      "featureTitle": "Display nearby academy places with their locations on the website",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/AcademiesList.tsx",
-        "frontend/src/components/AcademyCard.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-render-all-generated-sport-category-images-and-academy-location-images-as-static-assets-in-frontend-public-assets-generated",
-      "featureTitle": "Render all generated sport category images and academy location images as static assets in frontend/public/assets/generated",
-      "files": [
-        "frontend/src/components/AcademyCard.tsx",
-        "frontend/src/components/SportCard.tsx",
-        "frontend/src/index.css"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
+        "REQ-4"
       ],
       "confidence": "high"
     }

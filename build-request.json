@@ -1,79 +1,39 @@
 {
   "kind": "build_request",
-  "title": "Add sports photos and nearby academy locations",
-  "projectName": "Sports Academy Finder",
+  "title": "Update website name to SPORTS MANAGEMENT HUB",
+  "projectName": "Sports Management Hub",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-1",
-      "text": "Display high-quality photos for each sport category throughout the website",
+      "id": "REQ-4",
+      "text": "Update the website name displayed in the header from 'Sports Academy Finder' to 'SPORTS MANAGEMENT HUB' at XPath /html[1]/body[1]/div[1]/div[1]/header[1]/div[1]/div[1]/div[1]/span[1]",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-2"
+          "msg-latest"
         ],
         "quotes": [
-          "Add photos for the sports in this website"
+          "SPORTS MANAGEMENT HUB"
         ]
       },
       "acceptanceCriteria": [
-        "Each sport category has an associated photo displayed",
-        "Photos are visually appealing and relevant to the specific sport",
-        "Images load efficiently and are properly sized for their containers"
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "text": "Display nearby academy places with their locations on the website",
-      "target": "both",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ],
-        "quotes": [
-          "some nearby academy places"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Academy locations are displayed on the website",
-        "Each academy shows its name and location information",
-        "Academies are organized in a user-friendly layout"
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "text": "Render all generated sport category images and academy location images as static assets in frontend/public/assets/generated",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-2"
-        ]
-      },
-      "acceptanceCriteria": [
-        "Generated images are stored in frontend/public/assets/generated directory",
-        "Images are referenced correctly in components",
-        "All sport and academy images display without errors"
+        "The header displays 'SPORTS MANAGEMENT HUB' as the website name",
+        "The text is visible in the specified header location",
+        "The change applies to both desktop and mobile views"
       ]
     }
   ],
-  "constraints": [],
+  "constraints": [
+    "Only modify the website name in the header component",
+    "Do not change any other text or functionality"
+  ],
   "nonGoals": [
-    "Real-time GPS tracking or geolocation features",
-    "Integration with external mapping APIs",
-    "User-generated content or photo uploads",
-    "Interactive maps with pins or markers"
+    "Changing the application title in index.html",
+    "Updating any other branding elements beyond the header name",
+    "Modifying navigation or other header components"
   ],
   "imageRequirements": {
-    "required": [
-      "Action photo of basketball game with players jumping (basketball.dim_800x600.png)",
-      "Soccer players in action on field (soccer.dim_800x600.png)",
-      "Tennis player serving on court (tennis.dim_800x600.png)",
-      "Swimming pool with swimmer doing freestyle (swimming.dim_800x600.png)",
-      "Volleyball match at the net (volleyball.dim_800x600.png)",
-      "Modern sports academy building exterior (academy-1.dim_600x400.png)",
-      "Indoor training facility with equipment (academy-2.dim_600x400.png)",
-      "Outdoor sports complex with multiple fields (academy-3.dim_600x400.png)"
-    ],
+    "required": [],
     "edits": []
   }
 }

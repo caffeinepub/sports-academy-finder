@@ -15,7 +15,7 @@ export function Header() {
             <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center">
               <span className="text-primary-foreground font-bold text-lg">S</span>
             </div>
-            <span className="font-bold text-xl">Sports Academy Finder</span>
+            <span className="font-bold text-xl">SPORTS MANAGEMENT HUB</span>
           </div>
         </div>
 

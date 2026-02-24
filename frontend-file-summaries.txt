@@ -1,6 +1,6 @@
 {
   "frontend/src/App.tsx": "Main application component that renders the header, sports grid section, academies list section, and footer with proper layout and styling.",
-  "frontend/src/components/Header.tsx": "Header component with logo, navigation menu, and responsive mobile menu using Sheet component.",
+  "frontend/src/components/Header.tsx": "Header component with logo, navigation menu, and responsive mobile menu using Sheet component, displaying \"SPORTS MANAGEMENT HUB\" as the website name.",
   "frontend/src/components/Footer.tsx": "Footer component displaying copyright information and attribution link to caffeine.ai with UTM tracking.",
   "frontend/src/components/SportCard.tsx": "Reusable card component that displays a sport with its image, name, and description, including loading states and error handling.",
   "frontend/src/components/SportsGrid.tsx": "Grid layout component that renders all five sport categories (Basketball, Soccer, Tennis, Swimming, Volleyball) using SportCard components.",
