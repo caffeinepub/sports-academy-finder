@@ -1,0 +1,90 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add sports photos and nearby academy locations",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Display high-quality photos for each sport category throughout the website",
+      "acceptanceCriteria": [
+        "Each sport category has an associated photo displayed",
+        "Photos are visually appealing and relevant to the specific sport",
+        "Images load efficiently and are properly sized for their containers"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SportCard.tsx",
+          "operation": "create",
+          "description": "Create a SportCard component that displays a sport category with its associated photo from frontend/public/assets/generated. The component accepts props for sport name, description, and image filename. Reference the exact generated images: basketball.dim_800x600.png, soccer.dim_800x600.png, tennis.dim_800x600.png, swimming.dim_800x600.png, and volleyball.dim_800x600.png from the workspace path frontend/public/assets/generated."
+        },
+        {
+          "path": "frontend/src/components/SportsGrid.tsx",
+          "operation": "create",
+          "description": "Create a SportsGrid component that renders multiple SportCard components in a responsive grid layout. This component manages the display of all five sport categories with their respective photos, ensuring proper spacing and responsive behavior across device sizes."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and integrate the SportsGrid component into the main application layout to display sport categories with photos. Position the sports grid appropriately within the existing page structure."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Display nearby academy places with their locations on the website",
+      "acceptanceCriteria": [
+        "Academy locations are displayed on the website",
+        "Each academy shows its name and location information",
+        "Academies are organized in a user-friendly layout"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/hooks/usePlaces.ts",
+          "operation": "create",
+          "description": "Create a custom hook that fetches academy places from the backend using the getAllPlaces method defined in backend.d.ts. Handle loading and error states, and return the array of Place objects containing id, name, description, and location (lat, long) data."
+        },
+        {
+          "path": "frontend/src/components/AcademyCard.tsx",
+          "operation": "create",
+          "description": "Create an AcademyCard component that displays a single academy with its photo, name, description, and location coordinates. Accept props for Place data and image filename. Reference the exact generated images: academy-1.dim_600x400.png, academy-2.dim_600x400.png, and academy-3.dim_600x400.png from the workspace path frontend/public/assets/generated. Display latitude and longitude information in a user-friendly format."
+        },
+        {
+          "path": "frontend/src/components/AcademiesList.tsx",
+          "operation": "create",
+          "description": "Create an AcademiesList component that uses the usePlaces hook to fetch academy data and renders multiple AcademyCard components. Map each Place object to an AcademyCard, associating the appropriate generated academy image with each location. Handle loading and error states gracefully."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Import and integrate the AcademiesList component into the main application layout to display academy locations below or alongside the sports grid. Ensure proper spacing and visual hierarchy between sections."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Render all generated sport category images and academy location images as static assets",
+      "acceptanceCriteria": [
+        "Generated images are stored in frontend/public/assets/generated directory",
+        "Images are referenced correctly in components",
+        "All sport and academy images display without errors"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SportCard.tsx",
+          "operation": "modify",
+          "description": "Ensure the SportCard component correctly references images from frontend/public/assets/generated using the exact generated filenames: basketball.dim_800x600.png, soccer.dim_800x600.png, tennis.dim_800x600.png, swimming.dim_800x600.png, and volleyball.dim_800x600.png. Include proper alt text and error handling for image loading."
+        },
+        {
+          "path": "frontend/src/components/AcademyCard.tsx",
+          "operation": "modify",
+          "description": "Ensure the AcademyCard component correctly references images from frontend/public/assets/generated using the exact generated filenames: academy-1.dim_600x400.png, academy-2.dim_600x400.png, and academy-3.dim_600x400.png. Include proper alt text and error handling for image loading."
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add responsive image styling rules to ensure generated sport and academy images display properly across different screen sizes. Include styles for image containers, aspect ratio maintenance, and loading states."
+        }
+      ]
+    }
+  ]
+}
