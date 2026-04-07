@@ -33363,15 +33363,21 @@ function EnrollmentFormDialog({
   ] });
 }
 function extractArea(name) {
-  const parts = name.split(" ");
-  if (parts.length > 0) {
-    return `${parts[0]}, Chennai`;
+  const knownAreas = [
+    "Anna Nagar",
+    "Ramapuram",
+    "Kolathur",
+    "Mylapore",
+    "Santhome"
+  ];
+  for (const area of knownAreas) {
+    if (name.startsWith(area)) return `${area}, Chennai`;
   }
   return "Chennai";
 }
 function AcademyCard({
   place,
-  imageFilename,
+  imageSrc,
   contact,
   "data-ocid": dataOcid
 }) {
@@ -33389,7 +33395,7 @@ function AcademyCard({
           imageError ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center justify-center bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground text-sm", children: "Image unavailable" }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
             "img",
             {
-              src: `/assets/generated/${imageFilename}`,
+              src: imageSrc,
               alt: `${place.name} academy`,
               className: `w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`,
               onLoad: () => setImageLoaded(true),
@@ -33452,41 +33458,66 @@ function AcademyCard({
     }
   );
 }
+const basketballAnnaNagar = "/assets/generated/basketball-annanagar.dim_600x400.jpg";
+const basketballKolathur = "/assets/generated/basketball-kolathur.dim_600x400.jpg";
+const basketballMylapore = "/assets/generated/basketball-mylapore.dim_600x400.jpg";
+const basketballRamapuram = "/assets/generated/basketball-ramapuram.dim_600x400.jpg";
+const basketballSanthome = "/assets/generated/basketball-santhome.dim_600x400.jpg";
+const soccerAnnaNagar = "/assets/generated/soccer-annanagar.dim_600x400.jpg";
+const soccerKolathur = "/assets/generated/soccer-kolathur.dim_600x400.jpg";
+const soccerMylapore = "/assets/generated/soccer-mylapore.dim_600x400.jpg";
+const soccerRamapuram = "/assets/generated/soccer-ramapuram.dim_600x400.jpg";
+const soccerSanthome = "/assets/generated/soccer-santhome.dim_600x400.jpg";
+const swimmingAnnaNagar = "/assets/generated/swimming-annanagar.dim_600x400.jpg";
+const swimmingKolathur = "/assets/generated/swimming-kolathur.dim_600x400.jpg";
+const swimmingMylapore = "/assets/generated/swimming-mylapore.dim_600x400.jpg";
+const swimmingRamapuram = "/assets/generated/swimming-ramapuram.dim_600x400.jpg";
+const swimmingSanthome = "/assets/generated/swimming-santhome.dim_600x400.jpg";
+const tennisAnnaNagar = "/assets/generated/tennis-annanagar.dim_600x400.jpg";
+const tennisKolathur = "/assets/generated/tennis-kolathur.dim_600x400.jpg";
+const tennisMylapore = "/assets/generated/tennis-mylapore.dim_600x400.jpg";
+const tennisRamapuram = "/assets/generated/tennis-ramapuram.dim_600x400.jpg";
+const tennisSanthome = "/assets/generated/tennis-santhome.dim_600x400.jpg";
+const volleyballAnnaNagar = "/assets/generated/volleyball-annanagar.dim_600x400.jpg";
+const volleyballKolathur = "/assets/generated/volleyball-kolathur.dim_600x400.jpg";
+const volleyballMylapore = "/assets/generated/volleyball-mylapore.dim_600x400.jpg";
+const volleyballRamapuram = "/assets/generated/volleyball-ramapuram.dim_600x400.jpg";
+const volleyballSanthome = "/assets/generated/volleyball-santhome.dim_600x400.jpg";
 const academyImageMap = {
   Basketball: {
-    Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "basketball-annanagar.dim_600x400.jpg",
-    Kolathur: "basketball-kolathur.dim_600x400.jpg",
-    Mylapore: "basketball-mylapore.dim_600x400.jpg",
-    Santhome: "basketball-santhome.dim_600x400.jpg"
+    Ramapuram: basketballRamapuram,
+    "Anna Nagar": basketballAnnaNagar,
+    Kolathur: basketballKolathur,
+    Mylapore: basketballMylapore,
+    Santhome: basketballSanthome
   },
   Soccer: {
-    Ramapuram: "soccer-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "soccer-annanagar.dim_600x400.jpg",
-    Kolathur: "soccer-kolathur.dim_600x400.jpg",
-    Mylapore: "soccer-mylapore.dim_600x400.jpg",
-    Santhome: "soccer-santhome.dim_600x400.jpg"
+    Ramapuram: soccerRamapuram,
+    "Anna Nagar": soccerAnnaNagar,
+    Kolathur: soccerKolathur,
+    Mylapore: soccerMylapore,
+    Santhome: soccerSanthome
   },
   Tennis: {
-    Ramapuram: "tennis-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "tennis-annanagar.dim_600x400.jpg",
-    Kolathur: "tennis-kolathur.dim_600x400.jpg",
-    Mylapore: "tennis-mylapore.dim_600x400.jpg",
-    Santhome: "tennis-santhome.dim_600x400.jpg"
+    Ramapuram: tennisRamapuram,
+    "Anna Nagar": tennisAnnaNagar,
+    Kolathur: tennisKolathur,
+    Mylapore: tennisMylapore,
+    Santhome: tennisSanthome
   },
   Swimming: {
-    Ramapuram: "swimming-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "swimming-annanagar.dim_600x400.jpg",
-    Kolathur: "swimming-kolathur.dim_600x400.jpg",
-    Mylapore: "swimming-mylapore.dim_600x400.jpg",
-    Santhome: "swimming-santhome.dim_600x400.jpg"
+    Ramapuram: swimmingRamapuram,
+    "Anna Nagar": swimmingAnnaNagar,
+    Kolathur: swimmingKolathur,
+    Mylapore: swimmingMylapore,
+    Santhome: swimmingSanthome
   },
   Volleyball: {
-    Ramapuram: "volleyball-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "volleyball-annanagar.dim_600x400.jpg",
-    Kolathur: "volleyball-kolathur.dim_600x400.jpg",
-    Mylapore: "volleyball-mylapore.dim_600x400.jpg",
-    Santhome: "volleyball-santhome.dim_600x400.jpg"
+    Ramapuram: volleyballRamapuram,
+    "Anna Nagar": volleyballAnnaNagar,
+    Kolathur: volleyballKolathur,
+    Mylapore: volleyballMylapore,
+    Santhome: volleyballSanthome
   }
 };
 const academyContactMap = {
@@ -33631,7 +33662,6 @@ const fallbackContact = {
   email: "info@sports-hub.in",
   enrollmentUrl: "https://forms.google.com/sports-enroll"
 };
-const fallbackImage = "basketball-ramapuram.dim_600x400.jpg";
 const KNOWN_AREAS = [
   "Anna Nagar",
   "Ramapuram",
@@ -33650,7 +33680,7 @@ function getAreaKey(placeName) {
 function getImageForPlace(sport, name) {
   var _a3;
   const areaKey = getAreaKey(name);
-  return ((_a3 = academyImageMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackImage;
+  return ((_a3 = academyImageMap[sport]) == null ? void 0 : _a3[areaKey]) ?? basketballRamapuram;
 }
 function getContactForPlace(sport, name) {
   var _a3;
@@ -33701,7 +33731,7 @@ function FilteredAcademies({ sport }) {
         AcademyCard,
         {
           place,
-          imageFilename: getImageForPlace(place.sport, place.name),
+          imageSrc: getImageForPlace(place.sport, place.name),
           contact: getContactForPlace(place.sport, place.name),
           "data-ocid": `academies.item.${index2 + 1}`
         },
@@ -33736,7 +33766,7 @@ function AllAcademies() {
         AcademyCard,
         {
           place,
-          imageFilename: getImageForPlace(place.sport, place.name),
+          imageSrc: getImageForPlace(place.sport, place.name),
           contact: getContactForPlace(place.sport, place.name),
           "data-ocid": `academies.item.${index2 + 1}`
         },
@@ -34233,10 +34263,15 @@ function Header({ isAdmin, showAdminPanel, onAdminPanel }) {
     ] })
   ] }) });
 }
+const basketballImg = "/assets/generated/basketball-academy.dim_600x400.jpg";
+const soccerImg = "/assets/generated/soccer-academy.dim_600x400.jpg";
+const swimmingImg = "/assets/generated/swimming-academy.dim_600x400.jpg";
+const tennisImg = "/assets/generated/tennis-academy.dim_600x400.jpg";
+const volleyballImg = "/assets/generated/volleyball-academy.dim_600x400.jpg";
 function SportCard({
   name,
   description,
-  imageFilename,
+  imageSrc,
   onClick,
   isSelected
 }) {
@@ -34256,7 +34291,7 @@ function SportCard({
           imageError ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center justify-center bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground text-sm", children: "Image unavailable" }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
             "img",
             {
-              src: `/assets/generated/${imageFilename}`,
+              src: imageSrc,
               alt: `${name} sport`,
               className: `w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${imageLoaded ? "opacity-100" : "opacity-0"}`,
               onLoad: () => setImageLoaded(true),
@@ -34291,27 +34326,27 @@ const sports = [
   {
     name: "Basketball",
     description: "Fast-paced team sport focusing on agility, coordination, and teamwork",
-    imageFilename: "basketball-academy.dim_600x400.jpg"
+    imageSrc: basketballImg
   },
   {
     name: "Soccer",
     description: "The world's most popular sport, building endurance and strategic thinking",
-    imageFilename: "soccer-academy.dim_600x400.jpg"
+    imageSrc: soccerImg
   },
   {
     name: "Tennis",
     description: "Individual or doubles sport developing precision, speed, and mental focus",
-    imageFilename: "tennis-academy.dim_600x400.jpg"
+    imageSrc: tennisImg
   },
   {
     name: "Swimming",
     description: "Full-body workout improving cardiovascular health and muscle strength",
-    imageFilename: "swimming-academy.dim_600x400.jpg"
+    imageSrc: swimmingImg
   },
   {
     name: "Volleyball",
     description: "Dynamic team sport enhancing reflexes, jumping ability, and communication",
-    imageFilename: "volleyball-academy.dim_600x400.jpg"
+    imageSrc: volleyballImg
   }
 ];
 function SportsGrid({ onSelectSport, selectedSport }) {
@@ -34320,7 +34355,7 @@ function SportsGrid({ onSelectSport, selectedSport }) {
     {
       name: sport.name,
       description: sport.description,
-      imageFilename: sport.imageFilename,
+      imageSrc: sport.imageSrc,
       onClick: () => onSelectSport(sport.name),
       isSelected: selectedSport === sport.name
     },

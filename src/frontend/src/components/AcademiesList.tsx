@@ -5,42 +5,69 @@ import { useGetAllPlaces, useGetPlacesBySport } from "../hooks/useQueries";
 import { AcademyCard } from "./AcademyCard";
 import type { AcademyContactInfo } from "./AcademyCard";
 
-// Unique sport-specific thumbnails per location
+import basketballAnnaNagar from "/assets/generated/basketball-annanagar.dim_600x400.jpg";
+import basketballKolathur from "/assets/generated/basketball-kolathur.dim_600x400.jpg";
+import basketballMylapore from "/assets/generated/basketball-mylapore.dim_600x400.jpg";
+// Static imports so the build pipeline keeps these images
+import basketballRamapuram from "/assets/generated/basketball-ramapuram.dim_600x400.jpg";
+import basketballSanthome from "/assets/generated/basketball-santhome.dim_600x400.jpg";
+import soccerAnnaNagar from "/assets/generated/soccer-annanagar.dim_600x400.jpg";
+import soccerKolathur from "/assets/generated/soccer-kolathur.dim_600x400.jpg";
+import soccerMylapore from "/assets/generated/soccer-mylapore.dim_600x400.jpg";
+import soccerRamapuram from "/assets/generated/soccer-ramapuram.dim_600x400.jpg";
+import soccerSanthome from "/assets/generated/soccer-santhome.dim_600x400.jpg";
+import swimmingAnnaNagar from "/assets/generated/swimming-annanagar.dim_600x400.jpg";
+import swimmingKolathur from "/assets/generated/swimming-kolathur.dim_600x400.jpg";
+import swimmingMylapore from "/assets/generated/swimming-mylapore.dim_600x400.jpg";
+import swimmingRamapuram from "/assets/generated/swimming-ramapuram.dim_600x400.jpg";
+import swimmingSanthome from "/assets/generated/swimming-santhome.dim_600x400.jpg";
+import tennisAnnaNagar from "/assets/generated/tennis-annanagar.dim_600x400.jpg";
+import tennisKolathur from "/assets/generated/tennis-kolathur.dim_600x400.jpg";
+import tennisMylapore from "/assets/generated/tennis-mylapore.dim_600x400.jpg";
+import tennisRamapuram from "/assets/generated/tennis-ramapuram.dim_600x400.jpg";
+import tennisSanthome from "/assets/generated/tennis-santhome.dim_600x400.jpg";
+import volleyballAnnaNagar from "/assets/generated/volleyball-annanagar.dim_600x400.jpg";
+import volleyballKolathur from "/assets/generated/volleyball-kolathur.dim_600x400.jpg";
+import volleyballMylapore from "/assets/generated/volleyball-mylapore.dim_600x400.jpg";
+import volleyballRamapuram from "/assets/generated/volleyball-ramapuram.dim_600x400.jpg";
+import volleyballSanthome from "/assets/generated/volleyball-santhome.dim_600x400.jpg";
+
+// Unique sport-specific image URLs per location
 const academyImageMap: Record<string, Record<string, string>> = {
   Basketball: {
-    Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "basketball-annanagar.dim_600x400.jpg",
-    Kolathur: "basketball-kolathur.dim_600x400.jpg",
-    Mylapore: "basketball-mylapore.dim_600x400.jpg",
-    Santhome: "basketball-santhome.dim_600x400.jpg",
+    Ramapuram: basketballRamapuram,
+    "Anna Nagar": basketballAnnaNagar,
+    Kolathur: basketballKolathur,
+    Mylapore: basketballMylapore,
+    Santhome: basketballSanthome,
   },
   Soccer: {
-    Ramapuram: "soccer-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "soccer-annanagar.dim_600x400.jpg",
-    Kolathur: "soccer-kolathur.dim_600x400.jpg",
-    Mylapore: "soccer-mylapore.dim_600x400.jpg",
-    Santhome: "soccer-santhome.dim_600x400.jpg",
+    Ramapuram: soccerRamapuram,
+    "Anna Nagar": soccerAnnaNagar,
+    Kolathur: soccerKolathur,
+    Mylapore: soccerMylapore,
+    Santhome: soccerSanthome,
   },
   Tennis: {
-    Ramapuram: "tennis-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "tennis-annanagar.dim_600x400.jpg",
-    Kolathur: "tennis-kolathur.dim_600x400.jpg",
-    Mylapore: "tennis-mylapore.dim_600x400.jpg",
-    Santhome: "tennis-santhome.dim_600x400.jpg",
+    Ramapuram: tennisRamapuram,
+    "Anna Nagar": tennisAnnaNagar,
+    Kolathur: tennisKolathur,
+    Mylapore: tennisMylapore,
+    Santhome: tennisSanthome,
   },
   Swimming: {
-    Ramapuram: "swimming-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "swimming-annanagar.dim_600x400.jpg",
-    Kolathur: "swimming-kolathur.dim_600x400.jpg",
-    Mylapore: "swimming-mylapore.dim_600x400.jpg",
-    Santhome: "swimming-santhome.dim_600x400.jpg",
+    Ramapuram: swimmingRamapuram,
+    "Anna Nagar": swimmingAnnaNagar,
+    Kolathur: swimmingKolathur,
+    Mylapore: swimmingMylapore,
+    Santhome: swimmingSanthome,
   },
   Volleyball: {
-    Ramapuram: "volleyball-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "volleyball-annanagar.dim_600x400.jpg",
-    Kolathur: "volleyball-kolathur.dim_600x400.jpg",
-    Mylapore: "volleyball-mylapore.dim_600x400.jpg",
-    Santhome: "volleyball-santhome.dim_600x400.jpg",
+    Ramapuram: volleyballRamapuram,
+    "Anna Nagar": volleyballAnnaNagar,
+    Kolathur: volleyballKolathur,
+    Mylapore: volleyballMylapore,
+    Santhome: volleyballSanthome,
   },
 };
 
@@ -189,8 +216,6 @@ const fallbackContact: AcademyContactInfo = {
   enrollmentUrl: "https://forms.google.com/sports-enroll",
 };
 
-const fallbackImage = "basketball-ramapuram.dim_600x400.jpg";
-
 // Known area names extracted from place name patterns like "Anna Nagar Basketball Academy"
 const KNOWN_AREAS = [
   "Anna Nagar",
@@ -206,13 +231,12 @@ function getAreaKey(placeName: string): string {
       return area;
     }
   }
-  // Fallback: first word
   return placeName.split(" ")[0];
 }
 
 function getImageForPlace(sport: string, name: string): string {
   const areaKey = getAreaKey(name);
-  return academyImageMap[sport]?.[areaKey] ?? fallbackImage;
+  return academyImageMap[sport]?.[areaKey] ?? basketballRamapuram;
 }
 
 function getContactForPlace(sport: string, name: string): AcademyContactInfo {
@@ -280,7 +304,7 @@ function FilteredAcademies({ sport }: FilteredAcademiesProps) {
         <AcademyCard
           key={place.id.toString()}
           place={place}
-          imageFilename={getImageForPlace(place.sport, place.name)}
+          imageSrc={getImageForPlace(place.sport, place.name)}
           contact={getContactForPlace(place.sport, place.name)}
           data-ocid={`academies.item.${index + 1}`}
         />
@@ -327,7 +351,7 @@ function AllAcademies() {
         <AcademyCard
           key={place.id.toString()}
           place={place}
-          imageFilename={getImageForPlace(place.sport, place.name)}
+          imageSrc={getImageForPlace(place.sport, place.name)}
           contact={getContactForPlace(place.sport, place.name)}
           data-ocid={`academies.item.${index + 1}`}
         />

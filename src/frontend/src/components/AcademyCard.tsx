@@ -15,22 +15,28 @@ export interface AcademyContactInfo {
 
 interface AcademyCardProps {
   place: Place;
-  imageFilename: string;
+  imageSrc: string;
   contact: AcademyContactInfo;
   "data-ocid"?: string;
 }
 
 function extractArea(name: string): string {
-  const parts = name.split(" ");
-  if (parts.length > 0) {
-    return `${parts[0]}, Chennai`;
+  const knownAreas = [
+    "Anna Nagar",
+    "Ramapuram",
+    "Kolathur",
+    "Mylapore",
+    "Santhome",
+  ];
+  for (const area of knownAreas) {
+    if (name.startsWith(area)) return `${area}, Chennai`;
   }
   return "Chennai";
 }
 
 export function AcademyCard({
   place,
-  imageFilename,
+  imageSrc,
   contact,
   "data-ocid": dataOcid,
 }: AcademyCardProps) {
@@ -55,7 +61,7 @@ export function AcademyCard({
           </div>
         ) : (
           <img
-            src={`/assets/generated/${imageFilename}`}
+            src={imageSrc}
             alt={`${place.name} academy`}
             className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${
               imageLoaded ? "opacity-100" : "opacity-0"

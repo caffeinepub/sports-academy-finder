@@ -5,7 +5,7 @@ import { useState } from "react";
 interface SportCardProps {
   name: string;
   description: string;
-  imageFilename: string;
+  imageSrc: string;
   onClick: () => void;
   isSelected: boolean;
 }
@@ -13,7 +13,7 @@ interface SportCardProps {
 export function SportCard({
   name,
   description,
-  imageFilename,
+  imageSrc,
   onClick,
   isSelected,
 }: SportCardProps) {
@@ -44,7 +44,7 @@ export function SportCard({
           </div>
         ) : (
           <img
-            src={`/assets/generated/${imageFilename}`}
+            src={imageSrc}
             alt={`${name} sport`}
             className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
               imageLoaded ? "opacity-100" : "opacity-0"

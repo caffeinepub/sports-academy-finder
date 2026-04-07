@@ -4,14 +4,14 @@ import Order "mo:core/Order";
 import Text "mo:core/Text";
 import Int "mo:core/Int";
 import Time "mo:core/Time";
-import Migration "migration";
+
 import Principal "mo:core/Principal";
 import Runtime "mo:core/Runtime";
 import MixinAuthorization "authorization/MixinAuthorization";
 import AccessControl "authorization/access-control";
 
 // Use data migration for persistent data
-(with migration = Migration.run)
+
 actor {
   type PlaceId = Nat64;
   type EnrollmentId = Nat64;
