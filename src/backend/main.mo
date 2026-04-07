@@ -1,6 +1,5 @@
 import Array "mo:core/Array";
 import Map "mo:core/Map";
-import Nat "mo:core/Nat";
 import Nat64 "mo:core/Nat64";
 import Order "mo:core/Order";
 import Text "mo:core/Text";
@@ -30,9 +29,13 @@ actor {
   };
 
   var nextPlaceId : PlaceId = 0;
+  var initialized : Bool = false;
   let places = Map.empty<PlaceId, Place>();
 
-  public shared ({ caller }) func initializePlaces() : async () {
+  public shared func initializePlaces() : async () {
+    if (initialized) return;
+    initialized := true;
+
     for (sport in [ "Basketball", "Soccer", "Tennis", "Swimming", "Volleyball" ].values()) {
       let locations = [
         ("Ramapuram", 13.0304, 80.1769),
@@ -44,7 +47,7 @@ actor {
 
       for ((area, lat, long) in locations.values()) {
         let name = area # " " # sport # " Academy";
-        let description = sport # " facility located in " # area # " area of Chennai. ";
+        let description = sport # " facility located in " # area # " area of Chennai.";
 
         let place : Place = {
           id = nextPlaceId;
@@ -60,15 +63,15 @@ actor {
     };
   };
 
-  public query ({ caller }) func getAllPlaces() : async [Place] {
+  public query func getAllPlaces() : async [Place] {
     places.values().toArray().sort();
   };
 
-  public query ({ caller }) func getPlacesBySport(sport : Text) : async [Place] {
+  public query func getPlacesBySport(sport : Text) : async [Place] {
     places.values().toArray().filter(func(p) { p.sport == sport }).sort();
   };
 
-  public query ({ caller }) func getPlaceById(id : PlaceId) : async ?Place {
+  public query func getPlaceById(id : PlaceId) : async ?Place {
     places.get(id);
   };
 };

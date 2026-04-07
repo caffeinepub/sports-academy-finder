@@ -9,35 +9,35 @@ import type { AcademyContactInfo } from "./AcademyCard";
 const academyImageMap: Record<string, Record<string, string>> = {
   Basketball: {
     Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
-    Anna: "basketball-annanagar.dim_600x400.jpg",
+    "Anna Nagar": "basketball-annanagar.dim_600x400.jpg",
     Kolathur: "basketball-kolathur.dim_600x400.jpg",
     Mylapore: "basketball-mylapore.dim_600x400.jpg",
     Santhome: "basketball-santhome.dim_600x400.jpg",
   },
   Soccer: {
     Ramapuram: "soccer-ramapuram.dim_600x400.jpg",
-    Anna: "soccer-annanagar.dim_600x400.jpg",
+    "Anna Nagar": "soccer-annanagar.dim_600x400.jpg",
     Kolathur: "soccer-kolathur.dim_600x400.jpg",
     Mylapore: "soccer-mylapore.dim_600x400.jpg",
     Santhome: "soccer-santhome.dim_600x400.jpg",
   },
   Tennis: {
     Ramapuram: "tennis-ramapuram.dim_600x400.jpg",
-    Anna: "tennis-annanagar.dim_600x400.jpg",
+    "Anna Nagar": "tennis-annanagar.dim_600x400.jpg",
     Kolathur: "tennis-kolathur.dim_600x400.jpg",
     Mylapore: "tennis-mylapore.dim_600x400.jpg",
     Santhome: "tennis-santhome.dim_600x400.jpg",
   },
   Swimming: {
     Ramapuram: "swimming-ramapuram.dim_600x400.jpg",
-    Anna: "swimming-annanagar.dim_600x400.jpg",
+    "Anna Nagar": "swimming-annanagar.dim_600x400.jpg",
     Kolathur: "swimming-kolathur.dim_600x400.jpg",
     Mylapore: "swimming-mylapore.dim_600x400.jpg",
     Santhome: "swimming-santhome.dim_600x400.jpg",
   },
   Volleyball: {
     Ramapuram: "volleyball-ramapuram.dim_600x400.jpg",
-    Anna: "volleyball-annanagar.dim_600x400.jpg",
+    "Anna Nagar": "volleyball-annanagar.dim_600x400.jpg",
     Kolathur: "volleyball-kolathur.dim_600x400.jpg",
     Mylapore: "volleyball-mylapore.dim_600x400.jpg",
     Santhome: "volleyball-santhome.dim_600x400.jpg",
@@ -52,7 +52,7 @@ const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
       email: "basketball@ramapuram-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
     },
-    Anna: {
+    "Anna Nagar": {
       phone: "+91 98400 11202",
       email: "basketball@annanagar-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
@@ -79,7 +79,7 @@ const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
       email: "soccer@ramapuram-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
     },
-    Anna: {
+    "Anna Nagar": {
       phone: "+91 98400 22202",
       email: "soccer@annanagar-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
@@ -106,7 +106,7 @@ const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
       email: "tennis@ramapuram-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
     },
-    Anna: {
+    "Anna Nagar": {
       phone: "+91 98400 33202",
       email: "tennis@annanagar-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
@@ -133,7 +133,7 @@ const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
       email: "swimming@ramapuram-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
     },
-    Anna: {
+    "Anna Nagar": {
       phone: "+91 98400 44202",
       email: "swimming@annanagar-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
@@ -160,7 +160,7 @@ const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
       email: "volleyball@ramapuram-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
     },
-    Anna: {
+    "Anna Nagar": {
       phone: "+91 98400 55202",
       email: "volleyball@annanagar-sports.in",
       enrollmentUrl: "https://forms.google.com/sports-enroll",
@@ -191,8 +191,23 @@ const fallbackContact: AcademyContactInfo = {
 
 const fallbackImage = "basketball-ramapuram.dim_600x400.jpg";
 
-function getAreaKey(name: string): string {
-  return name.split(" ")[0];
+// Known area names extracted from place name patterns like "Anna Nagar Basketball Academy"
+const KNOWN_AREAS = [
+  "Anna Nagar",
+  "Ramapuram",
+  "Kolathur",
+  "Mylapore",
+  "Santhome",
+];
+
+function getAreaKey(placeName: string): string {
+  for (const area of KNOWN_AREAS) {
+    if (placeName.startsWith(area)) {
+      return area;
+    }
+  }
+  // Fallback: first word
+  return placeName.split(" ")[0];
 }
 
 function getImageForPlace(sport: string, name: string): string {
