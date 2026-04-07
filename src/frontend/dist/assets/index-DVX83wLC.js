@@ -30758,10 +30758,12 @@ function useGetAllPlaces() {
   return useQuery({
     queryKey: ["places"],
     queryFn: async () => {
-      if (!actor) return [];
+      if (!actor) throw new Error("Actor not ready");
       return actor.getAllPlaces();
     },
-    enabled: !!actor && !isFetching
+    enabled: !!actor && !isFetching,
+    retry: 3,
+    retryDelay: 1e3
   });
 }
 function useGetPlacesBySport(sport) {
@@ -30769,10 +30771,12 @@ function useGetPlacesBySport(sport) {
   return useQuery({
     queryKey: ["places", "sport", sport],
     queryFn: async () => {
-      if (!actor || !sport) return [];
+      if (!actor || !sport) throw new Error("Actor not ready");
       return actor.getPlacesBySport(sport);
     },
-    enabled: !!actor && !isFetching && sport.length > 0
+    enabled: !!actor && !isFetching && sport.length > 0,
+    retry: 3,
+    retryDelay: 1e3
   });
 }
 function useInitializePlaces() {
@@ -30814,7 +30818,7 @@ function useGetAllEnrollments() {
   return useQuery({
     queryKey: ["enrollments"],
     queryFn: async () => {
-      if (!actor) return [];
+      if (!actor) throw new Error("Actor not ready");
       return actor.getAllEnrollments();
     },
     enabled: !!actor && !isFetching
@@ -35069,14 +35073,17 @@ function App() {
   const [selectedSport, setSelectedSport] = reactExports.useState(null);
   const [showAdminPanel, setShowAdminPanel] = reactExports.useState(false);
   const academiesRef = reactExports.useRef(null);
-  const { data: places } = useGetAllPlaces();
+  const initCalledRef = reactExports.useRef(false);
+  const { actor, isFetching: actorFetching } = useActor();
+  const { data: places, isSuccess: placesLoaded } = useGetAllPlaces();
   const { mutate: initializePlaces } = useInitializePlaces();
   const { data: isAdmin = false } = useIsCallerAdmin();
   reactExports.useEffect(() => {
-    if (places !== void 0 && places.length === 0) {
+    if (actor && !actorFetching && placesLoaded && places !== void 0 && places.length === 0 && !initCalledRef.current) {
+      initCalledRef.current = true;
       initializePlaces();
     }
-  }, [places, initializePlaces]);
+  }, [actor, actorFetching, placesLoaded, places, initializePlaces]);
   reactExports.useEffect(() => {
     if (!isAdmin) {
       setShowAdminPanel(false);

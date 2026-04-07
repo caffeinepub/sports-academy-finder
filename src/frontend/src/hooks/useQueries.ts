@@ -8,10 +8,12 @@ export function useGetAllPlaces() {
   return useQuery<Place[]>({
     queryKey: ["places"],
     queryFn: async () => {
-      if (!actor) return [];
+      if (!actor) throw new Error("Actor not ready");
       return actor.getAllPlaces();
     },
     enabled: !!actor && !isFetching,
+    retry: 3,
+    retryDelay: 1000,
   });
 }
 
@@ -21,10 +23,12 @@ export function useGetPlacesBySport(sport: string) {
   return useQuery<Place[]>({
     queryKey: ["places", "sport", sport],
     queryFn: async () => {
-      if (!actor || !sport) return [];
+      if (!actor || !sport) throw new Error("Actor not ready");
       return actor.getPlacesBySport(sport);
     },
     enabled: !!actor && !isFetching && sport.length > 0,
+    retry: 3,
+    retryDelay: 1000,
   });
 }
 
@@ -79,7 +83,7 @@ export function useGetAllEnrollments() {
   return useQuery<Enrollment[]>({
     queryKey: ["enrollments"],
     queryFn: async () => {
-      if (!actor) return [];
+      if (!actor) throw new Error("Actor not ready");
       return actor.getAllEnrollments();
     },
     enabled: !!actor && !isFetching,
@@ -92,7 +96,7 @@ export function useGetEnrollmentsByAcademy(academyName: string) {
   return useQuery<Enrollment[]>({
     queryKey: ["enrollments", "academy", academyName],
     queryFn: async () => {
-      if (!actor || !academyName) return [];
+      if (!actor || !academyName) throw new Error("Actor not ready");
       return actor.getEnrollmentsByAcademy(academyName);
     },
     enabled: !!actor && !isFetching && academyName.length > 0,

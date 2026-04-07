@@ -4,6 +4,7 @@ import { AdminPanel } from "./components/AdminPanel";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { SportsGrid } from "./components/SportsGrid";
+import { useActor } from "./hooks/useActor";
 import {
   useGetAllPlaces,
   useInitializePlaces,
@@ -14,17 +15,28 @@ function App() {
   const [selectedSport, setSelectedSport] = useState<string | null>(null);
   const [showAdminPanel, setShowAdminPanel] = useState(false);
   const academiesRef = useRef<HTMLElement>(null);
+  const initCalledRef = useRef(false);
 
-  const { data: places } = useGetAllPlaces();
+  const { actor, isFetching: actorFetching } = useActor();
+  const { data: places, isSuccess: placesLoaded } = useGetAllPlaces();
   const { mutate: initializePlaces } = useInitializePlaces();
   const { data: isAdmin = false } = useIsCallerAdmin();
 
   // Seed the backend data once on load if places are empty
+  // Only run after actor is ready and places have been fetched (not just loading)
   useEffect(() => {
-    if (places !== undefined && places.length === 0) {
+    if (
+      actor &&
+      !actorFetching &&
+      placesLoaded &&
+      places !== undefined &&
+      places.length === 0 &&
+      !initCalledRef.current
+    ) {
+      initCalledRef.current = true;
       initializePlaces();
     }
-  }, [places, initializePlaces]);
+  }, [actor, actorFetching, placesLoaded, places, initializePlaces]);
 
   // Hide admin panel if user loses admin rights
   useEffect(() => {
