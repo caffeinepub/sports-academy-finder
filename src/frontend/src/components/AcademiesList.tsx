@@ -5,32 +5,32 @@ import { useGetAllPlaces, useGetPlacesBySport } from "../hooks/useQueries";
 import { AcademyCard } from "./AcademyCard";
 import type { AcademyContactInfo } from "./AcademyCard";
 
-import basketballAnnaNagar from "/assets/generated/basketball-annanagar.dim_600x400.jpg";
-import basketballKolathur from "/assets/generated/basketball-kolathur.dim_600x400.jpg";
-import basketballMylapore from "/assets/generated/basketball-mylapore.dim_600x400.jpg";
 // Static imports so the build pipeline keeps these images
-import basketballRamapuram from "/assets/generated/basketball-ramapuram.dim_600x400.jpg";
-import basketballSanthome from "/assets/generated/basketball-santhome.dim_600x400.jpg";
-import soccerAnnaNagar from "/assets/generated/soccer-annanagar.dim_600x400.jpg";
-import soccerKolathur from "/assets/generated/soccer-kolathur.dim_600x400.jpg";
-import soccerMylapore from "/assets/generated/soccer-mylapore.dim_600x400.jpg";
-import soccerRamapuram from "/assets/generated/soccer-ramapuram.dim_600x400.jpg";
-import soccerSanthome from "/assets/generated/soccer-santhome.dim_600x400.jpg";
-import swimmingAnnaNagar from "/assets/generated/swimming-annanagar.dim_600x400.jpg";
-import swimmingKolathur from "/assets/generated/swimming-kolathur.dim_600x400.jpg";
-import swimmingMylapore from "/assets/generated/swimming-mylapore.dim_600x400.jpg";
-import swimmingRamapuram from "/assets/generated/swimming-ramapuram.dim_600x400.jpg";
-import swimmingSanthome from "/assets/generated/swimming-santhome.dim_600x400.jpg";
-import tennisAnnaNagar from "/assets/generated/tennis-annanagar.dim_600x400.jpg";
-import tennisKolathur from "/assets/generated/tennis-kolathur.dim_600x400.jpg";
-import tennisMylapore from "/assets/generated/tennis-mylapore.dim_600x400.jpg";
-import tennisRamapuram from "/assets/generated/tennis-ramapuram.dim_600x400.jpg";
-import tennisSanthome from "/assets/generated/tennis-santhome.dim_600x400.jpg";
-import volleyballAnnaNagar from "/assets/generated/volleyball-annanagar.dim_600x400.jpg";
-import volleyballKolathur from "/assets/generated/volleyball-kolathur.dim_600x400.jpg";
-import volleyballMylapore from "/assets/generated/volleyball-mylapore.dim_600x400.jpg";
-import volleyballRamapuram from "/assets/generated/volleyball-ramapuram.dim_600x400.jpg";
-import volleyballSanthome from "/assets/generated/volleyball-santhome.dim_600x400.jpg";
+import basketballAnnaNagar from "../assets/generated/basketball-annanagar.dim_600x400.jpg";
+import basketballKolathur from "../assets/generated/basketball-kolathur.dim_600x400.jpg";
+import basketballMylapore from "../assets/generated/basketball-mylapore.dim_600x400.jpg";
+import basketballRamapuram from "../assets/generated/basketball-ramapuram.dim_600x400.jpg";
+import basketballSanthome from "../assets/generated/basketball-santhome.dim_600x400.jpg";
+import soccerAnnaNagar from "../assets/generated/soccer-annanagar.dim_600x400.jpg";
+import soccerKolathur from "../assets/generated/soccer-kolathur.dim_600x400.jpg";
+import soccerMylapore from "../assets/generated/soccer-mylapore.dim_600x400.jpg";
+import soccerRamapuram from "../assets/generated/soccer-ramapuram.dim_600x400.jpg";
+import soccerSanthome from "../assets/generated/soccer-santhome.dim_600x400.jpg";
+import swimmingAnnaNagar from "../assets/generated/swimming-annanagar.dim_600x400.jpg";
+import swimmingKolathur from "../assets/generated/swimming-kolathur.dim_600x400.jpg";
+import swimmingMylapore from "../assets/generated/swimming-mylapore.dim_600x400.jpg";
+import swimmingRamapuram from "../assets/generated/swimming-ramapuram.dim_600x400.jpg";
+import swimmingSanthome from "../assets/generated/swimming-santhome.dim_600x400.jpg";
+import tennisAnnaNagar from "../assets/generated/tennis-annanagar.dim_600x400.jpg";
+import tennisKolathur from "../assets/generated/tennis-kolathur.dim_600x400.jpg";
+import tennisMylapore from "../assets/generated/tennis-mylapore.dim_600x400.jpg";
+import tennisRamapuram from "../assets/generated/tennis-ramapuram.dim_600x400.jpg";
+import tennisSanthome from "../assets/generated/tennis-santhome.dim_600x400.jpg";
+import volleyballAnnaNagar from "../assets/generated/volleyball-annanagar.dim_600x400.jpg";
+import volleyballKolathur from "../assets/generated/volleyball-kolathur.dim_600x400.jpg";
+import volleyballMylapore from "../assets/generated/volleyball-mylapore.dim_600x400.jpg";
+import volleyballRamapuram from "../assets/generated/volleyball-ramapuram.dim_600x400.jpg";
+import volleyballSanthome from "../assets/generated/volleyball-santhome.dim_600x400.jpg";
 
 // Unique sport-specific image URLs per location
 const academyImageMap: Record<string, Record<string, string>> = {

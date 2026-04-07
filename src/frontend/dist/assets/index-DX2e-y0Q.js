@@ -33458,31 +33458,31 @@ function AcademyCard({
     }
   );
 }
-const basketballAnnaNagar = "/assets/generated/basketball-annanagar.dim_600x400.jpg";
-const basketballKolathur = "/assets/generated/basketball-kolathur.dim_600x400.jpg";
-const basketballMylapore = "/assets/generated/basketball-mylapore.dim_600x400.jpg";
-const basketballRamapuram = "/assets/generated/basketball-ramapuram.dim_600x400.jpg";
-const basketballSanthome = "/assets/generated/basketball-santhome.dim_600x400.jpg";
-const soccerAnnaNagar = "/assets/generated/soccer-annanagar.dim_600x400.jpg";
-const soccerKolathur = "/assets/generated/soccer-kolathur.dim_600x400.jpg";
-const soccerMylapore = "/assets/generated/soccer-mylapore.dim_600x400.jpg";
-const soccerRamapuram = "/assets/generated/soccer-ramapuram.dim_600x400.jpg";
-const soccerSanthome = "/assets/generated/soccer-santhome.dim_600x400.jpg";
-const swimmingAnnaNagar = "/assets/generated/swimming-annanagar.dim_600x400.jpg";
-const swimmingKolathur = "/assets/generated/swimming-kolathur.dim_600x400.jpg";
-const swimmingMylapore = "/assets/generated/swimming-mylapore.dim_600x400.jpg";
-const swimmingRamapuram = "/assets/generated/swimming-ramapuram.dim_600x400.jpg";
-const swimmingSanthome = "/assets/generated/swimming-santhome.dim_600x400.jpg";
-const tennisAnnaNagar = "/assets/generated/tennis-annanagar.dim_600x400.jpg";
-const tennisKolathur = "/assets/generated/tennis-kolathur.dim_600x400.jpg";
-const tennisMylapore = "/assets/generated/tennis-mylapore.dim_600x400.jpg";
-const tennisRamapuram = "/assets/generated/tennis-ramapuram.dim_600x400.jpg";
-const tennisSanthome = "/assets/generated/tennis-santhome.dim_600x400.jpg";
-const volleyballAnnaNagar = "/assets/generated/volleyball-annanagar.dim_600x400.jpg";
-const volleyballKolathur = "/assets/generated/volleyball-kolathur.dim_600x400.jpg";
-const volleyballMylapore = "/assets/generated/volleyball-mylapore.dim_600x400.jpg";
-const volleyballRamapuram = "/assets/generated/volleyball-ramapuram.dim_600x400.jpg";
-const volleyballSanthome = "/assets/generated/volleyball-santhome.dim_600x400.jpg";
+const basketballAnnaNagar = "/assets/basketball-annanagar.dim_600x400-BT3RZ2Vd.jpg";
+const basketballKolathur = "/assets/basketball-kolathur.dim_600x400-Ba-DgYc7.jpg";
+const basketballMylapore = "/assets/basketball-mylapore.dim_600x400-B-YMOm6x.jpg";
+const basketballRamapuram = "/assets/basketball-ramapuram.dim_600x400-Da-LkP35.jpg";
+const basketballSanthome = "/assets/basketball-santhome.dim_600x400-Ce-XHoLl.jpg";
+const soccerAnnaNagar = "/assets/soccer-annanagar.dim_600x400-BNQXVK9T.jpg";
+const soccerKolathur = "/assets/soccer-kolathur.dim_600x400-Dlw0cn4z.jpg";
+const soccerMylapore = "/assets/soccer-mylapore.dim_600x400-BSn01UAy.jpg";
+const soccerRamapuram = "/assets/soccer-ramapuram.dim_600x400-BnT2HsaK.jpg";
+const soccerSanthome = "/assets/soccer-santhome.dim_600x400-DuRmzRk0.jpg";
+const swimmingAnnaNagar = "/assets/swimming-annanagar.dim_600x400-BjJ6R4Yl.jpg";
+const swimmingKolathur = "/assets/swimming-kolathur.dim_600x400-CRchoEIV.jpg";
+const swimmingMylapore = "/assets/swimming-mylapore.dim_600x400-C7LohlH5.jpg";
+const swimmingRamapuram = "/assets/swimming-ramapuram.dim_600x400-CWUJvwUU.jpg";
+const swimmingSanthome = "/assets/swimming-santhome.dim_600x400-BFw-61KQ.jpg";
+const tennisAnnaNagar = "/assets/tennis-annanagar.dim_600x400-Cuyt2HO7.jpg";
+const tennisKolathur = "/assets/tennis-kolathur.dim_600x400-DfpakkiG.jpg";
+const tennisMylapore = "/assets/tennis-mylapore.dim_600x400-CTlpSf_p.jpg";
+const tennisRamapuram = "/assets/tennis-ramapuram.dim_600x400-DucHXRPP.jpg";
+const tennisSanthome = "/assets/tennis-santhome.dim_600x400-BU4D8GCj.jpg";
+const volleyballAnnaNagar = "/assets/volleyball-annanagar.dim_600x400-DXx-7i4x.jpg";
+const volleyballKolathur = "/assets/volleyball-kolathur.dim_600x400-CBBNdXhZ.jpg";
+const volleyballMylapore = "/assets/volleyball-mylapore.dim_600x400-EYsFN0SY.jpg";
+const volleyballRamapuram = "/assets/volleyball-ramapuram.dim_600x400-BeVVKlBx.jpg";
+const volleyballSanthome = "/assets/volleyball-santhome.dim_600x400-CJsxC2G8.jpg";
 const academyImageMap = {
   Basketball: {
     Ramapuram: basketballRamapuram,
@@ -34263,11 +34263,11 @@ function Header({ isAdmin, showAdminPanel, onAdminPanel }) {
     ] })
   ] }) });
 }
-const basketballImg = "/assets/generated/basketball-academy.dim_600x400.jpg";
-const soccerImg = "/assets/generated/soccer-academy.dim_600x400.jpg";
-const swimmingImg = "/assets/generated/swimming-academy.dim_600x400.jpg";
-const tennisImg = "/assets/generated/tennis-academy.dim_600x400.jpg";
-const volleyballImg = "/assets/generated/volleyball-academy.dim_600x400.jpg";
+const basketballImg = "/assets/basketball-academy.dim_600x400-BSBcgAh_.jpg";
+const soccerImg = "/assets/soccer-academy.dim_600x400-DErwvfc8.jpg";
+const swimmingImg = "/assets/swimming-academy.dim_600x400-Dz6q6pw_.jpg";
+const tennisImg = "/assets/tennis-academy.dim_600x400-DC5ymhn7.jpg";
+const volleyballImg = "/assets/volleyball-academy.dim_600x400-CNR68yqF.jpg";
 function SportCard({
   name,
   description,

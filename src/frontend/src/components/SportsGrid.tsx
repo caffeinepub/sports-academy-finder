@@ -1,8 +1,8 @@
-import basketballImg from "/assets/generated/basketball-academy.dim_600x400.jpg";
-import soccerImg from "/assets/generated/soccer-academy.dim_600x400.jpg";
-import swimmingImg from "/assets/generated/swimming-academy.dim_600x400.jpg";
-import tennisImg from "/assets/generated/tennis-academy.dim_600x400.jpg";
-import volleyballImg from "/assets/generated/volleyball-academy.dim_600x400.jpg";
+import basketballImg from "../assets/generated/basketball-academy.dim_600x400.jpg";
+import soccerImg from "../assets/generated/soccer-academy.dim_600x400.jpg";
+import swimmingImg from "../assets/generated/swimming-academy.dim_600x400.jpg";
+import tennisImg from "../assets/generated/tennis-academy.dim_600x400.jpg";
+import volleyballImg from "../assets/generated/volleyball-academy.dim_600x400.jpg";
 import { SportCard } from "./SportCard";
 
 const sports = [
