@@ -30738,37 +30738,37 @@ function AcademyCard({
 const academyImageMap = {
   Basketball: {
     Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
-    Anna: "basketball-academy.dim_600x400.jpg",
-    Kolathur: "basketball-academy.dim_600x400.jpg",
-    Mylapore: "basketball-academy.dim_600x400.jpg",
-    Santhome: "basketball-academy.dim_600x400.jpg"
+    Anna: "basketball-annanagar.dim_600x400.jpg",
+    Kolathur: "basketball-kolathur.dim_600x400.jpg",
+    Mylapore: "basketball-mylapore.dim_600x400.jpg",
+    Santhome: "basketball-santhome.dim_600x400.jpg"
   },
   Soccer: {
-    Ramapuram: "soccer-academy.dim_600x400.jpg",
+    Ramapuram: "soccer-ramapuram.dim_600x400.jpg",
     Anna: "soccer-annanagar.dim_600x400.jpg",
-    Kolathur: "soccer-academy.dim_600x400.jpg",
-    Mylapore: "soccer-academy.dim_600x400.jpg",
-    Santhome: "soccer-academy.dim_600x400.jpg"
+    Kolathur: "soccer-kolathur.dim_600x400.jpg",
+    Mylapore: "soccer-mylapore.dim_600x400.jpg",
+    Santhome: "soccer-santhome.dim_600x400.jpg"
   },
   Tennis: {
-    Ramapuram: "tennis-academy.dim_600x400.jpg",
-    Anna: "tennis-academy.dim_600x400.jpg",
+    Ramapuram: "tennis-ramapuram.dim_600x400.jpg",
+    Anna: "tennis-annanagar.dim_600x400.jpg",
     Kolathur: "tennis-kolathur.dim_600x400.jpg",
-    Mylapore: "tennis-academy.dim_600x400.jpg",
-    Santhome: "tennis-academy.dim_600x400.jpg"
+    Mylapore: "tennis-mylapore.dim_600x400.jpg",
+    Santhome: "tennis-santhome.dim_600x400.jpg"
   },
   Swimming: {
-    Ramapuram: "swimming-academy.dim_600x400.jpg",
-    Anna: "swimming-academy.dim_600x400.jpg",
-    Kolathur: "swimming-academy.dim_600x400.jpg",
+    Ramapuram: "swimming-ramapuram.dim_600x400.jpg",
+    Anna: "swimming-annanagar.dim_600x400.jpg",
+    Kolathur: "swimming-kolathur.dim_600x400.jpg",
     Mylapore: "swimming-mylapore.dim_600x400.jpg",
-    Santhome: "swimming-academy.dim_600x400.jpg"
+    Santhome: "swimming-santhome.dim_600x400.jpg"
   },
   Volleyball: {
-    Ramapuram: "volleyball-academy.dim_600x400.jpg",
-    Anna: "volleyball-academy.dim_600x400.jpg",
-    Kolathur: "volleyball-academy.dim_600x400.jpg",
-    Mylapore: "volleyball-academy.dim_600x400.jpg",
+    Ramapuram: "volleyball-ramapuram.dim_600x400.jpg",
+    Anna: "volleyball-annanagar.dim_600x400.jpg",
+    Kolathur: "volleyball-kolathur.dim_600x400.jpg",
+    Mylapore: "volleyball-mylapore.dim_600x400.jpg",
     Santhome: "volleyball-santhome.dim_600x400.jpg"
   }
 };
@@ -30914,7 +30914,7 @@ const fallbackContact = {
   email: "info@sports-hub.in",
   enrollmentUrl: "https://forms.google.com/sports-enroll"
 };
-const fallbackImage = "basketball-academy.dim_600x400.jpg";
+const fallbackImage = "basketball-ramapuram.dim_600x400.jpg";
 function getAreaKey(name) {
   return name.split(" ")[0];
 }
