@@ -2,14 +2,19 @@ import { SportCard } from "./SportCard";
 
 const sports = [
   {
+    name: "Cricket",
+    description:
+      "India's most beloved sport, developing batting precision, bowling accuracy, and teamwork",
+  },
+  {
+    name: "Football",
+    description:
+      "The world's most popular sport, building endurance and strategic thinking",
+  },
+  {
     name: "Basketball",
     description:
       "Fast-paced team sport focusing on agility, coordination, and teamwork",
-  },
-  {
-    name: "Soccer",
-    description:
-      "The world's most popular sport, building endurance and strategic thinking",
   },
   {
     name: "Tennis",
@@ -20,11 +25,6 @@ const sports = [
     name: "Swimming",
     description:
       "Full-body workout improving cardiovascular health and muscle strength",
-  },
-  {
-    name: "Volleyball",
-    description:
-      "Dynamic team sport enhancing reflexes, jumping ability, and communication",
   },
 ];
 

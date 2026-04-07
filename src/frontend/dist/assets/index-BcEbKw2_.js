@@ -33366,11 +33366,16 @@ function EnrollmentFormDialog({
     ] }) })
   ] });
 }
-const soccerAnnaNagar = "/assets/football-annanagar.dim_600x400-BR2I7UNo.jpg";
-const soccerKolathur = "/assets/football-kolathur.dim_600x400-wbTDSpfK.jpg";
-const soccerMylapore = "/assets/football-mylapore.dim_600x400-BONaLX9P.jpg";
-const soccerRamapuram = "/assets/football-ramapuram.dim_600x400-CYA6K78D.jpg";
-const soccerSanthome = "/assets/football-santhome.dim_600x400-Dj1emNYD.jpg";
+const cricketAnnaNagar = "/assets/cricket-annanagar.dim_600x400-DDaYolrS.jpg";
+const cricketKolathur = "/assets/cricket-kolathur.dim_600x400-BqX2_PzX.jpg";
+const cricketMylapore = "/assets/cricket-mylapore.dim_600x400-7PsskgKK.jpg";
+const cricketRamapuram = "/assets/cricket-ramapuram.dim_600x400-BERVdkBc.jpg";
+const cricketSanthome = "/assets/cricket-santhome.dim_600x400-UjaZ1x7O.jpg";
+const footballAnnaNagar = "/assets/football-annanagar.dim_600x400-BR2I7UNo.jpg";
+const footballKolathur = "/assets/football-kolathur.dim_600x400-wbTDSpfK.jpg";
+const footballMylapore = "/assets/football-mylapore.dim_600x400-BONaLX9P.jpg";
+const footballRamapuram = "/assets/football-ramapuram.dim_600x400-CYA6K78D.jpg";
+const footballSanthome = "/assets/football-santhome.dim_600x400-Dj1emNYD.jpg";
 const basketballAnnaNagar = "/assets/basketball-annanagar-new.dim_600x400-RDhNSH08.jpg";
 const basketballKolathur = "/assets/basketball-kolathur-new.dim_600x400-0bIP-IVx.jpg";
 const basketballMylapore = "/assets/basketball-mylapore-new.dim_600x400-B3uiGH9q.jpg";
@@ -33386,18 +33391,20 @@ const swimmingKolathur = "/assets/swimming-kolathur-new.dim_600x400-762hYCF2.jpg
 const swimmingMylapore = "/assets/swimming-mylapore-new.dim_600x400-tHWeq1jw.jpg";
 const swimmingRamapuram = "/assets/swimming-ramapuram-new.dim_600x400-CgWDJA_U.jpg";
 const swimmingSanthome = "/assets/swimming-santhome-new.dim_600x400-BCt0eDPj.jpg";
-const volleyballAnnaNagar = "/assets/volleyball-annanagar-new.dim_600x400-Cvoe6yPC.jpg";
-const volleyballKolathur = "/assets/volleyball-kolathur-new.dim_600x400-CTTEgAaI.jpg";
-const volleyballMylapore = "/assets/volleyball-mylapore-new.dim_600x400-06JzTq9v.jpg";
-const volleyballRamapuram = "/assets/volleyball-ramapuram-new.dim_600x400-CRULY6ke.jpg";
-const volleyballSanthome = "/assets/volleyball-santhome-new.dim_600x400-CcX0PVE1.jpg";
 const sportLocationImages = {
-  Soccer: {
-    Ramapuram: soccerRamapuram,
-    "Anna Nagar": soccerAnnaNagar,
-    Kolathur: soccerKolathur,
-    Mylapore: soccerMylapore,
-    Santhome: soccerSanthome
+  Cricket: {
+    Ramapuram: cricketRamapuram,
+    "Anna Nagar": cricketAnnaNagar,
+    Kolathur: cricketKolathur,
+    Mylapore: cricketMylapore,
+    Santhome: cricketSanthome
+  },
+  Football: {
+    Ramapuram: footballRamapuram,
+    "Anna Nagar": footballAnnaNagar,
+    Kolathur: footballKolathur,
+    Mylapore: footballMylapore,
+    Santhome: footballSanthome
   },
   Basketball: {
     Ramapuram: basketballRamapuram,
@@ -33419,13 +33426,6 @@ const sportLocationImages = {
     Kolathur: swimmingKolathur,
     Mylapore: swimmingMylapore,
     Santhome: swimmingSanthome
-  },
-  Volleyball: {
-    Ramapuram: volleyballRamapuram,
-    "Anna Nagar": volleyballAnnaNagar,
-    Kolathur: volleyballKolathur,
-    Mylapore: volleyballMylapore,
-    Santhome: volleyballSanthome
   }
 };
 function SportIllustration({
@@ -33551,138 +33551,138 @@ function AcademyCard({
   );
 }
 const academyContactMap = {
-  Basketball: {
+  Cricket: {
     Ramapuram: {
       phone: "+91 98400 11201",
-      email: "basketball@ramapuram-sports.in",
+      email: "cricket@ramapuram-sports.in",
       enrollmentUrl: ""
     },
     "Anna Nagar": {
       phone: "+91 98400 11202",
-      email: "basketball@annanagar-sports.in",
+      email: "cricket@annanagar-sports.in",
       enrollmentUrl: ""
     },
     Kolathur: {
       phone: "+91 98400 11203",
-      email: "basketball@kolathur-sports.in",
+      email: "cricket@kolathur-sports.in",
       enrollmentUrl: ""
     },
     Mylapore: {
       phone: "+91 98400 11204",
-      email: "basketball@mylapore-sports.in",
+      email: "cricket@mylapore-sports.in",
       enrollmentUrl: ""
     },
     Santhome: {
       phone: "+91 98400 11205",
-      email: "basketball@santhome-sports.in",
+      email: "cricket@santhome-sports.in",
       enrollmentUrl: ""
     }
   },
-  Soccer: {
+  Football: {
     Ramapuram: {
       phone: "+91 98400 22201",
-      email: "soccer@ramapuram-sports.in",
+      email: "football@ramapuram-sports.in",
       enrollmentUrl: ""
     },
     "Anna Nagar": {
       phone: "+91 98400 22202",
-      email: "soccer@annanagar-sports.in",
+      email: "football@annanagar-sports.in",
       enrollmentUrl: ""
     },
     Kolathur: {
       phone: "+91 98400 22203",
-      email: "soccer@kolathur-sports.in",
+      email: "football@kolathur-sports.in",
       enrollmentUrl: ""
     },
     Mylapore: {
       phone: "+91 98400 22204",
-      email: "soccer@mylapore-sports.in",
+      email: "football@mylapore-sports.in",
       enrollmentUrl: ""
     },
     Santhome: {
       phone: "+91 98400 22205",
-      email: "soccer@santhome-sports.in",
+      email: "football@santhome-sports.in",
+      enrollmentUrl: ""
+    }
+  },
+  Basketball: {
+    Ramapuram: {
+      phone: "+91 98400 33201",
+      email: "basketball@ramapuram-sports.in",
+      enrollmentUrl: ""
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 33202",
+      email: "basketball@annanagar-sports.in",
+      enrollmentUrl: ""
+    },
+    Kolathur: {
+      phone: "+91 98400 33203",
+      email: "basketball@kolathur-sports.in",
+      enrollmentUrl: ""
+    },
+    Mylapore: {
+      phone: "+91 98400 33204",
+      email: "basketball@mylapore-sports.in",
+      enrollmentUrl: ""
+    },
+    Santhome: {
+      phone: "+91 98400 33205",
+      email: "basketball@santhome-sports.in",
       enrollmentUrl: ""
     }
   },
   Tennis: {
     Ramapuram: {
-      phone: "+91 98400 33201",
+      phone: "+91 98400 44201",
       email: "tennis@ramapuram-sports.in",
       enrollmentUrl: ""
     },
     "Anna Nagar": {
-      phone: "+91 98400 33202",
+      phone: "+91 98400 44202",
       email: "tennis@annanagar-sports.in",
       enrollmentUrl: ""
     },
     Kolathur: {
-      phone: "+91 98400 33203",
+      phone: "+91 98400 44203",
       email: "tennis@kolathur-sports.in",
       enrollmentUrl: ""
     },
     Mylapore: {
-      phone: "+91 98400 33204",
+      phone: "+91 98400 44204",
       email: "tennis@mylapore-sports.in",
       enrollmentUrl: ""
     },
     Santhome: {
-      phone: "+91 98400 33205",
+      phone: "+91 98400 44205",
       email: "tennis@santhome-sports.in",
       enrollmentUrl: ""
     }
   },
   Swimming: {
     Ramapuram: {
-      phone: "+91 98400 44201",
+      phone: "+91 98400 55201",
       email: "swimming@ramapuram-sports.in",
       enrollmentUrl: ""
     },
     "Anna Nagar": {
-      phone: "+91 98400 44202",
+      phone: "+91 98400 55202",
       email: "swimming@annanagar-sports.in",
       enrollmentUrl: ""
     },
     Kolathur: {
-      phone: "+91 98400 44203",
+      phone: "+91 98400 55203",
       email: "swimming@kolathur-sports.in",
       enrollmentUrl: ""
     },
     Mylapore: {
-      phone: "+91 98400 44204",
+      phone: "+91 98400 55204",
       email: "swimming@mylapore-sports.in",
       enrollmentUrl: ""
     },
     Santhome: {
-      phone: "+91 98400 44205",
-      email: "swimming@santhome-sports.in",
-      enrollmentUrl: ""
-    }
-  },
-  Volleyball: {
-    Ramapuram: {
-      phone: "+91 98400 55201",
-      email: "volleyball@ramapuram-sports.in",
-      enrollmentUrl: ""
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 55202",
-      email: "volleyball@annanagar-sports.in",
-      enrollmentUrl: ""
-    },
-    Kolathur: {
-      phone: "+91 98400 55203",
-      email: "volleyball@kolathur-sports.in",
-      enrollmentUrl: ""
-    },
-    Mylapore: {
-      phone: "+91 98400 55204",
-      email: "volleyball@mylapore-sports.in",
-      enrollmentUrl: ""
-    },
-    Santhome: {
       phone: "+91 98400 55205",
-      email: "volleyball@santhome-sports.in",
+      email: "swimming@santhome-sports.in",
       enrollmentUrl: ""
     }
   }
@@ -34332,12 +34332,16 @@ function SportCard({
 }
 const sports = [
   {
-    name: "Basketball",
-    description: "Fast-paced team sport focusing on agility, coordination, and teamwork"
+    name: "Cricket",
+    description: "India's most beloved sport, developing batting precision, bowling accuracy, and teamwork"
   },
   {
-    name: "Soccer",
+    name: "Football",
     description: "The world's most popular sport, building endurance and strategic thinking"
+  },
+  {
+    name: "Basketball",
+    description: "Fast-paced team sport focusing on agility, coordination, and teamwork"
   },
   {
     name: "Tennis",
@@ -34346,10 +34350,6 @@ const sports = [
   {
     name: "Swimming",
     description: "Full-body workout improving cardiovascular health and muscle strength"
-  },
-  {
-    name: "Volleyball",
-    description: "Dynamic team sport enhancing reflexes, jumping ability, and communication"
   }
 ];
 function SportsGrid({ onSelectSport, selectedSport }) {
@@ -34364,6 +34364,13 @@ function SportsGrid({ onSelectSport, selectedSport }) {
     sport.name
   )) });
 }
+const EXPECTED_SPORTS = /* @__PURE__ */ new Set([
+  "Cricket",
+  "Football",
+  "Basketball",
+  "Tennis",
+  "Swimming"
+]);
 function App() {
   const [selectedSport, setSelectedSport] = reactExports.useState(null);
   const [showAdminPanel, setShowAdminPanel] = reactExports.useState(false);
@@ -34374,9 +34381,12 @@ function App() {
   const { mutate: initializePlaces } = useInitializePlaces();
   const { data: isAdmin = false } = useIsCallerAdmin();
   reactExports.useEffect(() => {
-    if (actor && !actorFetching && placesLoaded && places !== void 0 && places.length === 0 && !initCalledRef.current) {
-      initCalledRef.current = true;
-      initializePlaces();
+    if (actor && !actorFetching && placesLoaded && places !== void 0 && !initCalledRef.current) {
+      const hasStaleData = places.length > 0 && places.some((p2) => !EXPECTED_SPORTS.has(p2.sport));
+      if (places.length === 0 || hasStaleData) {
+        initCalledRef.current = true;
+        initializePlaces();
+      }
     }
   }, [actor, actorFetching, placesLoaded, places, initializePlaces]);
   reactExports.useEffect(() => {

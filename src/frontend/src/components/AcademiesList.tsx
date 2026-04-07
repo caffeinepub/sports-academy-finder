@@ -7,138 +7,138 @@ import type { AcademyContactInfo } from "./AcademyCard";
 
 // Contact details per location per sport
 const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
-  Basketball: {
+  Cricket: {
     Ramapuram: {
       phone: "+91 98400 11201",
-      email: "basketball@ramapuram-sports.in",
+      email: "cricket@ramapuram-sports.in",
       enrollmentUrl: "",
     },
     "Anna Nagar": {
       phone: "+91 98400 11202",
-      email: "basketball@annanagar-sports.in",
+      email: "cricket@annanagar-sports.in",
       enrollmentUrl: "",
     },
     Kolathur: {
       phone: "+91 98400 11203",
-      email: "basketball@kolathur-sports.in",
+      email: "cricket@kolathur-sports.in",
       enrollmentUrl: "",
     },
     Mylapore: {
       phone: "+91 98400 11204",
-      email: "basketball@mylapore-sports.in",
+      email: "cricket@mylapore-sports.in",
       enrollmentUrl: "",
     },
     Santhome: {
       phone: "+91 98400 11205",
-      email: "basketball@santhome-sports.in",
+      email: "cricket@santhome-sports.in",
       enrollmentUrl: "",
     },
   },
-  Soccer: {
+  Football: {
     Ramapuram: {
       phone: "+91 98400 22201",
-      email: "soccer@ramapuram-sports.in",
+      email: "football@ramapuram-sports.in",
       enrollmentUrl: "",
     },
     "Anna Nagar": {
       phone: "+91 98400 22202",
-      email: "soccer@annanagar-sports.in",
+      email: "football@annanagar-sports.in",
       enrollmentUrl: "",
     },
     Kolathur: {
       phone: "+91 98400 22203",
-      email: "soccer@kolathur-sports.in",
+      email: "football@kolathur-sports.in",
       enrollmentUrl: "",
     },
     Mylapore: {
       phone: "+91 98400 22204",
-      email: "soccer@mylapore-sports.in",
+      email: "football@mylapore-sports.in",
       enrollmentUrl: "",
     },
     Santhome: {
       phone: "+91 98400 22205",
-      email: "soccer@santhome-sports.in",
+      email: "football@santhome-sports.in",
+      enrollmentUrl: "",
+    },
+  },
+  Basketball: {
+    Ramapuram: {
+      phone: "+91 98400 33201",
+      email: "basketball@ramapuram-sports.in",
+      enrollmentUrl: "",
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 33202",
+      email: "basketball@annanagar-sports.in",
+      enrollmentUrl: "",
+    },
+    Kolathur: {
+      phone: "+91 98400 33203",
+      email: "basketball@kolathur-sports.in",
+      enrollmentUrl: "",
+    },
+    Mylapore: {
+      phone: "+91 98400 33204",
+      email: "basketball@mylapore-sports.in",
+      enrollmentUrl: "",
+    },
+    Santhome: {
+      phone: "+91 98400 33205",
+      email: "basketball@santhome-sports.in",
       enrollmentUrl: "",
     },
   },
   Tennis: {
     Ramapuram: {
-      phone: "+91 98400 33201",
+      phone: "+91 98400 44201",
       email: "tennis@ramapuram-sports.in",
       enrollmentUrl: "",
     },
     "Anna Nagar": {
-      phone: "+91 98400 33202",
+      phone: "+91 98400 44202",
       email: "tennis@annanagar-sports.in",
       enrollmentUrl: "",
     },
     Kolathur: {
-      phone: "+91 98400 33203",
+      phone: "+91 98400 44203",
       email: "tennis@kolathur-sports.in",
       enrollmentUrl: "",
     },
     Mylapore: {
-      phone: "+91 98400 33204",
+      phone: "+91 98400 44204",
       email: "tennis@mylapore-sports.in",
       enrollmentUrl: "",
     },
     Santhome: {
-      phone: "+91 98400 33205",
+      phone: "+91 98400 44205",
       email: "tennis@santhome-sports.in",
       enrollmentUrl: "",
     },
   },
   Swimming: {
     Ramapuram: {
-      phone: "+91 98400 44201",
+      phone: "+91 98400 55201",
       email: "swimming@ramapuram-sports.in",
       enrollmentUrl: "",
     },
     "Anna Nagar": {
-      phone: "+91 98400 44202",
+      phone: "+91 98400 55202",
       email: "swimming@annanagar-sports.in",
       enrollmentUrl: "",
     },
     Kolathur: {
-      phone: "+91 98400 44203",
+      phone: "+91 98400 55203",
       email: "swimming@kolathur-sports.in",
       enrollmentUrl: "",
     },
     Mylapore: {
-      phone: "+91 98400 44204",
+      phone: "+91 98400 55204",
       email: "swimming@mylapore-sports.in",
       enrollmentUrl: "",
     },
     Santhome: {
-      phone: "+91 98400 44205",
-      email: "swimming@santhome-sports.in",
-      enrollmentUrl: "",
-    },
-  },
-  Volleyball: {
-    Ramapuram: {
-      phone: "+91 98400 55201",
-      email: "volleyball@ramapuram-sports.in",
-      enrollmentUrl: "",
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 55202",
-      email: "volleyball@annanagar-sports.in",
-      enrollmentUrl: "",
-    },
-    Kolathur: {
-      phone: "+91 98400 55203",
-      email: "volleyball@kolathur-sports.in",
-      enrollmentUrl: "",
-    },
-    Mylapore: {
-      phone: "+91 98400 55204",
-      email: "volleyball@mylapore-sports.in",
-      enrollmentUrl: "",
-    },
-    Santhome: {
       phone: "+91 98400 55205",
-      email: "volleyball@santhome-sports.in",
+      email: "swimming@santhome-sports.in",
       enrollmentUrl: "",
     },
   },

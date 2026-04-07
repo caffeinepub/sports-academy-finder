@@ -1,34 +1,39 @@
 // Realistic sport+location photo thumbnails
 
-import soccerAnnaNagar from "../../public/assets/generated/football-annanagar.dim_600x400.jpg";
-import soccerKolathur from "../../public/assets/generated/football-kolathur.dim_600x400.jpg";
-import soccerMylapore from "../../public/assets/generated/football-mylapore.dim_600x400.jpg";
-import soccerRamapuram from "../../public/assets/generated/football-ramapuram.dim_600x400.jpg";
-import soccerSanthome from "../../public/assets/generated/football-santhome.dim_600x400.jpg";
+// Cricket
+import cricketAnnaNagar from "../../public/assets/generated/cricket-annanagar.dim_600x400.jpg";
+import cricketKolathur from "../../public/assets/generated/cricket-kolathur.dim_600x400.jpg";
+import cricketMylapore from "../../public/assets/generated/cricket-mylapore.dim_600x400.jpg";
+import cricketRamapuram from "../../public/assets/generated/cricket-ramapuram.dim_600x400.jpg";
+import cricketSanthome from "../../public/assets/generated/cricket-santhome.dim_600x400.jpg";
 
+// Football
+import footballAnnaNagar from "../../public/assets/generated/football-annanagar.dim_600x400.jpg";
+import footballKolathur from "../../public/assets/generated/football-kolathur.dim_600x400.jpg";
+import footballMylapore from "../../public/assets/generated/football-mylapore.dim_600x400.jpg";
+import footballRamapuram from "../../public/assets/generated/football-ramapuram.dim_600x400.jpg";
+import footballSanthome from "../../public/assets/generated/football-santhome.dim_600x400.jpg";
+
+// Basketball
 import basketballAnnaNagar from "../../public/assets/generated/basketball-annanagar-new.dim_600x400.jpg";
 import basketballKolathur from "../../public/assets/generated/basketball-kolathur-new.dim_600x400.jpg";
 import basketballMylapore from "../../public/assets/generated/basketball-mylapore-new.dim_600x400.jpg";
 import basketballRamapuram from "../../public/assets/generated/basketball-ramapuram-new.dim_600x400.jpg";
 import basketballSanthome from "../../public/assets/generated/basketball-santhome-new.dim_600x400.jpg";
 
+// Tennis
 import tennisAnnaNagar from "../../public/assets/generated/tennis-annanagar-new.dim_600x400.jpg";
 import tennisKolathur from "../../public/assets/generated/tennis-kolathur-new.dim_600x400.jpg";
 import tennisMylapore from "../../public/assets/generated/tennis-mylapore-new.dim_600x400.jpg";
 import tennisRamapuram from "../../public/assets/generated/tennis-ramapuram-new.dim_600x400.jpg";
 import tennisSanthome from "../../public/assets/generated/tennis-santhome-new.dim_600x400.jpg";
 
+// Swimming
 import swimmingAnnaNagar from "../../public/assets/generated/swimming-annanagar-new.dim_600x400.jpg";
 import swimmingKolathur from "../../public/assets/generated/swimming-kolathur-new.dim_600x400.jpg";
 import swimmingMylapore from "../../public/assets/generated/swimming-mylapore-new.dim_600x400.jpg";
 import swimmingRamapuram from "../../public/assets/generated/swimming-ramapuram-new.dim_600x400.jpg";
 import swimmingSanthome from "../../public/assets/generated/swimming-santhome-new.dim_600x400.jpg";
-
-import volleyballAnnaNagar from "../../public/assets/generated/volleyball-annanagar-new.dim_600x400.jpg";
-import volleyballKolathur from "../../public/assets/generated/volleyball-kolathur-new.dim_600x400.jpg";
-import volleyballMylapore from "../../public/assets/generated/volleyball-mylapore-new.dim_600x400.jpg";
-import volleyballRamapuram from "../../public/assets/generated/volleyball-ramapuram-new.dim_600x400.jpg";
-import volleyballSanthome from "../../public/assets/generated/volleyball-santhome-new.dim_600x400.jpg";
 
 interface SportIllustrationProps {
   sport: string;
@@ -38,12 +43,19 @@ interface SportIllustrationProps {
 
 // Map: sport -> location -> image src
 const sportLocationImages: Record<string, Record<string, string>> = {
-  Soccer: {
-    Ramapuram: soccerRamapuram,
-    "Anna Nagar": soccerAnnaNagar,
-    Kolathur: soccerKolathur,
-    Mylapore: soccerMylapore,
-    Santhome: soccerSanthome,
+  Cricket: {
+    Ramapuram: cricketRamapuram,
+    "Anna Nagar": cricketAnnaNagar,
+    Kolathur: cricketKolathur,
+    Mylapore: cricketMylapore,
+    Santhome: cricketSanthome,
+  },
+  Football: {
+    Ramapuram: footballRamapuram,
+    "Anna Nagar": footballAnnaNagar,
+    Kolathur: footballKolathur,
+    Mylapore: footballMylapore,
+    Santhome: footballSanthome,
   },
   Basketball: {
     Ramapuram: basketballRamapuram,
@@ -65,13 +77,6 @@ const sportLocationImages: Record<string, Record<string, string>> = {
     Kolathur: swimmingKolathur,
     Mylapore: swimmingMylapore,
     Santhome: swimmingSanthome,
-  },
-  Volleyball: {
-    Ramapuram: volleyballRamapuram,
-    "Anna Nagar": volleyballAnnaNagar,
-    Kolathur: volleyballKolathur,
-    Mylapore: volleyballMylapore,
-    Santhome: volleyballSanthome,
   },
 };
 

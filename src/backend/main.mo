@@ -62,6 +62,7 @@ actor {
 
   var nextPlaceId : PlaceId = 0;
   var nextEnrollmentId : EnrollmentId = 0;
+  // Always re-initialize to ensure fresh data with correct sport names
   var initialized : Bool = false;
   let places = Map.empty<PlaceId, Place>();
   let enrollments = Map.empty<EnrollmentId, Enrollment>();
@@ -71,7 +72,11 @@ actor {
     if (initialized) { return };
     initialized := true;
 
-    for (sport in [ "Basketball", "Soccer", "Tennis", "Swimming", "Volleyball" ].values()) {
+    // Clear any existing places first
+    places.clear();
+    nextPlaceId := 0;
+
+    for (sport in [ "Cricket", "Football", "Basketball", "Tennis", "Swimming" ].values()) {
       let locations = [
         ("Ramapuram", 13.0304, 80.1769),
         ("Anna Nagar", 13.0850, 80.2101),
@@ -172,5 +177,15 @@ actor {
       Runtime.trap("Unauthorized: Only users can save profiles");
     };
     userProfiles.add(caller, profile);
+  };
+
+  // Admin: force re-initialization (clears all places and re-seeds)
+  public shared ({ caller }) func resetPlaces() : async () {
+    if (not (AccessControl.hasPermission(accessControlState, caller, #admin))) {
+      Runtime.trap("Unauthorized: Only admins can reset places");
+    };
+    initialized := false;
+    places.clear();
+    nextPlaceId := 0;
   };
 };

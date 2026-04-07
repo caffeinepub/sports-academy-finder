@@ -11,6 +11,14 @@ import {
   useIsCallerAdmin,
 } from "./hooks/useQueries";
 
+const EXPECTED_SPORTS = new Set([
+  "Cricket",
+  "Football",
+  "Basketball",
+  "Tennis",
+  "Swimming",
+]);
+
 function App() {
   const [selectedSport, setSelectedSport] = useState<string | null>(null);
   const [showAdminPanel, setShowAdminPanel] = useState(false);
@@ -22,19 +30,22 @@ function App() {
   const { mutate: initializePlaces } = useInitializePlaces();
   const { data: isAdmin = false } = useIsCallerAdmin();
 
-  // Seed the backend data once on load if places are empty
-  // Only run after actor is ready and places have been fetched (not just loading)
+  // Seed the backend data once on load if places are empty OR have stale sport names
   useEffect(() => {
     if (
       actor &&
       !actorFetching &&
       placesLoaded &&
       places !== undefined &&
-      places.length === 0 &&
       !initCalledRef.current
     ) {
-      initCalledRef.current = true;
-      initializePlaces();
+      const hasStaleData =
+        places.length > 0 && places.some((p) => !EXPECTED_SPORTS.has(p.sport));
+
+      if (places.length === 0 || hasStaleData) {
+        initCalledRef.current = true;
+        initializePlaces();
+      }
     }
   }, [actor, actorFetching, placesLoaded, places, initializePlaces]);
 
