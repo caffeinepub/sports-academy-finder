@@ -33366,795 +33366,82 @@ function EnrollmentFormDialog({
     ] }) })
   ] });
 }
-const sportColors = {
-  Basketball: { bg: "#ff8c42", accent: "#c0392b", secondary: "#f9ca24" },
-  Soccer: { bg: "#27ae60", accent: "#1e8449", secondary: "#f9ca24" },
-  Tennis: { bg: "#2980b9", accent: "#1a5276", secondary: "#f39c12" },
-  Swimming: { bg: "#1abc9c", accent: "#0e6655", secondary: "#3498db" },
-  Volleyball: { bg: "#8e44ad", accent: "#6c3483", secondary: "#e74c3c" }
-};
-const locationColors = {
-  Ramapuram: "#e74c3c",
-  "Anna Nagar": "#2ecc71",
-  Kolathur: "#3498db",
-  Mylapore: "#f39c12",
-  Santhome: "#9b59b6"
-};
-function BasketballSVG({ color }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "svg",
-    {
-      role: "img",
-      "aria-label": "sport illustration",
-      viewBox: "0 0 400 270",
-      xmlns: "http://www.w3.org/2000/svg",
-      style: { width: "100%", height: "100%" },
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "400", height: "270", fill: color }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "0", y: "200", width: "400", height: "70", fill: "rgba(0,0,0,0.2)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "50",
-            y: "60",
-            width: "300",
-            height: "180",
-            fill: "none",
-            stroke: "rgba(255,255,255,0.4)",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "circle",
-          {
-            cx: "200",
-            cy: "150",
-            r: "50",
-            fill: "none",
-            stroke: "rgba(255,255,255,0.4)",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "200",
-            y1: "60",
-            x2: "200",
-            y2: "240",
-            stroke: "rgba(255,255,255,0.3)",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "70", y: "80", width: "8", height: "60", fill: "rgba(255,255,255,0.7)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "60", y: "80", width: "28", height: "4", fill: "rgba(255,255,255,0.7)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "ellipse",
-          {
-            cx: "88",
-            cy: "84",
-            rx: "14",
-            ry: "5",
-            fill: "none",
-            stroke: "#ff6b35",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "circle",
-          {
-            cx: "200",
-            cy: "150",
-            r: "28",
-            fill: "#e86b1a",
-            stroke: "#333",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M172 150 Q186 138 200 150 Q214 162 228 150",
-            fill: "none",
-            stroke: "#333",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M200 122 Q212 136 200 150 Q188 164 200 178",
-            fill: "none",
-            stroke: "#333",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "150", cy: "130", r: "12", fill: "rgba(255,255,255,0.9)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "142",
-            y: "142",
-            width: "16",
-            height: "30",
-            rx: "4",
-            fill: "rgba(255,255,255,0.9)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "260", cy: "140", r: "12", fill: "rgba(255,220,0,0.9)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "252",
-            y: "152",
-            width: "16",
-            height: "30",
-            rx: "4",
-            fill: "rgba(255,220,0,0.9)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "text",
-          {
-            x: "200",
-            y: "255",
-            textAnchor: "middle",
-            fill: "white",
-            fontSize: "13",
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            children: "BASKETBALL"
-          }
-        )
-      ]
-    }
-  );
-}
-function SoccerSVG({ color }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "svg",
-    {
-      role: "img",
-      "aria-label": "sport illustration",
-      viewBox: "0 0 400 270",
-      xmlns: "http://www.w3.org/2000/svg",
-      style: { width: "100%", height: "100%" },
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "400", height: "270", fill: color }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "30",
-            y: "50",
-            width: "340",
-            height: "190",
-            rx: "8",
-            fill: "rgba(255,255,255,0.15)",
-            stroke: "white",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "circle",
-          {
-            cx: "200",
-            cy: "145",
-            r: "40",
-            fill: "none",
-            stroke: "white",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "200", y1: "50", x2: "200", y2: "240", stroke: "white", strokeWidth: "2" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "30",
-            y: "110",
-            width: "30",
-            height: "70",
-            fill: "none",
-            stroke: "white",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "340",
-            y: "110",
-            width: "30",
-            height: "70",
-            fill: "none",
-            stroke: "white",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "circle",
-          {
-            cx: "200",
-            cy: "145",
-            r: "22",
-            fill: "white",
-            stroke: "#333",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("polygon", { points: "200,125 208,132 205,142 195,142 192,132", fill: "#333" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "polygon",
-          {
-            points: "200,165 208,158 215,165 212,175 188,175 185,165 192,158",
-            fill: "#333"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "140", cy: "130", r: "11", fill: "rgba(255,220,0,0.95)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "133",
-            y: "141",
-            width: "14",
-            height: "28",
-            rx: "3",
-            fill: "rgba(255,220,0,0.95)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "270", cy: "155", r: "11", fill: "rgba(255,255,255,0.95)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "263",
-            y: "166",
-            width: "14",
-            height: "28",
-            rx: "3",
-            fill: "rgba(255,255,255,0.95)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "text",
-          {
-            x: "200",
-            y: "260",
-            textAnchor: "middle",
-            fill: "white",
-            fontSize: "13",
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            children: "SOCCER"
-          }
-        )
-      ]
-    }
-  );
-}
-function TennisSVG({ color }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "svg",
-    {
-      role: "img",
-      "aria-label": "sport illustration",
-      viewBox: "0 0 400 270",
-      xmlns: "http://www.w3.org/2000/svg",
-      style: { width: "100%", height: "100%" },
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "400", height: "270", fill: color }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "40",
-            y: "50",
-            width: "320",
-            height: "180",
-            fill: "rgba(255,255,255,0.15)",
-            stroke: "white",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "200", y1: "50", x2: "200", y2: "230", stroke: "white", strokeWidth: "2" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "40", y1: "140", x2: "360", y2: "140", stroke: "white", strokeWidth: "2" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "40",
-            y: "135",
-            width: "320",
-            height: "10",
-            fill: "rgba(255,255,255,0.5)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "200",
-            y1: "50",
-            x2: "200",
-            y2: "230",
-            stroke: "rgba(255,255,255,0.3)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "circle",
-          {
-            cx: "280",
-            cy: "90",
-            r: "18",
-            fill: "#c8ff00",
-            stroke: "white",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M268 84 Q280 95 292 84",
-            fill: "none",
-            stroke: "white",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M268 96 Q280 85 292 96",
-            fill: "none",
-            stroke: "white",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "ellipse",
-          {
-            cx: "130",
-            cy: "105",
-            rx: "25",
-            ry: "32",
-            fill: "none",
-            stroke: "rgba(255,255,255,0.9)",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "130",
-            y1: "137",
-            x2: "130",
-            y2: "175",
-            stroke: "rgba(255,255,255,0.9)",
-            strokeWidth: "5"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "110",
-            y1: "85",
-            x2: "150",
-            y2: "85",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "110",
-            y1: "95",
-            x2: "150",
-            y2: "95",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "110",
-            y1: "105",
-            x2: "150",
-            y2: "105",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "110",
-            y1: "115",
-            x2: "150",
-            y2: "115",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "110",
-            y1: "125",
-            x2: "150",
-            y2: "125",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "120",
-            y1: "73",
-            x2: "120",
-            y2: "137",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "130",
-            y1: "73",
-            x2: "130",
-            y2: "137",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "140",
-            y1: "73",
-            x2: "140",
-            y2: "137",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "120", cy: "85", r: "11", fill: "rgba(255,220,0,0.95)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "113",
-            y: "96",
-            width: "14",
-            height: "28",
-            rx: "3",
-            fill: "rgba(255,220,0,0.95)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "text",
-          {
-            x: "200",
-            y: "260",
-            textAnchor: "middle",
-            fill: "white",
-            fontSize: "13",
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            children: "TENNIS"
-          }
-        )
-      ]
-    }
-  );
-}
-function SwimmingSVG({ color }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "svg",
-    {
-      role: "img",
-      "aria-label": "sport illustration",
-      viewBox: "0 0 400 270",
-      xmlns: "http://www.w3.org/2000/svg",
-      style: { width: "100%", height: "100%" },
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "400", height: "270", fill: color }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { x: "30", y: "80", width: "340", height: "160", rx: "5", fill: "#1a7ab5" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "30",
-            y1: "113",
-            x2: "370",
-            y2: "113",
-            stroke: "#ffd700",
-            strokeWidth: "3",
-            strokeDasharray: "10,8"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "30",
-            y1: "147",
-            x2: "370",
-            y2: "147",
-            stroke: "#ffd700",
-            strokeWidth: "3",
-            strokeDasharray: "10,8"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "30",
-            y1: "181",
-            x2: "370",
-            y2: "181",
-            stroke: "#ffd700",
-            strokeWidth: "3",
-            strokeDasharray: "10,8"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("ellipse", { cx: "200", cy: "96", rx: "40", ry: "8", fill: "rgba(255,255,255,0.4)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "160", cy: "96", r: "10", fill: "#ffcd94" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M170 96 Q200 88 240 96",
-            fill: "none",
-            stroke: "#ffcd94",
-            strokeWidth: "6",
-            strokeLinecap: "round"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("ellipse", { cx: "200", cy: "130", rx: "40", ry: "8", fill: "rgba(255,255,255,0.3)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "240", cy: "130", r: "10", fill: "#ffb3b3" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M230 130 Q200 122 160 130",
-            fill: "none",
-            stroke: "#ffb3b3",
-            strokeWidth: "6",
-            strokeLinecap: "round"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M40 165 Q80 158 120 165 Q160 172 200 165 Q240 158 280 165 Q320 172 360 165",
-            fill: "none",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M40 185 Q80 178 120 185 Q160 192 200 185 Q240 178 280 185 Q320 192 360 185",
-            fill: "none",
-            stroke: "rgba(255,255,255,0.4)",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M40 205 Q80 198 120 205 Q160 212 200 205 Q240 198 280 205 Q320 212 360 205",
-            fill: "none",
-            stroke: "rgba(255,255,255,0.3)",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "30",
-            y: "50",
-            width: "30",
-            height: "30",
-            rx: "3",
-            fill: "rgba(255,255,255,0.7)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "80",
-            y: "50",
-            width: "30",
-            height: "30",
-            rx: "3",
-            fill: "rgba(255,255,255,0.7)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "130",
-            y: "50",
-            width: "30",
-            height: "30",
-            rx: "3",
-            fill: "rgba(255,255,255,0.7)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "text",
-          {
-            x: "200",
-            y: "260",
-            textAnchor: "middle",
-            fill: "white",
-            fontSize: "13",
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            children: "SWIMMING"
-          }
-        )
-      ]
-    }
-  );
-}
-function VolleyballSVG({ color }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    "svg",
-    {
-      role: "img",
-      "aria-label": "sport illustration",
-      viewBox: "0 0 400 270",
-      xmlns: "http://www.w3.org/2000/svg",
-      style: { width: "100%", height: "100%" },
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "400", height: "270", fill: color }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "40",
-            y: "80",
-            width: "320",
-            height: "150",
-            fill: "rgba(255,255,255,0.12)",
-            stroke: "white",
-            strokeWidth: "2"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "200", y1: "80", x2: "200", y2: "230", stroke: "white", strokeWidth: "2" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "40",
-            y: "148",
-            width: "320",
-            height: "8",
-            fill: "rgba(255,255,255,0.7)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("line", { x1: "200", y1: "80", x2: "200", y2: "150", stroke: "white", strokeWidth: "2" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "circle",
-          {
-            cx: "200",
-            cy: "110",
-            r: "22",
-            fill: "white",
-            stroke: "rgba(255,255,255,0.5)",
-            strokeWidth: "1"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M185 98 Q200 108 215 98",
-            fill: "none",
-            stroke: "#e74c3c",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M178 112 Q192 100 200 112 Q208 124 222 112",
-            fill: "none",
-            stroke: "#3498db",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "path",
-          {
-            d: "M185 126 Q200 116 215 126",
-            fill: "none",
-            stroke: "#f39c12",
-            strokeWidth: "3"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "130", cy: "180", r: "12", fill: "rgba(255,220,0,0.95)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "122",
-            y: "192",
-            width: "16",
-            height: "30",
-            rx: "4",
-            fill: "rgba(255,220,0,0.95)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "122",
-            y1: "205",
-            x2: "108",
-            y2: "215",
-            stroke: "rgba(255,220,0,0.95)",
-            strokeWidth: "4"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "280", cy: "175", r: "12", fill: "rgba(255,255,255,0.95)" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "rect",
-          {
-            x: "272",
-            y: "187",
-            width: "16",
-            height: "30",
-            rx: "4",
-            fill: "rgba(255,255,255,0.95)"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "line",
-          {
-            x1: "288",
-            y1: "200",
-            x2: "302",
-            y2: "210",
-            stroke: "rgba(255,255,255,0.95)",
-            strokeWidth: "4"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "text",
-          {
-            x: "200",
-            y: "260",
-            textAnchor: "middle",
-            fill: "white",
-            fontSize: "13",
-            fontWeight: "bold",
-            fontFamily: "Arial",
-            children: "VOLLEYBALL"
-          }
-        )
-      ]
-    }
-  );
-}
-const sportSVGMap = {
-  Basketball: (c2) => /* @__PURE__ */ jsxRuntimeExports.jsx(BasketballSVG, { color: c2 }),
-  Soccer: (c2) => /* @__PURE__ */ jsxRuntimeExports.jsx(SoccerSVG, { color: c2 }),
-  Tennis: (c2) => /* @__PURE__ */ jsxRuntimeExports.jsx(TennisSVG, { color: c2 }),
-  Swimming: (c2) => /* @__PURE__ */ jsxRuntimeExports.jsx(SwimmingSVG, { color: c2 }),
-  Volleyball: (c2) => /* @__PURE__ */ jsxRuntimeExports.jsx(VolleyballSVG, { color: c2 })
+const soccerAnnaNagar = "/assets/football-annanagar.dim_600x400-BR2I7UNo.jpg";
+const soccerKolathur = "/assets/football-kolathur.dim_600x400-wbTDSpfK.jpg";
+const soccerMylapore = "/assets/football-mylapore.dim_600x400-BONaLX9P.jpg";
+const soccerRamapuram = "/assets/football-ramapuram.dim_600x400-CYA6K78D.jpg";
+const soccerSanthome = "/assets/football-santhome.dim_600x400-Dj1emNYD.jpg";
+const basketballAnnaNagar = "/assets/basketball-annanagar-new.dim_600x400-RDhNSH08.jpg";
+const basketballKolathur = "/assets/basketball-kolathur-new.dim_600x400-0bIP-IVx.jpg";
+const basketballMylapore = "/assets/basketball-mylapore-new.dim_600x400-B3uiGH9q.jpg";
+const basketballRamapuram = "/assets/basketball-ramapuram-new.dim_600x400-BnQFC9qr.jpg";
+const basketballSanthome = "/assets/basketball-santhome-new.dim_600x400-frtM-x06.jpg";
+const tennisAnnaNagar = "/assets/tennis-annanagar-new.dim_600x400-C--8t91b.jpg";
+const tennisKolathur = "/assets/tennis-kolathur-new.dim_600x400-lLfh1qED.jpg";
+const tennisMylapore = "/assets/tennis-mylapore-new.dim_600x400-D-jS_qff.jpg";
+const tennisRamapuram = "/assets/tennis-ramapuram-new.dim_600x400-0tRj-Eja.jpg";
+const tennisSanthome = "/assets/tennis-santhome-new.dim_600x400-CNx9Rppy.jpg";
+const swimmingAnnaNagar = "/assets/swimming-annanagar-new.dim_600x400-BbUErK88.jpg";
+const swimmingKolathur = "/assets/swimming-kolathur-new.dim_600x400-762hYCF2.jpg";
+const swimmingMylapore = "/assets/swimming-mylapore-new.dim_600x400-tHWeq1jw.jpg";
+const swimmingRamapuram = "/assets/swimming-ramapuram-new.dim_600x400-CgWDJA_U.jpg";
+const swimmingSanthome = "/assets/swimming-santhome-new.dim_600x400-BCt0eDPj.jpg";
+const volleyballAnnaNagar = "/assets/volleyball-annanagar-new.dim_600x400-Cvoe6yPC.jpg";
+const volleyballKolathur = "/assets/volleyball-kolathur-new.dim_600x400-CTTEgAaI.jpg";
+const volleyballMylapore = "/assets/volleyball-mylapore-new.dim_600x400-06JzTq9v.jpg";
+const volleyballRamapuram = "/assets/volleyball-ramapuram-new.dim_600x400-CRULY6ke.jpg";
+const volleyballSanthome = "/assets/volleyball-santhome-new.dim_600x400-CcX0PVE1.jpg";
+const sportLocationImages = {
+  Soccer: {
+    Ramapuram: soccerRamapuram,
+    "Anna Nagar": soccerAnnaNagar,
+    Kolathur: soccerKolathur,
+    Mylapore: soccerMylapore,
+    Santhome: soccerSanthome
+  },
+  Basketball: {
+    Ramapuram: basketballRamapuram,
+    "Anna Nagar": basketballAnnaNagar,
+    Kolathur: basketballKolathur,
+    Mylapore: basketballMylapore,
+    Santhome: basketballSanthome
+  },
+  Tennis: {
+    Ramapuram: tennisRamapuram,
+    "Anna Nagar": tennisAnnaNagar,
+    Kolathur: tennisKolathur,
+    Mylapore: tennisMylapore,
+    Santhome: tennisSanthome
+  },
+  Swimming: {
+    Ramapuram: swimmingRamapuram,
+    "Anna Nagar": swimmingAnnaNagar,
+    Kolathur: swimmingKolathur,
+    Mylapore: swimmingMylapore,
+    Santhome: swimmingSanthome
+  },
+  Volleyball: {
+    Ramapuram: volleyballRamapuram,
+    "Anna Nagar": volleyballAnnaNagar,
+    Kolathur: volleyballKolathur,
+    Mylapore: volleyballMylapore,
+    Santhome: volleyballSanthome
+  }
 };
 function SportIllustration({
   sport,
   location: location2,
   className
 }) {
-  const colors = sportColors[sport] ?? {
-    bg: "#555"
-  };
-  const locColor = location2 ? locationColors[location2] : null;
-  const bg = locColor ?? colors.bg;
-  const SvgComponent = sportSVGMap[sport];
-  if (!SvgComponent) {
+  const locationMap = sportLocationImages[sport];
+  const src = (location2 && (locationMap == null ? void 0 : locationMap[location2])) ?? (locationMap == null ? void 0 : locationMap[Object.keys(locationMap ?? {})[0]]);
+  if (!src) {
     return /* @__PURE__ */ jsxRuntimeExports.jsx(
       "div",
       {
         className,
         style: {
-          background: bg,
+          background: "#374151",
           display: "flex",
           alignItems: "center",
           justifyContent: "center"
@@ -34163,7 +33450,15 @@ function SportIllustration({
       }
     );
   }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className, style: { background: bg, overflow: "hidden" }, children: SvgComponent(bg) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "img",
+    {
+      src,
+      alt: `${sport}${location2 ? ` - ${location2}` : ""} academy`,
+      className,
+      style: { objectFit: "cover" }
+    }
+  );
 }
 const KNOWN_AREAS$1 = [
   "Anna Nagar",
