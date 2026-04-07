@@ -2,9 +2,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
-import { ExternalLink, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import type { Place } from "../backend";
+import { EnrollmentFormDialog } from "./EnrollmentFormDialog";
 
 export interface AcademyContactInfo {
   phone: string;
@@ -107,18 +108,21 @@ export function AcademyCard({
           </div>
         </div>
 
-        {/* Enrollment Button */}
+        {/* Enrollment Dialog */}
         <div className="mt-auto pt-2">
-          <Button asChild className="w-full" size="sm">
-            <a
-              href={contact.enrollmentUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <ExternalLink className="h-4 w-4 mr-2" />
-              Enroll Now
-            </a>
-          </Button>
+          <EnrollmentFormDialog
+            academyName={place.name}
+            sport={place.sport}
+            trigger={
+              <Button
+                className="w-full"
+                size="sm"
+                data-ocid="academy.enroll_button"
+              >
+                Enroll Now
+              </Button>
+            }
+          />
         </div>
       </CardContent>
     </Card>

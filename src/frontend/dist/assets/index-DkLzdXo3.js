@@ -17433,12 +17433,23 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$9 = [
+const __iconNode$a = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
   ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
   ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
 ];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$9);
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$a);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$9 = [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+];
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$9);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17446,10 +17457,10 @@ const CircleAlert = createLucideIcon("circle-alert", __iconNode$9);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$8 = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
 ];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$8);
+const CircleCheck = createLucideIcon("circle-check", __iconNode$8);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17457,18 +17468,6 @@ const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$8);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$7 = [
-  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
-  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
-  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
-];
-const ExternalLink = createLucideIcon("external-link", __iconNode$7);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$6 = [
   [
     "path",
     {
@@ -17477,7 +17476,15 @@ const __iconNode$6 = [
     }
   ]
 ];
-const Heart = createLucideIcon("heart", __iconNode$6);
+const Heart = createLucideIcon("heart", __iconNode$7);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$6 = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
+const LoaderCircle = createLucideIcon("loader-circle", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -30649,431 +30656,6 @@ function CardContent({ className, ...props }) {
     }
   );
 }
-function extractArea(name) {
-  const parts = name.split(" ");
-  if (parts.length > 0) {
-    return `${parts[0]}, Chennai`;
-  }
-  return "Chennai";
-}
-function AcademyCard({
-  place,
-  imageFilename,
-  contact,
-  "data-ocid": dataOcid
-}) {
-  const [imageLoaded, setImageLoaded] = reactExports.useState(false);
-  const [imageError, setImageError] = reactExports.useState(false);
-  const area = extractArea(place.name);
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-    Card,
-    {
-      className: "overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col",
-      "data-ocid": dataOcid,
-      children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[3/2] overflow-hidden bg-muted", children: [
-          !imageLoaded && !imageError && /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "absolute inset-0" }),
-          imageError ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center justify-center bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground text-sm", children: "Image unavailable" }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "img",
-            {
-              src: `/assets/generated/${imageFilename}`,
-              alt: `${place.name} academy`,
-              className: `w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`,
-              onLoad: () => setImageLoaded(true),
-              onError: () => setImageError(true),
-              loading: "lazy"
-            }
-          ),
-          place.sport && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "bg-primary/90 text-primary-foreground text-xs font-semibold shadow", children: place.sport }) })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { className: "pb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-lg leading-snug", children: place.name }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "space-y-3 flex-1 flex flex-col", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-muted-foreground text-sm", children: place.description }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-4 w-4 text-primary flex-shrink-0" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground font-medium", children: area })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t pt-3 space-y-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold text-muted-foreground uppercase tracking-wider", children: "Contact" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4 text-primary flex-shrink-0" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "a",
-                {
-                  href: `tel:${contact.phone}`,
-                  className: "text-foreground hover:text-primary transition-colors font-medium",
-                  children: contact.phone
-                }
-              )
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4 text-primary flex-shrink-0" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx(
-                "a",
-                {
-                  href: `mailto:${contact.email}`,
-                  className: "text-foreground hover:text-primary transition-colors font-medium truncate",
-                  children: contact.email
-                }
-              )
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-auto pt-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, className: "w-full", size: "sm", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "a",
-            {
-              href: contact.enrollmentUrl,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "h-4 w-4 mr-2" }),
-                "Enroll Now"
-              ]
-            }
-          ) }) })
-        ] })
-      ]
-    }
-  );
-}
-const academyImageMap = {
-  Basketball: {
-    Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "basketball-annanagar.dim_600x400.jpg",
-    Kolathur: "basketball-kolathur.dim_600x400.jpg",
-    Mylapore: "basketball-mylapore.dim_600x400.jpg",
-    Santhome: "basketball-santhome.dim_600x400.jpg"
-  },
-  Soccer: {
-    Ramapuram: "soccer-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "soccer-annanagar.dim_600x400.jpg",
-    Kolathur: "soccer-kolathur.dim_600x400.jpg",
-    Mylapore: "soccer-mylapore.dim_600x400.jpg",
-    Santhome: "soccer-santhome.dim_600x400.jpg"
-  },
-  Tennis: {
-    Ramapuram: "tennis-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "tennis-annanagar.dim_600x400.jpg",
-    Kolathur: "tennis-kolathur.dim_600x400.jpg",
-    Mylapore: "tennis-mylapore.dim_600x400.jpg",
-    Santhome: "tennis-santhome.dim_600x400.jpg"
-  },
-  Swimming: {
-    Ramapuram: "swimming-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "swimming-annanagar.dim_600x400.jpg",
-    Kolathur: "swimming-kolathur.dim_600x400.jpg",
-    Mylapore: "swimming-mylapore.dim_600x400.jpg",
-    Santhome: "swimming-santhome.dim_600x400.jpg"
-  },
-  Volleyball: {
-    Ramapuram: "volleyball-ramapuram.dim_600x400.jpg",
-    "Anna Nagar": "volleyball-annanagar.dim_600x400.jpg",
-    Kolathur: "volleyball-kolathur.dim_600x400.jpg",
-    Mylapore: "volleyball-mylapore.dim_600x400.jpg",
-    Santhome: "volleyball-santhome.dim_600x400.jpg"
-  }
-};
-const academyContactMap = {
-  Basketball: {
-    Ramapuram: {
-      phone: "+91 98400 11201",
-      email: "basketball@ramapuram-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 11202",
-      email: "basketball@annanagar-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Kolathur: {
-      phone: "+91 98400 11203",
-      email: "basketball@kolathur-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Mylapore: {
-      phone: "+91 98400 11204",
-      email: "basketball@mylapore-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Santhome: {
-      phone: "+91 98400 11205",
-      email: "basketball@santhome-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    }
-  },
-  Soccer: {
-    Ramapuram: {
-      phone: "+91 98400 22201",
-      email: "soccer@ramapuram-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 22202",
-      email: "soccer@annanagar-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Kolathur: {
-      phone: "+91 98400 22203",
-      email: "soccer@kolathur-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Mylapore: {
-      phone: "+91 98400 22204",
-      email: "soccer@mylapore-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Santhome: {
-      phone: "+91 98400 22205",
-      email: "soccer@santhome-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    }
-  },
-  Tennis: {
-    Ramapuram: {
-      phone: "+91 98400 33201",
-      email: "tennis@ramapuram-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 33202",
-      email: "tennis@annanagar-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Kolathur: {
-      phone: "+91 98400 33203",
-      email: "tennis@kolathur-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Mylapore: {
-      phone: "+91 98400 33204",
-      email: "tennis@mylapore-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Santhome: {
-      phone: "+91 98400 33205",
-      email: "tennis@santhome-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    }
-  },
-  Swimming: {
-    Ramapuram: {
-      phone: "+91 98400 44201",
-      email: "swimming@ramapuram-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 44202",
-      email: "swimming@annanagar-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Kolathur: {
-      phone: "+91 98400 44203",
-      email: "swimming@kolathur-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Mylapore: {
-      phone: "+91 98400 44204",
-      email: "swimming@mylapore-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Santhome: {
-      phone: "+91 98400 44205",
-      email: "swimming@santhome-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    }
-  },
-  Volleyball: {
-    Ramapuram: {
-      phone: "+91 98400 55201",
-      email: "volleyball@ramapuram-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    "Anna Nagar": {
-      phone: "+91 98400 55202",
-      email: "volleyball@annanagar-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Kolathur: {
-      phone: "+91 98400 55203",
-      email: "volleyball@kolathur-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Mylapore: {
-      phone: "+91 98400 55204",
-      email: "volleyball@mylapore-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    },
-    Santhome: {
-      phone: "+91 98400 55205",
-      email: "volleyball@santhome-sports.in",
-      enrollmentUrl: "https://forms.google.com/sports-enroll"
-    }
-  }
-};
-const fallbackContact = {
-  phone: "+91 98400 00000",
-  email: "info@sports-hub.in",
-  enrollmentUrl: "https://forms.google.com/sports-enroll"
-};
-const fallbackImage = "basketball-ramapuram.dim_600x400.jpg";
-const KNOWN_AREAS = [
-  "Anna Nagar",
-  "Ramapuram",
-  "Kolathur",
-  "Mylapore",
-  "Santhome"
-];
-function getAreaKey(placeName) {
-  for (const area of KNOWN_AREAS) {
-    if (placeName.startsWith(area)) {
-      return area;
-    }
-  }
-  return placeName.split(" ")[0];
-}
-function getImageForPlace(sport, name) {
-  var _a3;
-  const areaKey = getAreaKey(name);
-  return ((_a3 = academyImageMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackImage;
-}
-function getContactForPlace(sport, name) {
-  var _a3;
-  const areaKey = getAreaKey(name);
-  return ((_a3 = academyContactMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackContact;
-}
-function LoadingGrid() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", children: [1, 2, 3, 4, 5].map((i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(
-      Skeleton,
-      {
-        className: "aspect-[3/2] w-full",
-        "data-ocid": "academies.loading_state"
-      }
-    ),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-6 w-3/4" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-4 w-full" }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-4 w-2/3" })
-  ] }, i)) });
-}
-function FilteredAcademies({ sport }) {
-  const { data: places, isLoading, error } = useGetPlacesBySport(sport);
-  if (isLoading) return /* @__PURE__ */ jsxRuntimeExports.jsx(LoadingGrid, {});
-  if (error) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", "data-ocid": "academies.error_state", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "Error" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Failed to load academies. Please try again later." })
-    ] });
-  }
-  if (!places || places.length === 0) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { "data-ocid": "academies.empty_state", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "No Academies Found" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDescription, { children: [
-        "No academies found for ",
-        sport,
-        ". Please check back later."
-      ] })
-    ] });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-      "data-ocid": "academies.list",
-      children: places.map((place, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-        AcademyCard,
-        {
-          place,
-          imageFilename: getImageForPlace(place.sport, place.name),
-          contact: getContactForPlace(place.sport, place.name),
-          "data-ocid": `academies.item.${index2 + 1}`
-        },
-        place.id.toString()
-      ))
-    }
-  );
-}
-function AllAcademies() {
-  const { data: places, isLoading, error } = useGetAllPlaces();
-  if (isLoading) return /* @__PURE__ */ jsxRuntimeExports.jsx(LoadingGrid, {});
-  if (error) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", "data-ocid": "academies.error_state", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "Error" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Failed to load academies. Please try again later." })
-    ] });
-  }
-  if (!places || places.length === 0) {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { "data-ocid": "academies.empty_state", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "No Academies Found" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "There are currently no academies available. Please check back later." })
-    ] });
-  }
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
-      "data-ocid": "academies.list",
-      children: places.map((place, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-        AcademyCard,
-        {
-          place,
-          imageFilename: getImageForPlace(place.sport, place.name),
-          contact: getContactForPlace(place.sport, place.name),
-          "data-ocid": `academies.item.${index2 + 1}`
-        },
-        place.id.toString()
-      ))
-    }
-  );
-}
-function AcademiesList({ selectedSport }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-    selectedSport && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
-      {
-        className: "flex items-center gap-3 mb-8 justify-center",
-        "data-ocid": "academies.filter.panel",
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Trophy, { className: "h-5 w-5 text-primary" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-lg font-semibold text-primary", children: [
-            selectedSport,
-            " Academies in Chennai"
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-muted-foreground", children: "(5 locations)" })
-        ]
-      }
-    ),
-    selectedSport ? /* @__PURE__ */ jsxRuntimeExports.jsx(FilteredAcademies, { sport: selectedSport }) : /* @__PURE__ */ jsxRuntimeExports.jsx(AllAcademies, {})
-  ] });
-}
-function Footer() {
-  const currentYear = (/* @__PURE__ */ new Date()).getFullYear();
-  const appIdentifier = typeof window !== "undefined" ? encodeURIComponent(window.location.hostname) : "sports-academy-finder";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "border-t bg-muted/30 py-8 px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row justify-between items-center gap-4", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-sm text-muted-foreground", children: [
-      "© ",
-      currentYear,
-      " Sports Academy Finder. All rights reserved."
-    ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Built with" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Heart, { className: "h-4 w-4 text-destructive fill-destructive" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "using" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        "a",
-        {
-          href: `https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          className: "font-medium hover:text-foreground transition-colors",
-          children: "caffeine.ai"
-        }
-      )
-    ] })
-  ] }) }) });
-}
 function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
   return function handleEvent(event) {
     originalEventHandler == null ? void 0 : originalEventHandler(event);
@@ -32626,7 +32208,7 @@ var hideOthers = function(originalTarget, parentNode, markerName) {
 var DIALOG_NAME = "Dialog";
 var [createDialogContext] = createContextScope(DIALOG_NAME);
 var [DialogProvider, useDialogContext] = createDialogContext(DIALOG_NAME);
-var Dialog = (props) => {
+var Dialog$1 = (props) => {
   const {
     __scopeDialog,
     children,
@@ -32660,9 +32242,9 @@ var Dialog = (props) => {
     }
   );
 };
-Dialog.displayName = DIALOG_NAME;
+Dialog$1.displayName = DIALOG_NAME;
 var TRIGGER_NAME = "DialogTrigger";
-var DialogTrigger = reactExports.forwardRef(
+var DialogTrigger$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDialog, ...triggerProps } = props;
     const context = useDialogContext(TRIGGER_NAME, __scopeDialog);
@@ -32682,19 +32264,19 @@ var DialogTrigger = reactExports.forwardRef(
     );
   }
 );
-DialogTrigger.displayName = TRIGGER_NAME;
+DialogTrigger$1.displayName = TRIGGER_NAME;
 var PORTAL_NAME = "DialogPortal";
 var [PortalProvider, usePortalContext] = createDialogContext(PORTAL_NAME, {
   forceMount: void 0
 });
-var DialogPortal = (props) => {
+var DialogPortal$1 = (props) => {
   const { __scopeDialog, forceMount, children, container } = props;
   const context = useDialogContext(PORTAL_NAME, __scopeDialog);
   return /* @__PURE__ */ jsxRuntimeExports.jsx(PortalProvider, { scope: __scopeDialog, forceMount, children: reactExports.Children.map(children, (child) => /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Portal$1, { asChild: true, container, children: child }) })) });
 };
-DialogPortal.displayName = PORTAL_NAME;
+DialogPortal$1.displayName = PORTAL_NAME;
 var OVERLAY_NAME = "DialogOverlay";
-var DialogOverlay = reactExports.forwardRef(
+var DialogOverlay$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const portalContext = usePortalContext(OVERLAY_NAME, props.__scopeDialog);
     const { forceMount = portalContext.forceMount, ...overlayProps } = props;
@@ -32702,7 +32284,7 @@ var DialogOverlay = reactExports.forwardRef(
     return context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlayImpl, { ...overlayProps, ref: forwardedRef }) }) : null;
   }
 );
-DialogOverlay.displayName = OVERLAY_NAME;
+DialogOverlay$1.displayName = OVERLAY_NAME;
 var Slot = /* @__PURE__ */ createSlot("DialogOverlay.RemoveScroll");
 var DialogOverlayImpl = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -32724,7 +32306,7 @@ var DialogOverlayImpl = reactExports.forwardRef(
   }
 );
 var CONTENT_NAME = "DialogContent";
-var DialogContent = reactExports.forwardRef(
+var DialogContent$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const portalContext = usePortalContext(CONTENT_NAME, props.__scopeDialog);
     const { forceMount = portalContext.forceMount, ...contentProps } = props;
@@ -32732,7 +32314,7 @@ var DialogContent = reactExports.forwardRef(
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Presence, { present: forceMount || context.open, children: context.modal ? /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentModal, { ...contentProps, ref: forwardedRef }) : /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContentNonModal, { ...contentProps, ref: forwardedRef }) });
   }
 );
-DialogContent.displayName = CONTENT_NAME;
+DialogContent$1.displayName = CONTENT_NAME;
 var DialogContentModal = reactExports.forwardRef(
   (props, forwardedRef) => {
     const context = useDialogContext(CONTENT_NAME, props.__scopeDialog);
@@ -32849,23 +32431,23 @@ var DialogContentImpl = reactExports.forwardRef(
   }
 );
 var TITLE_NAME = "DialogTitle";
-var DialogTitle = reactExports.forwardRef(
+var DialogTitle$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDialog, ...titleProps } = props;
     const context = useDialogContext(TITLE_NAME, __scopeDialog);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.h2, { id: context.titleId, ...titleProps, ref: forwardedRef });
   }
 );
-DialogTitle.displayName = TITLE_NAME;
+DialogTitle$1.displayName = TITLE_NAME;
 var DESCRIPTION_NAME = "DialogDescription";
-var DialogDescription = reactExports.forwardRef(
+var DialogDescription$1 = reactExports.forwardRef(
   (props, forwardedRef) => {
     const { __scopeDialog, ...descriptionProps } = props;
     const context = useDialogContext(DESCRIPTION_NAME, __scopeDialog);
     return /* @__PURE__ */ jsxRuntimeExports.jsx(Primitive.p, { id: context.descriptionId, ...descriptionProps, ref: forwardedRef });
   }
 );
-DialogDescription.displayName = DESCRIPTION_NAME;
+DialogDescription$1.displayName = DESCRIPTION_NAME;
 var CLOSE_NAME = "DialogClose";
 var DialogClose = reactExports.forwardRef(
   (props, forwardedRef) => {
@@ -32921,14 +32503,853 @@ var DescriptionWarning = ({ contentRef, descriptionId }) => {
   }, [MESSAGE, contentRef, descriptionId]);
   return null;
 };
-var Root = Dialog;
-var Trigger = DialogTrigger;
-var Portal = DialogPortal;
-var Overlay = DialogOverlay;
-var Content = DialogContent;
+var Root$1 = Dialog$1;
+var Trigger = DialogTrigger$1;
+var Portal = DialogPortal$1;
+var Overlay = DialogOverlay$1;
+var Content = DialogContent$1;
+var Title = DialogTitle$1;
+var Description = DialogDescription$1;
 var Close = DialogClose;
+function Dialog({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$1, { "data-slot": "dialog", ...props });
+}
+function DialogTrigger({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Trigger, { "data-slot": "dialog-trigger", ...props });
+}
+function DialogPortal({
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Portal, { "data-slot": "dialog-portal", ...props });
+}
+function DialogOverlay({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Overlay,
+    {
+      "data-slot": "dialog-overlay",
+      className: cn(
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function DialogContent({
+  className,
+  children,
+  showCloseButton = true,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogPortal, { "data-slot": "dialog-portal", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(DialogOverlay, {}),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      Content,
+      {
+        "data-slot": "dialog-content",
+        className: cn(
+          "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed top-[50%] left-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 sm:max-w-lg",
+          className
+        ),
+        ...props,
+        children: [
+          children,
+          showCloseButton && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            Close,
+            {
+              "data-slot": "dialog-close",
+              className: "ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(X$1, {}),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sr-only", children: "Close" })
+              ]
+            }
+          )
+        ]
+      }
+    )
+  ] });
+}
+function DialogHeader({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "dialog-header",
+      className: cn("flex flex-col gap-2 text-center sm:text-left", className),
+      ...props
+    }
+  );
+}
+function DialogFooter({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "dialog-footer",
+      className: cn(
+        "flex flex-col-reverse gap-2 sm:flex-row sm:justify-end",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function DialogTitle({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Title,
+    {
+      "data-slot": "dialog-title",
+      className: cn("text-lg leading-none font-semibold", className),
+      ...props
+    }
+  );
+}
+function DialogDescription({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Description,
+    {
+      "data-slot": "dialog-description",
+      className: cn("text-muted-foreground text-sm", className),
+      ...props
+    }
+  );
+}
+function Input({ className, type, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "input",
+    {
+      type,
+      "data-slot": "input",
+      className: cn(
+        "file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]",
+        "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+        className
+      ),
+      ...props
+    }
+  );
+}
+var NAME = "Label";
+var Label$1 = reactExports.forwardRef((props, forwardedRef) => {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Primitive.label,
+    {
+      ...props,
+      ref: forwardedRef,
+      onMouseDown: (event) => {
+        var _a3;
+        const target = event.target;
+        if (target.closest("button, input, select, textarea")) return;
+        (_a3 = props.onMouseDown) == null ? void 0 : _a3.call(props, event);
+        if (!event.defaultPrevented && event.detail > 1) event.preventDefault();
+      }
+    }
+  );
+});
+Label$1.displayName = NAME;
+var Root = Label$1;
+function Label({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Root,
+    {
+      "data-slot": "label",
+      className: cn(
+        "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function Textarea({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "textarea",
+    {
+      "data-slot": "textarea",
+      className: cn(
+        "border-input placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 flex field-sizing-content min-h-16 w-full rounded-md border bg-transparent px-3 py-2 text-base shadow-xs transition-[color,box-shadow] outline-none focus-visible:ring-[3px] disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+        className
+      ),
+      ...props
+    }
+  );
+}
+const EMPTY_FORM = {
+  fullName: "",
+  age: "",
+  phone: "",
+  address: ""
+};
+function EnrollmentFormDialog({
+  academyName,
+  sport,
+  trigger
+}) {
+  const [open, setOpen] = reactExports.useState(false);
+  const [form, setForm] = reactExports.useState(EMPTY_FORM);
+  const [errors, setErrors] = reactExports.useState({});
+  const [submitting, setSubmitting] = reactExports.useState(false);
+  const [submitted, setSubmitted] = reactExports.useState(false);
+  function validate() {
+    const errs = {};
+    if (!form.fullName.trim()) errs.fullName = "Full name is required.";
+    if (!form.age.trim()) {
+      errs.age = "Age is required.";
+    } else {
+      const ageNum = Number(form.age);
+      if (Number.isNaN(ageNum) || ageNum < 5 || ageNum > 100) {
+        errs.age = "Age must be between 5 and 100.";
+      }
+    }
+    if (!form.phone.trim()) {
+      errs.phone = "Phone number is required.";
+    } else if (!/^[+]?[0-9\s\-]{7,15}$/.test(form.phone.trim())) {
+      errs.phone = "Enter a valid phone number.";
+    }
+    if (!form.address.trim()) errs.address = "Address is required.";
+    return errs;
+  }
+  function handleChange(field, value) {
+    setForm((prev) => ({ ...prev, [field]: value }));
+    if (errors[field]) {
+      setErrors((prev) => ({ ...prev, [field]: void 0 }));
+    }
+  }
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length > 0) {
+      setErrors(errs);
+      return;
+    }
+    setSubmitting(true);
+    await new Promise((resolve) => setTimeout(resolve, 800));
+    setSubmitting(false);
+    setSubmitted(true);
+  }
+  function handleOpenChange(val) {
+    setOpen(val);
+    if (!val) {
+      setTimeout(() => {
+        setForm(EMPTY_FORM);
+        setErrors({});
+        setSubmitted(false);
+        setSubmitting(false);
+      }, 200);
+    }
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(Dialog, { open, onOpenChange: handleOpenChange, children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTrigger, { asChild: true, "data-ocid": "enrollment.open_modal_button", children: trigger }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(DialogContent, { className: "sm:max-w-md", "data-ocid": "enrollment.dialog", children: submitted ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "flex flex-col items-center gap-4 py-8 text-center",
+        "data-ocid": "enrollment.success_state",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleCheck, { className: "h-14 w-14 text-green-500" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTitle, { className: "text-xl font-bold", children: "Enrollment Submitted!" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-muted-foreground", children: [
+            "Thank you for your interest in",
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-semibold text-foreground", children: academyName }),
+            ".",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+            "We'll contact you soon."
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Button,
+            {
+              className: "mt-2 w-full",
+              onClick: () => handleOpenChange(false),
+              "data-ocid": "enrollment.close_button",
+              children: "Close"
+            }
+          )
+        ]
+      }
+    ) : /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: handleSubmit, noValidate: true, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogHeader, { className: "mb-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogTitle, { className: "text-xl", children: [
+          "Enroll at ",
+          academyName
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogDescription, { children: [
+          sport,
+          " Academy — Fill in your details below to enroll."
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "enroll-name", children: "Full Name *" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Input,
+            {
+              id: "enroll-name",
+              type: "text",
+              placeholder: "e.g. Arjun Kumar",
+              value: form.fullName,
+              onChange: (e) => handleChange("fullName", e.target.value),
+              "aria-invalid": !!errors.fullName,
+              "data-ocid": "enrollment.input"
+            }
+          ),
+          errors.fullName && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "p",
+            {
+              className: "text-destructive text-xs mt-1",
+              "data-ocid": "enrollment.error_state",
+              children: errors.fullName
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "enroll-age", children: "Age *" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Input,
+            {
+              id: "enroll-age",
+              type: "number",
+              placeholder: "e.g. 14",
+              min: 5,
+              max: 100,
+              value: form.age,
+              onChange: (e) => handleChange("age", e.target.value),
+              "aria-invalid": !!errors.age,
+              "data-ocid": "enrollment.input"
+            }
+          ),
+          errors.age && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "p",
+            {
+              className: "text-destructive text-xs mt-1",
+              "data-ocid": "enrollment.error_state",
+              children: errors.age
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "enroll-phone", children: "Phone Number *" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Input,
+            {
+              id: "enroll-phone",
+              type: "tel",
+              placeholder: "e.g. +91 98400 12345",
+              value: form.phone,
+              onChange: (e) => handleChange("phone", e.target.value),
+              "aria-invalid": !!errors.phone,
+              "data-ocid": "enrollment.input"
+            }
+          ),
+          errors.phone && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "p",
+            {
+              className: "text-destructive text-xs mt-1",
+              "data-ocid": "enrollment.error_state",
+              children: errors.phone
+            }
+          )
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Label, { htmlFor: "enroll-address", children: "Address *" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            Textarea,
+            {
+              id: "enroll-address",
+              placeholder: "Your full address in Chennai",
+              rows: 3,
+              value: form.address,
+              onChange: (e) => handleChange("address", e.target.value),
+              "aria-invalid": !!errors.address,
+              "data-ocid": "enrollment.textarea"
+            }
+          ),
+          errors.address && /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "p",
+            {
+              className: "text-destructive text-xs mt-1",
+              "data-ocid": "enrollment.error_state",
+              children: errors.address
+            }
+          )
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogFooter, { className: "mt-6 flex gap-2", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Button,
+          {
+            type: "button",
+            variant: "outline",
+            className: "flex-1",
+            onClick: () => handleOpenChange(false),
+            "data-ocid": "enrollment.cancel_button",
+            children: "Cancel"
+          }
+        ),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          Button,
+          {
+            type: "submit",
+            className: "flex-1",
+            disabled: submitting,
+            "data-ocid": "enrollment.submit_button",
+            children: submitting ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-4 w-4 mr-2 animate-spin" }),
+              "Submitting..."
+            ] }) : "Submit Enrollment"
+          }
+        )
+      ] })
+    ] }) })
+  ] });
+}
+function extractArea(name) {
+  const parts = name.split(" ");
+  if (parts.length > 0) {
+    return `${parts[0]}, Chennai`;
+  }
+  return "Chennai";
+}
+function AcademyCard({
+  place,
+  imageFilename,
+  contact,
+  "data-ocid": dataOcid
+}) {
+  const [imageLoaded, setImageLoaded] = reactExports.useState(false);
+  const [imageError, setImageError] = reactExports.useState(false);
+  const area = extractArea(place.name);
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+    Card,
+    {
+      className: "overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col",
+      "data-ocid": dataOcid,
+      children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[3/2] overflow-hidden bg-muted", children: [
+          !imageLoaded && !imageError && /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "absolute inset-0" }),
+          imageError ? /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute inset-0 flex items-center justify-center bg-muted", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground text-sm", children: "Image unavailable" }) }) : /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "img",
+            {
+              src: `/assets/generated/${imageFilename}`,
+              alt: `${place.name} academy`,
+              className: `w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${imageLoaded ? "opacity-100" : "opacity-0"}`,
+              onLoad: () => setImageLoaded(true),
+              onError: () => setImageError(true),
+              loading: "lazy"
+            }
+          ),
+          place.sport && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "bg-primary/90 text-primary-foreground text-xs font-semibold shadow", children: place.sport }) })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { className: "pb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-lg leading-snug", children: place.name }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "space-y-3 flex-1 flex flex-col", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-muted-foreground text-sm", children: place.description }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-4 w-4 text-primary flex-shrink-0" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground font-medium", children: area })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t pt-3 space-y-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold text-muted-foreground uppercase tracking-wider", children: "Contact" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4 text-primary flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "a",
+                {
+                  href: `tel:${contact.phone}`,
+                  className: "text-foreground hover:text-primary transition-colors font-medium",
+                  children: contact.phone
+                }
+              )
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4 text-primary flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "a",
+                {
+                  href: `mailto:${contact.email}`,
+                  className: "text-foreground hover:text-primary transition-colors font-medium truncate",
+                  children: contact.email
+                }
+              )
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-auto pt-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+            EnrollmentFormDialog,
+            {
+              academyName: place.name,
+              sport: place.sport,
+              trigger: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                Button,
+                {
+                  className: "w-full",
+                  size: "sm",
+                  "data-ocid": "academy.enroll_button",
+                  children: "Enroll Now"
+                }
+              )
+            }
+          ) })
+        ] })
+      ]
+    }
+  );
+}
+const academyImageMap = {
+  Basketball: {
+    Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
+    "Anna Nagar": "basketball-annanagar.dim_600x400.jpg",
+    Kolathur: "basketball-kolathur.dim_600x400.jpg",
+    Mylapore: "basketball-mylapore.dim_600x400.jpg",
+    Santhome: "basketball-santhome.dim_600x400.jpg"
+  },
+  Soccer: {
+    Ramapuram: "soccer-ramapuram.dim_600x400.jpg",
+    "Anna Nagar": "soccer-annanagar.dim_600x400.jpg",
+    Kolathur: "soccer-kolathur.dim_600x400.jpg",
+    Mylapore: "soccer-mylapore.dim_600x400.jpg",
+    Santhome: "soccer-santhome.dim_600x400.jpg"
+  },
+  Tennis: {
+    Ramapuram: "tennis-ramapuram.dim_600x400.jpg",
+    "Anna Nagar": "tennis-annanagar.dim_600x400.jpg",
+    Kolathur: "tennis-kolathur.dim_600x400.jpg",
+    Mylapore: "tennis-mylapore.dim_600x400.jpg",
+    Santhome: "tennis-santhome.dim_600x400.jpg"
+  },
+  Swimming: {
+    Ramapuram: "swimming-ramapuram.dim_600x400.jpg",
+    "Anna Nagar": "swimming-annanagar.dim_600x400.jpg",
+    Kolathur: "swimming-kolathur.dim_600x400.jpg",
+    Mylapore: "swimming-mylapore.dim_600x400.jpg",
+    Santhome: "swimming-santhome.dim_600x400.jpg"
+  },
+  Volleyball: {
+    Ramapuram: "volleyball-ramapuram.dim_600x400.jpg",
+    "Anna Nagar": "volleyball-annanagar.dim_600x400.jpg",
+    Kolathur: "volleyball-kolathur.dim_600x400.jpg",
+    Mylapore: "volleyball-mylapore.dim_600x400.jpg",
+    Santhome: "volleyball-santhome.dim_600x400.jpg"
+  }
+};
+const academyContactMap = {
+  Basketball: {
+    Ramapuram: {
+      phone: "+91 98400 11201",
+      email: "basketball@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 11202",
+      email: "basketball@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 11203",
+      email: "basketball@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 11204",
+      email: "basketball@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 11205",
+      email: "basketball@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Soccer: {
+    Ramapuram: {
+      phone: "+91 98400 22201",
+      email: "soccer@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 22202",
+      email: "soccer@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 22203",
+      email: "soccer@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 22204",
+      email: "soccer@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 22205",
+      email: "soccer@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Tennis: {
+    Ramapuram: {
+      phone: "+91 98400 33201",
+      email: "tennis@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 33202",
+      email: "tennis@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 33203",
+      email: "tennis@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 33204",
+      email: "tennis@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 33205",
+      email: "tennis@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Swimming: {
+    Ramapuram: {
+      phone: "+91 98400 44201",
+      email: "swimming@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 44202",
+      email: "swimming@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 44203",
+      email: "swimming@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 44204",
+      email: "swimming@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 44205",
+      email: "swimming@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Volleyball: {
+    Ramapuram: {
+      phone: "+91 98400 55201",
+      email: "volleyball@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    "Anna Nagar": {
+      phone: "+91 98400 55202",
+      email: "volleyball@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 55203",
+      email: "volleyball@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 55204",
+      email: "volleyball@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 55205",
+      email: "volleyball@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  }
+};
+const fallbackContact = {
+  phone: "+91 98400 00000",
+  email: "info@sports-hub.in",
+  enrollmentUrl: "https://forms.google.com/sports-enroll"
+};
+const fallbackImage = "basketball-ramapuram.dim_600x400.jpg";
+const KNOWN_AREAS = [
+  "Anna Nagar",
+  "Ramapuram",
+  "Kolathur",
+  "Mylapore",
+  "Santhome"
+];
+function getAreaKey(placeName) {
+  for (const area of KNOWN_AREAS) {
+    if (placeName.startsWith(area)) {
+      return area;
+    }
+  }
+  return placeName.split(" ")[0];
+}
+function getImageForPlace(sport, name) {
+  var _a3;
+  const areaKey = getAreaKey(name);
+  return ((_a3 = academyImageMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackImage;
+}
+function getContactForPlace(sport, name) {
+  var _a3;
+  const areaKey = getAreaKey(name);
+  return ((_a3 = academyContactMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackContact;
+}
+function LoadingGrid() {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", children: [1, 2, 3, 4, 5].map((i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Skeleton,
+      {
+        className: "aspect-[3/2] w-full",
+        "data-ocid": "academies.loading_state"
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-6 w-3/4" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-4 w-full" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx(Skeleton, { className: "h-4 w-2/3" })
+  ] }, i)) });
+}
+function FilteredAcademies({ sport }) {
+  const { data: places, isLoading, error } = useGetPlacesBySport(sport);
+  if (isLoading) return /* @__PURE__ */ jsxRuntimeExports.jsx(LoadingGrid, {});
+  if (error) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", "data-ocid": "academies.error_state", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "Error" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Failed to load academies. Please try again later." })
+    ] });
+  }
+  if (!places || places.length === 0) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { "data-ocid": "academies.empty_state", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "No Academies Found" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(AlertDescription, { children: [
+        "No academies found for ",
+        sport,
+        ". Please check back later."
+      ] })
+    ] });
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+      "data-ocid": "academies.list",
+      children: places.map((place, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+        AcademyCard,
+        {
+          place,
+          imageFilename: getImageForPlace(place.sport, place.name),
+          contact: getContactForPlace(place.sport, place.name),
+          "data-ocid": `academies.item.${index2 + 1}`
+        },
+        place.id.toString()
+      ))
+    }
+  );
+}
+function AllAcademies() {
+  const { data: places, isLoading, error } = useGetAllPlaces();
+  if (isLoading) return /* @__PURE__ */ jsxRuntimeExports.jsx(LoadingGrid, {});
+  if (error) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { variant: "destructive", "data-ocid": "academies.error_state", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "Error" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "Failed to load academies. Please try again later." })
+    ] });
+  }
+  if (!places || places.length === 0) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsxs(Alert, { "data-ocid": "academies.empty_state", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertTitle, { children: "No Academies Found" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(AlertDescription, { children: "There are currently no academies available. Please check back later." })
+    ] });
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6",
+      "data-ocid": "academies.list",
+      children: places.map((place, index2) => /* @__PURE__ */ jsxRuntimeExports.jsx(
+        AcademyCard,
+        {
+          place,
+          imageFilename: getImageForPlace(place.sport, place.name),
+          contact: getContactForPlace(place.sport, place.name),
+          "data-ocid": `academies.item.${index2 + 1}`
+        },
+        place.id.toString()
+      ))
+    }
+  );
+}
+function AcademiesList({ selectedSport }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+    selectedSport && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "flex items-center gap-3 mb-8 justify-center",
+        "data-ocid": "academies.filter.panel",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(Trophy, { className: "h-5 w-5 text-primary" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-lg font-semibold text-primary", children: [
+            selectedSport,
+            " Academies in Chennai"
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm text-muted-foreground", children: "(5 locations)" })
+        ]
+      }
+    ),
+    selectedSport ? /* @__PURE__ */ jsxRuntimeExports.jsx(FilteredAcademies, { sport: selectedSport }) : /* @__PURE__ */ jsxRuntimeExports.jsx(AllAcademies, {})
+  ] });
+}
+function Footer() {
+  const currentYear = (/* @__PURE__ */ new Date()).getFullYear();
+  const appIdentifier = typeof window !== "undefined" ? encodeURIComponent(window.location.hostname) : "sports-academy-finder";
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "border-t bg-muted/30 py-8 px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row justify-between items-center gap-4", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-sm text-muted-foreground", children: [
+      "© ",
+      currentYear,
+      " Sports Academy Finder. All rights reserved."
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Built with" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Heart, { className: "h-4 w-4 text-destructive fill-destructive" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "using" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "a",
+        {
+          href: `https://caffeine.ai/?utm_source=Caffeine-footer&utm_medium=referral&utm_content=${appIdentifier}`,
+          target: "_blank",
+          rel: "noopener noreferrer",
+          className: "font-medium hover:text-foreground transition-colors",
+          children: "caffeine.ai"
+        }
+      )
+    ] })
+  ] }) }) });
+}
 function Sheet({ ...props }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root, { "data-slot": "sheet", ...props });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(Root$1, { "data-slot": "sheet", ...props });
 }
 function SheetTrigger({
   ...props
