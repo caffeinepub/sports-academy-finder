@@ -17433,12 +17433,70 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$a = [
+const __iconNode$f = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
   ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
   ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
 ];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$a);
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$f);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$e = [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+];
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$e);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$d = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+];
+const CircleCheck = createLucideIcon("circle-check", __iconNode$d);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$c = [
+  [
+    "path",
+    {
+      d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
+      key: "c3ymky"
+    }
+  ]
+];
+const Heart = createLucideIcon("heart", __iconNode$c);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$b = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
+const LoaderCircle = createLucideIcon("loader-circle", __iconNode$b);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$a = [
+  ["path", { d: "m10 17 5-5-5-5", key: "1bsop3" }],
+  ["path", { d: "M15 12H3", key: "6jk70r" }],
+  ["path", { d: "M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4", key: "u53s6r" }]
+];
+const LogIn = createLucideIcon("log-in", __iconNode$a);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17446,10 +17504,11 @@ const CircleAlert = createLucideIcon("circle-alert", __iconNode$a);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$9 = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
+  ["path", { d: "M21 12H9", key: "dn1m92" }],
+  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
 ];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$9);
+const LogOut = createLucideIcon("log-out", __iconNode$9);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17457,10 +17516,10 @@ const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$9);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$8 = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
+  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
 ];
-const CircleCheck = createLucideIcon("circle-check", __iconNode$8);
+const Mail = createLucideIcon("mail", __iconNode$8);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17471,20 +17530,25 @@ const __iconNode$7 = [
   [
     "path",
     {
-      d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
-      key: "c3ymky"
+      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+      key: "1r0f0z"
     }
-  ]
+  ],
+  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const Heart = createLucideIcon("heart", __iconNode$7);
+const MapPin = createLucideIcon("map-pin", __iconNode$7);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$6 = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
-const LoaderCircle = createLucideIcon("loader-circle", __iconNode$6);
+const __iconNode$6 = [
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
+];
+const Menu = createLucideIcon("menu", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17492,46 +17556,6 @@ const LoaderCircle = createLucideIcon("loader-circle", __iconNode$6);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$5 = [
-  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
-  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
-];
-const Mail = createLucideIcon("mail", __iconNode$5);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$4 = [
-  [
-    "path",
-    {
-      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-      key: "1r0f0z"
-    }
-  ],
-  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
-];
-const MapPin = createLucideIcon("map-pin", __iconNode$4);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$3 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
-];
-const Menu = createLucideIcon("menu", __iconNode$3);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$2 = [
   [
     "path",
     {
@@ -17540,14 +17564,44 @@ const __iconNode$2 = [
     }
   ]
 ];
-const Phone = createLucideIcon("phone", __iconNode$2);
+const Phone = createLucideIcon("phone", __iconNode$5);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$1 = [
+const __iconNode$4 = [
+  ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
+  ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
+  ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
+  ["path", { d: "M8 16H3v5", key: "1cv678" }]
+];
+const RefreshCw = createLucideIcon("refresh-cw", __iconNode$4);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$3 = [
+  [
+    "path",
+    {
+      d: "M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z",
+      key: "oel41y"
+    }
+  ],
+  ["path", { d: "m9 12 2 2 4-4", key: "dzmm74" }]
+];
+const ShieldCheck = createLucideIcon("shield-check", __iconNode$3);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$2 = [
   ["path", { d: "M6 9H4.5a2.5 2.5 0 0 1 0-5H6", key: "17hqa7" }],
   ["path", { d: "M18 9h1.5a2.5 2.5 0 0 0 0-5H18", key: "lmptdp" }],
   ["path", { d: "M4 22h16", key: "57wxv0" }],
@@ -17555,7 +17609,20 @@ const __iconNode$1 = [
   ["path", { d: "M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22", key: "1np0yb" }],
   ["path", { d: "M18 2H6v7a6 6 0 0 0 12 0V2Z", key: "u46fv3" }]
 ];
-const Trophy = createLucideIcon("trophy", __iconNode$1);
+const Trophy = createLucideIcon("trophy", __iconNode$2);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$1 = [
+  ["path", { d: "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2", key: "1yyitq" }],
+  ["path", { d: "M16 3.128a4 4 0 0 1 0 7.744", key: "16gr8j" }],
+  ["path", { d: "M22 21v-2a4 4 0 0 0-3-3.87", key: "kshegd" }],
+  ["circle", { cx: "9", cy: "7", r: "4", key: "nufk8" }]
+];
+const Users = createLucideIcon("users", __iconNode$1);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -28178,6 +28245,22 @@ function _createActorMethod(actor, methodName, func, blsVerify2) {
   handler.withOptions = (options) => (...args) => caller(options, ...args);
   return handler;
 }
+const UserRole = Variant({
+  "admin": Null,
+  "user": Null,
+  "guest": Null
+});
+const EnrollmentId = Nat64;
+const Enrollment = Record({
+  "id": EnrollmentId,
+  "age": Nat,
+  "academyName": Text,
+  "fullName": Text,
+  "submittedAt": Int,
+  "sport": Text,
+  "address": Text,
+  "phone": Text
+});
 const PlaceId = Nat64;
 const GeoLocation = Record({
   "lat": Float64,
@@ -28190,13 +28273,52 @@ const Place = Record({
   "sport": Text,
   "location": GeoLocation
 });
+const UserProfile = Record({ "name": Text });
 Service({
+  "_initializeAccessControlWithSecret": Func([Text], [], []),
+  "assignCallerUserRole": Func([Principal2, UserRole], [], []),
+  "getAllEnrollments": Func([], [Vec(Enrollment)], ["query"]),
   "getAllPlaces": Func([], [Vec(Place)], ["query"]),
+  "getCallerUserProfile": Func([], [Opt(UserProfile)], ["query"]),
+  "getCallerUserRole": Func([], [UserRole], ["query"]),
+  "getEnrollmentsByAcademy": Func(
+    [Text],
+    [Vec(Enrollment)],
+    ["query"]
+  ),
   "getPlaceById": Func([PlaceId], [Opt(Place)], ["query"]),
   "getPlacesBySport": Func([Text], [Vec(Place)], ["query"]),
-  "initializePlaces": Func([], [], [])
+  "getUserProfile": Func(
+    [Principal2],
+    [Opt(UserProfile)],
+    ["query"]
+  ),
+  "initializePlaces": Func([], [], []),
+  "isCallerAdmin": Func([], [Bool], ["query"]),
+  "saveCallerUserProfile": Func([UserProfile], [], []),
+  "submitEnrollment": Func(
+    [Text, Text, Text, Nat, Text, Text],
+    [EnrollmentId],
+    []
+  )
 });
 const idlFactory = ({ IDL: IDL2 }) => {
+  const UserRole2 = IDL2.Variant({
+    "admin": IDL2.Null,
+    "user": IDL2.Null,
+    "guest": IDL2.Null
+  });
+  const EnrollmentId2 = IDL2.Nat64;
+  const Enrollment2 = IDL2.Record({
+    "id": EnrollmentId2,
+    "age": IDL2.Nat,
+    "academyName": IDL2.Text,
+    "fullName": IDL2.Text,
+    "submittedAt": IDL2.Int,
+    "sport": IDL2.Text,
+    "address": IDL2.Text,
+    "phone": IDL2.Text
+  });
   const PlaceId2 = IDL2.Nat64;
   const GeoLocation2 = IDL2.Record({ "lat": IDL2.Float64, "long": IDL2.Float64 });
   const Place2 = IDL2.Record({
@@ -28206,11 +28328,34 @@ const idlFactory = ({ IDL: IDL2 }) => {
     "sport": IDL2.Text,
     "location": GeoLocation2
   });
+  const UserProfile2 = IDL2.Record({ "name": IDL2.Text });
   return IDL2.Service({
+    "_initializeAccessControlWithSecret": IDL2.Func([IDL2.Text], [], []),
+    "assignCallerUserRole": IDL2.Func([IDL2.Principal, UserRole2], [], []),
+    "getAllEnrollments": IDL2.Func([], [IDL2.Vec(Enrollment2)], ["query"]),
     "getAllPlaces": IDL2.Func([], [IDL2.Vec(Place2)], ["query"]),
+    "getCallerUserProfile": IDL2.Func([], [IDL2.Opt(UserProfile2)], ["query"]),
+    "getCallerUserRole": IDL2.Func([], [UserRole2], ["query"]),
+    "getEnrollmentsByAcademy": IDL2.Func(
+      [IDL2.Text],
+      [IDL2.Vec(Enrollment2)],
+      ["query"]
+    ),
     "getPlaceById": IDL2.Func([PlaceId2], [IDL2.Opt(Place2)], ["query"]),
     "getPlacesBySport": IDL2.Func([IDL2.Text], [IDL2.Vec(Place2)], ["query"]),
-    "initializePlaces": IDL2.Func([], [], [])
+    "getUserProfile": IDL2.Func(
+      [IDL2.Principal],
+      [IDL2.Opt(UserProfile2)],
+      ["query"]
+    ),
+    "initializePlaces": IDL2.Func([], [], []),
+    "isCallerAdmin": IDL2.Func([], [IDL2.Bool], ["query"]),
+    "saveCallerUserProfile": IDL2.Func([UserProfile2], [], []),
+    "submitEnrollment": IDL2.Func(
+      [IDL2.Text, IDL2.Text, IDL2.Text, IDL2.Nat, IDL2.Text, IDL2.Text],
+      [EnrollmentId2],
+      []
+    )
   });
 };
 class ExternalBlob {
@@ -28258,6 +28403,48 @@ class Backend {
     this._downloadFile = _downloadFile;
     this.processError = processError2;
   }
+  async _initializeAccessControlWithSecret(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor._initializeAccessControlWithSecret(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor._initializeAccessControlWithSecret(arg0);
+      return result;
+    }
+  }
+  async assignCallerUserRole(arg0, arg1) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.assignCallerUserRole(arg0, to_candid_UserRole_n1(this._uploadFile, this._downloadFile, arg1));
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.assignCallerUserRole(arg0, to_candid_UserRole_n1(this._uploadFile, this._downloadFile, arg1));
+      return result;
+    }
+  }
+  async getAllEnrollments() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getAllEnrollments();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getAllEnrollments();
+      return result;
+    }
+  }
   async getAllPlaces() {
     if (this.processError) {
       try {
@@ -28272,18 +28459,60 @@ class Backend {
       return result;
     }
   }
+  async getCallerUserProfile() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getCallerUserProfile();
+        return from_candid_opt_n3(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getCallerUserProfile();
+      return from_candid_opt_n3(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async getCallerUserRole() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getCallerUserRole();
+        return from_candid_UserRole_n4(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getCallerUserRole();
+      return from_candid_UserRole_n4(this._uploadFile, this._downloadFile, result);
+    }
+  }
+  async getEnrollmentsByAcademy(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getEnrollmentsByAcademy(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getEnrollmentsByAcademy(arg0);
+      return result;
+    }
+  }
   async getPlaceById(arg0) {
     if (this.processError) {
       try {
         const result = await this.actor.getPlaceById(arg0);
-        return from_candid_opt_n1(this._uploadFile, this._downloadFile, result);
+        return from_candid_opt_n6(this._uploadFile, this._downloadFile, result);
       } catch (e) {
         this.processError(e);
         throw new Error("unreachable");
       }
     } else {
       const result = await this.actor.getPlaceById(arg0);
-      return from_candid_opt_n1(this._uploadFile, this._downloadFile, result);
+      return from_candid_opt_n6(this._uploadFile, this._downloadFile, result);
     }
   }
   async getPlacesBySport(arg0) {
@@ -28300,6 +28529,20 @@ class Backend {
       return result;
     }
   }
+  async getUserProfile(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.getUserProfile(arg0);
+        return from_candid_opt_n3(this._uploadFile, this._downloadFile, result);
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.getUserProfile(arg0);
+      return from_candid_opt_n3(this._uploadFile, this._downloadFile, result);
+    }
+  }
   async initializePlaces() {
     if (this.processError) {
       try {
@@ -28314,9 +28557,72 @@ class Backend {
       return result;
     }
   }
+  async isCallerAdmin() {
+    if (this.processError) {
+      try {
+        const result = await this.actor.isCallerAdmin();
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.isCallerAdmin();
+      return result;
+    }
+  }
+  async saveCallerUserProfile(arg0) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.saveCallerUserProfile(arg0);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.saveCallerUserProfile(arg0);
+      return result;
+    }
+  }
+  async submitEnrollment(arg0, arg1, arg2, arg3, arg4, arg5) {
+    if (this.processError) {
+      try {
+        const result = await this.actor.submitEnrollment(arg0, arg1, arg2, arg3, arg4, arg5);
+        return result;
+      } catch (e) {
+        this.processError(e);
+        throw new Error("unreachable");
+      }
+    } else {
+      const result = await this.actor.submitEnrollment(arg0, arg1, arg2, arg3, arg4, arg5);
+      return result;
+    }
+  }
 }
-function from_candid_opt_n1(_uploadFile, _downloadFile, value) {
+function from_candid_UserRole_n4(_uploadFile, _downloadFile, value) {
+  return from_candid_variant_n5(_uploadFile, _downloadFile, value);
+}
+function from_candid_opt_n3(_uploadFile, _downloadFile, value) {
   return value.length === 0 ? null : value[0];
+}
+function from_candid_opt_n6(_uploadFile, _downloadFile, value) {
+  return value.length === 0 ? null : value[0];
+}
+function from_candid_variant_n5(_uploadFile, _downloadFile, value) {
+  return "admin" in value ? "admin" : "user" in value ? "user" : "guest" in value ? "guest" : value;
+}
+function to_candid_UserRole_n1(_uploadFile, _downloadFile, value) {
+  return to_candid_variant_n2(_uploadFile, _downloadFile, value);
+}
+function to_candid_variant_n2(_uploadFile, _downloadFile, value) {
+  return value == "admin" ? {
+    admin: null
+  } : value == "user" ? {
+    user: null
+  } : value == "guest" ? {
+    guest: null
+  } : value;
 }
 function createActor(canisterId, _uploadFile, _downloadFile, options = {}) {
   const agent = options.agent || HttpAgent.createSync({
@@ -28874,6 +29180,68 @@ async function createActorWithConfig(options) {
     downloadFile,
     actorOptions
   );
+}
+function storeSessionParameter(key, value) {
+  try {
+    sessionStorage.setItem(key, value);
+  } catch (error) {
+    console.warn(`Failed to store session parameter ${key}:`, error);
+  }
+}
+function getSessionParameter(key) {
+  try {
+    return sessionStorage.getItem(key);
+  } catch (error) {
+    console.warn(`Failed to retrieve session parameter ${key}:`, error);
+    return null;
+  }
+}
+function clearParamFromHash(paramName) {
+  if (!window.history.replaceState) {
+    return;
+  }
+  const hash = window.location.hash;
+  if (!hash || hash.length <= 1) {
+    return;
+  }
+  const hashContent = hash.substring(1);
+  const queryStartIndex = hashContent.indexOf("?");
+  if (queryStartIndex === -1) {
+    return;
+  }
+  const routePath = hashContent.substring(0, queryStartIndex);
+  const queryString = hashContent.substring(queryStartIndex + 1);
+  const params = new URLSearchParams(queryString);
+  params.delete(paramName);
+  const newQueryString = params.toString();
+  let newHash = routePath;
+  if (newQueryString) {
+    newHash += `?${newQueryString}`;
+  }
+  const newUrl = window.location.pathname + window.location.search + (newHash ? `#${newHash}` : "");
+  window.history.replaceState(null, "", newUrl);
+}
+function getSecretFromHash(paramName) {
+  const existingSecret = getSessionParameter(paramName);
+  if (existingSecret !== null) {
+    return existingSecret;
+  }
+  const hash = window.location.hash;
+  if (!hash || hash.length <= 1) {
+    return null;
+  }
+  const hashContent = hash.substring(1);
+  const params = new URLSearchParams(hashContent);
+  const secret = params.get(paramName);
+  if (secret) {
+    storeSessionParameter(paramName, secret);
+    clearParamFromHash(paramName);
+    return secret;
+  }
+  return null;
+}
+function getSecretParameter(paramName) {
+  return getSecretFromHash(paramName);
 }
 function isObject(value) {
   return value !== null && typeof value === "object";
@@ -30357,6 +30725,8 @@ function useActor() {
         }
       };
       const actor = await createActorWithConfig(actorOptions);
+      const adminToken = getSecretParameter("caffeineAdminToken") || "";
+      await actor._initializeAccessControlWithSecret(adminToken);
       return actor;
     },
     // Only refetch when identity changes
@@ -30416,6 +30786,50 @@ function useInitializePlaces() {
     onSuccess: () => {
       queryClient2.invalidateQueries({ queryKey: ["places"] });
     }
+  });
+}
+function useSubmitEnrollment() {
+  const { actor } = useActor();
+  const queryClient2 = useQueryClient();
+  return useMutation({
+    mutationFn: async (params) => {
+      if (!actor) throw new Error("Actor not initialized");
+      const ageBigInt = BigInt(Number.parseInt(params.age, 10));
+      return actor.submitEnrollment(
+        params.academyName,
+        params.sport,
+        params.fullName,
+        ageBigInt,
+        params.phone,
+        params.address
+      );
+    },
+    onSuccess: () => {
+      queryClient2.invalidateQueries({ queryKey: ["enrollments"] });
+    }
+  });
+}
+function useGetAllEnrollments() {
+  const { actor, isFetching } = useActor();
+  return useQuery({
+    queryKey: ["enrollments"],
+    queryFn: async () => {
+      if (!actor) return [];
+      return actor.getAllEnrollments();
+    },
+    enabled: !!actor && !isFetching
+  });
+}
+function useIsCallerAdmin() {
+  const { actor, isFetching } = useActor();
+  return useQuery({
+    queryKey: ["isCallerAdmin", actor ? "actor" : "no-actor"],
+    queryFn: async () => {
+      if (!actor) return false;
+      return actor.isCallerAdmin();
+    },
+    enabled: !!actor && !isFetching,
+    staleTime: 3e4
   });
 }
 function setRef(ref, value) {
@@ -32704,8 +33118,9 @@ function EnrollmentFormDialog({
   const [open, setOpen] = reactExports.useState(false);
   const [form, setForm] = reactExports.useState(EMPTY_FORM);
   const [errors, setErrors] = reactExports.useState({});
-  const [submitting, setSubmitting] = reactExports.useState(false);
   const [submitted, setSubmitted] = reactExports.useState(false);
+  const [submitError, setSubmitError] = reactExports.useState(null);
+  const { mutate: submitEnrollment, isPending } = useSubmitEnrollment();
   function validate() {
     const errs = {};
     if (!form.fullName.trim()) errs.fullName = "Full name is required.";
@@ -32731,17 +33146,34 @@ function EnrollmentFormDialog({
       setErrors((prev) => ({ ...prev, [field]: void 0 }));
     }
   }
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    setSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setSubmitting(false);
-    setSubmitted(true);
+    setSubmitError(null);
+    submitEnrollment(
+      {
+        academyName,
+        sport,
+        fullName: form.fullName,
+        age: form.age,
+        phone: form.phone,
+        address: form.address
+      },
+      {
+        onSuccess: () => {
+          setSubmitted(true);
+        },
+        onError: (err) => {
+          setSubmitError(
+            err instanceof Error ? err.message : "Submission failed. Please try again."
+          );
+        }
+      }
+    );
   }
   function handleOpenChange(val) {
     setOpen(val);
@@ -32750,7 +33182,7 @@ function EnrollmentFormDialog({
         setForm(EMPTY_FORM);
         setErrors({});
         setSubmitted(false);
-        setSubmitting(false);
+        setSubmitError(null);
       }, 200);
     }
   }
@@ -32888,7 +33320,18 @@ function EnrollmentFormDialog({
               children: errors.address
             }
           )
-        ] })
+        ] }),
+        submitError && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          "div",
+          {
+            className: "flex items-start gap-2 rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive",
+            "data-ocid": "enrollment.error_state",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-4 w-4 mt-0.5 flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: submitError })
+            ]
+          }
+        )
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogFooter, { className: "mt-6 flex gap-2", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -32907,9 +33350,9 @@ function EnrollmentFormDialog({
           {
             type: "submit",
             className: "flex-1",
-            disabled: submitting,
+            disabled: isPending,
             "data-ocid": "enrollment.submit_button",
-            children: submitting ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+            children: isPending ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-4 w-4 mr-2 animate-spin" }),
               "Submitting..."
             ] }) : "Submit Enrollment"
@@ -33322,6 +33765,219 @@ function AcademiesList({ selectedSport }) {
     selectedSport ? /* @__PURE__ */ jsxRuntimeExports.jsx(FilteredAcademies, { sport: selectedSport }) : /* @__PURE__ */ jsxRuntimeExports.jsx(AllAcademies, {})
   ] });
 }
+function Table({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      "data-slot": "table-container",
+      className: "relative w-full overflow-x-auto",
+      children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+        "table",
+        {
+          "data-slot": "table",
+          className: cn("w-full caption-bottom text-sm", className),
+          ...props
+        }
+      )
+    }
+  );
+}
+function TableHeader({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "thead",
+    {
+      "data-slot": "table-header",
+      className: cn("[&_tr]:border-b", className),
+      ...props
+    }
+  );
+}
+function TableBody({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "tbody",
+    {
+      "data-slot": "table-body",
+      className: cn("[&_tr:last-child]:border-0", className),
+      ...props
+    }
+  );
+}
+function TableRow({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "tr",
+    {
+      "data-slot": "table-row",
+      className: cn(
+        "hover:bg-muted/50 data-[state=selected]:bg-muted border-b transition-colors",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function TableHead({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "th",
+    {
+      "data-slot": "table-head",
+      className: cn(
+        "text-foreground h-10 px-2 text-left align-middle font-medium whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function TableCell({ className, ...props }) {
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "td",
+    {
+      "data-slot": "table-cell",
+      className: cn(
+        "p-2 align-middle whitespace-nowrap [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+        className
+      ),
+      ...props
+    }
+  );
+}
+function formatDate(nanos) {
+  try {
+    return new Date(Number(nanos) / 1e6).toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric"
+    });
+  } catch {
+    return "—";
+  }
+}
+const SPORT_COLORS = {
+  Basketball: "bg-orange-100 text-orange-800 border-orange-200",
+  Soccer: "bg-green-100 text-green-800 border-green-200",
+  Tennis: "bg-yellow-100 text-yellow-800 border-yellow-200",
+  Swimming: "bg-blue-100 text-blue-800 border-blue-200",
+  Volleyball: "bg-purple-100 text-purple-800 border-purple-200"
+};
+function AdminPanel() {
+  const {
+    data: enrollments,
+    isLoading,
+    error,
+    refetch,
+    isFetching
+  } = useGetAllEnrollments();
+  return /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-10 px-4", "data-ocid": "admin.panel", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between mb-8 flex-wrap gap-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-5 w-5 text-primary" }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h2", { className: "text-2xl font-bold", children: "Enrollment Submissions" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground", children: enrollments ? `${enrollments.length} total enrollment${enrollments.length !== 1 ? "s" : ""}` : "Loading..." })
+        ] })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        Button,
+        {
+          variant: "outline",
+          size: "sm",
+          onClick: () => refetch(),
+          disabled: isFetching,
+          "data-ocid": "admin.secondary_button",
+          children: [
+            isFetching ? /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-4 w-4 mr-2 animate-spin" }) : /* @__PURE__ */ jsxRuntimeExports.jsx(RefreshCw, { className: "h-4 w-4 mr-2" }),
+            "Refresh"
+          ]
+        }
+      )
+    ] }),
+    isLoading && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "flex items-center justify-center py-16 gap-3 text-muted-foreground",
+        "data-ocid": "admin.loading_state",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(LoaderCircle, { className: "h-6 w-6 animate-spin" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Loading enrollments..." })
+        ]
+      }
+    ),
+    error && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+      "div",
+      {
+        className: "flex items-center gap-3 rounded-lg border border-destructive/30 bg-destructive/5 px-4 py-3 text-destructive",
+        "data-ocid": "admin.error_state",
+        children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(CircleAlert, { className: "h-5 w-5 flex-shrink-0" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-sm", children: "Failed to load enrollments. Please refresh and try again." })
+        ]
+      }
+    ),
+    !isLoading && !error && enrollments && enrollments.length === 0 && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center py-16", "data-ocid": "admin.empty_state", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(Users, { className: "h-12 w-12 mx-auto text-muted-foreground/40 mb-3" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-lg font-medium text-muted-foreground", children: "No enrollments yet" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-muted-foreground/70 mt-1", children: "Enrollment submissions will appear here once users sign up." })
+    ] }),
+    !isLoading && !error && enrollments && enrollments.length > 0 && /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "div",
+      {
+        className: "rounded-xl border bg-card overflow-hidden",
+        "data-ocid": "admin.table",
+        children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Table, { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TableHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(TableRow, { className: "bg-muted/40", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "#" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Full Name" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Age" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Phone" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Address" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Academy" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Sport" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TableHead, { className: "font-semibold", children: "Date" })
+          ] }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(TableBody, { children: enrollments.map((enrollment, index2) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            TableRow,
+            {
+              className: "hover:bg-muted/20 transition-colors",
+              "data-ocid": `admin.item.${index2 + 1}`,
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-muted-foreground text-sm", children: index2 + 1 }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "font-medium", children: enrollment.fullName }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: enrollment.age.toString() }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-sm", children: enrollment.phone }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  TableCell,
+                  {
+                    className: "text-sm max-w-[180px] truncate",
+                    title: enrollment.address,
+                    children: enrollment.address
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  TableCell,
+                  {
+                    className: "text-sm max-w-[160px] truncate",
+                    title: enrollment.academyName,
+                    children: enrollment.academyName
+                  }
+                ),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+                  Badge,
+                  {
+                    variant: "outline",
+                    className: `text-xs ${SPORT_COLORS[enrollment.sport] ?? ""}`,
+                    children: enrollment.sport
+                  }
+                ) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx(TableCell, { className: "text-sm text-muted-foreground whitespace-nowrap", children: formatDate(enrollment.submittedAt) })
+              ]
+            },
+            enrollment.id.toString()
+          )) })
+        ] })
+      }
+    )
+  ] }) });
+}
 function Footer() {
   const currentYear = (/* @__PURE__ */ new Date()).getFullYear();
   const appIdentifier = typeof window !== "undefined" ? encodeURIComponent(window.location.hostname) : "sports-academy-finder";
@@ -33409,18 +34065,22 @@ function SheetContent({
     )
   ] });
 }
-function Header() {
+function Header({ isAdmin, showAdminPanel, onAdminPanel }) {
+  const { login, clear, identity, isLoggingIn } = useInternetIdentity();
+  const isLoggedIn = !!identity;
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-primary-foreground font-bold text-lg", children: "S" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-xl", children: "SPORTS MANAGEMENT HUB" })
-    ] }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-xl hidden sm:inline", children: "SPORTS MANAGEMENT HUB" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-base sm:hidden", children: "SMH" })
+    ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden md:flex items-center gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(
         "a",
         {
           href: "#sports",
           className: "text-sm font-medium hover:text-primary transition-colors",
+          "data-ocid": "header.link",
           children: "Sports"
         }
       ),
@@ -33429,6 +34089,7 @@ function Header() {
         {
           href: "#academies",
           className: "text-sm font-medium hover:text-primary transition-colors",
+          "data-ocid": "header.link",
           children: "Academies"
         }
       ),
@@ -33437,41 +34098,138 @@ function Header() {
         {
           href: "#about",
           className: "text-sm font-medium hover:text-primary transition-colors",
+          "data-ocid": "header.link",
           children: "About"
         }
       )
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(Sheet, { children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SheetTrigger, { asChild: true, className: "md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Button, { variant: "ghost", size: "icon", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { className: "h-5 w-5" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sr-only", children: "Toggle menu" })
-      ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SheetContent, { side: "right", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "flex flex-col gap-4 mt-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+      isLoggedIn && isAdmin && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        Button,
+        {
+          variant: showAdminPanel ? "default" : "outline",
+          size: "sm",
+          onClick: onAdminPanel,
+          className: "hidden md:flex items-center gap-1.5",
+          "data-ocid": "header.admin_panel.button",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "h-4 w-4" }),
+            "Admin Panel"
+          ]
+        }
+      ),
+      isLoggedIn ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        Button,
+        {
+          variant: "ghost",
+          size: "sm",
+          onClick: () => clear(),
+          className: "hidden md:flex items-center gap-1.5 text-muted-foreground hover:text-destructive",
+          "data-ocid": "header.logout.button",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(LogOut, { className: "h-4 w-4" }),
+            "Logout"
+          ]
+        }
+      ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+        Button,
+        {
+          variant: "outline",
+          size: "sm",
+          onClick: () => login(),
+          disabled: isLoggingIn,
+          className: "hidden md:flex items-center gap-1.5",
+          "data-ocid": "header.login.button",
+          children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(LogIn, { className: "h-4 w-4" }),
+            isLoggingIn ? "Connecting..." : "Login"
+          ]
+        }
+      ),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs(Sheet, { children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SheetTrigger, { asChild: true, className: "md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+          Button,
           {
-            href: "#sports",
-            className: "text-lg font-medium hover:text-primary transition-colors",
-            children: "Sports"
+            variant: "ghost",
+            size: "icon",
+            "data-ocid": "header.mobile_menu.button",
+            children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Menu, { className: "h-5 w-5" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "sr-only", children: "Toggle menu" })
+            ]
           }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: "#academies",
-            className: "text-lg font-medium hover:text-primary transition-colors",
-            children: "Academies"
-          }
-        ),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(
-          "a",
-          {
-            href: "#about",
-            className: "text-lg font-medium hover:text-primary transition-colors",
-            children: "About"
-          }
-        )
-      ] }) })
+        ) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SheetContent, { side: "right", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "flex flex-col gap-4 mt-8", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: "#sports",
+              className: "text-lg font-medium hover:text-primary transition-colors",
+              "data-ocid": "header.mobile.link",
+              children: "Sports"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: "#academies",
+              className: "text-lg font-medium hover:text-primary transition-colors",
+              "data-ocid": "header.mobile.link",
+              children: "Academies"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsx(
+            "a",
+            {
+              href: "#about",
+              className: "text-lg font-medium hover:text-primary transition-colors",
+              "data-ocid": "header.mobile.link",
+              children: "About"
+            }
+          ),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t pt-4 flex flex-col gap-3", children: [
+            isLoggedIn && isAdmin && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Button,
+              {
+                variant: showAdminPanel ? "default" : "outline",
+                onClick: onAdminPanel,
+                className: "justify-start gap-2",
+                "data-ocid": "header.mobile.admin_panel.button",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "h-4 w-4" }),
+                  "Admin Panel"
+                ]
+              }
+            ),
+            isLoggedIn ? /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Button,
+              {
+                variant: "ghost",
+                onClick: () => clear(),
+                className: "justify-start gap-2 text-muted-foreground",
+                "data-ocid": "header.mobile.logout.button",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(LogOut, { className: "h-4 w-4" }),
+                  "Logout"
+                ]
+              }
+            ) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+              Button,
+              {
+                variant: "outline",
+                onClick: () => login(),
+                disabled: isLoggingIn,
+                className: "justify-start gap-2",
+                "data-ocid": "header.mobile.login.button",
+                children: [
+                  /* @__PURE__ */ jsxRuntimeExports.jsx(LogIn, { className: "h-4 w-4" }),
+                  isLoggingIn ? "Connecting..." : "Login"
+                ]
+              }
+            )
+          ] })
+        ] }) })
+      ] })
     ] })
   ] }) });
 }
@@ -33571,14 +34329,21 @@ function SportsGrid({ onSelectSport, selectedSport }) {
 }
 function App() {
   const [selectedSport, setSelectedSport] = reactExports.useState(null);
+  const [showAdminPanel, setShowAdminPanel] = reactExports.useState(false);
   const academiesRef = reactExports.useRef(null);
   const { data: places } = useGetAllPlaces();
   const { mutate: initializePlaces } = useInitializePlaces();
+  const { data: isAdmin = false } = useIsCallerAdmin();
   reactExports.useEffect(() => {
     if (places !== void 0 && places.length === 0) {
       initializePlaces();
     }
   }, [places, initializePlaces]);
+  reactExports.useEffect(() => {
+    if (!isAdmin) {
+      setShowAdminPanel(false);
+    }
+  }, [isAdmin]);
   const handleSelectSport = (sport) => {
     setSelectedSport((prev) => {
       const next = prev === sport ? null : sport;
@@ -33594,9 +34359,19 @@ function App() {
       return next;
     });
   };
+  const handleToggleAdminPanel = () => {
+    setShowAdminPanel((prev) => !prev);
+  };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen flex flex-col", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("main", { className: "flex-1", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx(
+      Header,
+      {
+        isAdmin,
+        showAdminPanel,
+        onAdminPanel: handleToggleAdminPanel
+      }
+    ),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "flex-1", children: showAdminPanel && isAdmin ? /* @__PURE__ */ jsxRuntimeExports.jsx(AdminPanel, {}) : /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "py-16 px-4 bg-gradient-to-b from-background to-muted/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-center mb-12", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("h1", { className: "text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-transparent", children: "Discover Your Sport" }),
@@ -33638,7 +34413,7 @@ function App() {
           ] })
         }
       )
-    ] }),
+    ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }

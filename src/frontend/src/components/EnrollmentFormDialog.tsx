@@ -11,8 +11,9 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle2, Loader2 } from "lucide-react";
+import { AlertCircle, CheckCircle2, Loader2 } from "lucide-react";
 import { useState } from "react";
+import { useSubmitEnrollment } from "../hooks/useQueries";
 
 interface EnrollmentFormProps {
   academyName: string;
@@ -49,8 +50,10 @@ export function EnrollmentFormDialog({
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState<FormData>(EMPTY_FORM);
   const [errors, setErrors] = useState<FormErrors>({});
-  const [submitting, setSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const { mutate: submitEnrollment, isPending } = useSubmitEnrollment();
 
   function validate(): FormErrors {
     const errs: FormErrors = {};
@@ -79,29 +82,46 @@ export function EnrollmentFormDialog({
     }
   }
 
-  async function handleSubmit(e: React.FormEvent) {
+  function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     const errs = validate();
     if (Object.keys(errs).length > 0) {
       setErrors(errs);
       return;
     }
-    setSubmitting(true);
-    // Simulate async submit
-    await new Promise((resolve) => setTimeout(resolve, 800));
-    setSubmitting(false);
-    setSubmitted(true);
+    setSubmitError(null);
+    submitEnrollment(
+      {
+        academyName,
+        sport,
+        fullName: form.fullName,
+        age: form.age,
+        phone: form.phone,
+        address: form.address,
+      },
+      {
+        onSuccess: () => {
+          setSubmitted(true);
+        },
+        onError: (err) => {
+          setSubmitError(
+            err instanceof Error
+              ? err.message
+              : "Submission failed. Please try again.",
+          );
+        },
+      },
+    );
   }
 
   function handleOpenChange(val: boolean) {
     setOpen(val);
     if (!val) {
-      // Reset on close
       setTimeout(() => {
         setForm(EMPTY_FORM);
         setErrors({});
         setSubmitted(false);
-        setSubmitting(false);
+        setSubmitError(null);
       }, 200);
     }
   }
@@ -239,6 +259,17 @@ export function EnrollmentFormDialog({
                   </p>
                 )}
               </div>
+
+              {/* Submit error */}
+              {submitError && (
+                <div
+                  className="flex items-start gap-2 rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive"
+                  data-ocid="enrollment.error_state"
+                >
+                  <AlertCircle className="h-4 w-4 mt-0.5 flex-shrink-0" />
+                  <span>{submitError}</span>
+                </div>
+              )}
             </div>
 
             <DialogFooter className="mt-6 flex gap-2">
@@ -254,10 +285,10 @@ export function EnrollmentFormDialog({
               <Button
                 type="submit"
                 className="flex-1"
-                disabled={submitting}
+                disabled={isPending}
                 data-ocid="enrollment.submit_button"
               >
-                {submitting ? (
+                {isPending ? (
                   <>
                     <Loader2 className="h-4 w-4 mr-2 animate-spin" />
                     Submitting...

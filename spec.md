@@ -1,28 +1,34 @@
 # Sports Management Hub
 
 ## Current State
-Each academy card has an "Enroll Now" button that links to a placeholder Google Forms URL (`https://forms.google.com/sports-enroll`) via an external link.
+- Full-stack app with Motoko backend storing 25 academy places (5 sports x 5 Chennai locations)
+- React frontend with sport/location filtering, unique thumbnails per academy, contact details
+- Enrollment form dialog (EnrollmentFormDialog.tsx) collects name, age, phone, address — but only simulates submission (fake async, data is discarded)
+- No admin panel exists
+- No authorization system in place
 
 ## Requested Changes (Diff)
 
 ### Add
-- An enrollment form modal/dialog that opens when "Enroll Now" is clicked
-- Form fields: Full Name, Age, Phone Number, Address
-- Form submit button and success state
-- The form should show which academy and sport the user is enrolling in
+- Backend: `Enrollment` type and stable storage for enrollment submissions
+- Backend: `submitEnrollment(academyName, sport, fullName, age, phone, address)` mutation — stores submission with timestamp and auto-generated ID
+- Backend: `getAllEnrollments()` query (admin only via authorization) — returns all submissions
+- Backend: `getEnrollmentsByAcademy(academyName)` query (admin only) — filter by academy
+- Frontend: Admin panel page/section accessible to logged-in admins showing a table of all submissions
+- Frontend: Wire EnrollmentFormDialog to actually call `submitEnrollment` instead of the fake timeout
+- Authorization component for role-based admin access
 
 ### Modify
-- `AcademyCard.tsx`: Change the "Enroll Now" button from an external link to a button that opens the enrollment dialog
-- The dialog should be self-contained or imported into AcademyCard
+- EnrollmentFormDialog.tsx: Replace `await new Promise(setTimeout)` with real backend `submitEnrollment` call
+- App.tsx: Add navigation/routing between main discovery view and admin panel view
 
 ### Remove
-- The external `href` link behavior on the Enroll Now button
-- The placeholder `https://forms.google.com/sports-enroll` URLs (no longer needed since form is in-app)
+- Nothing removed
 
 ## Implementation Plan
-1. Create `EnrollmentFormDialog.tsx` component with a Dialog that contains a form with fields: Full Name (text), Age (number), Phone Number (tel), Address (textarea)
-2. The dialog title should show the academy name and sport
-3. On submit, show a success/thank-you message inside the dialog
-4. Basic validation: all fields required
-5. Update `AcademyCard.tsx` to use `EnrollmentFormDialog` instead of the external link button
-6. Remove `enrollmentUrl` dependency from the Enroll Now button (keep the field in the data structure for backward compat, but don't use it as a link)
+1. Select `authorization` Caffeine component
+2. Generate updated Motoko backend with Enrollment type, submitEnrollment, getAllEnrollments, getEnrollmentsByAcademy
+3. Update EnrollmentFormDialog to call real backend submitEnrollment
+4. Add AdminPanel component: table showing all enrollment submissions (name, age, phone, address, academy, sport, date)
+5. Add admin navigation in Header or App — only visible to logged-in admins
+6. Wire authorization login/logout to header

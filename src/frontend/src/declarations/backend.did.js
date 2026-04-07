@@ -8,6 +8,22 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
+export const UserRole = IDL.Variant({
+  'admin' : IDL.Null,
+  'user' : IDL.Null,
+  'guest' : IDL.Null,
+});
+export const EnrollmentId = IDL.Nat64;
+export const Enrollment = IDL.Record({
+  'id' : EnrollmentId,
+  'age' : IDL.Nat,
+  'academyName' : IDL.Text,
+  'fullName' : IDL.Text,
+  'submittedAt' : IDL.Int,
+  'sport' : IDL.Text,
+  'address' : IDL.Text,
+  'phone' : IDL.Text,
+});
 export const PlaceId = IDL.Nat64;
 export const GeoLocation = IDL.Record({
   'lat' : IDL.Float64,
@@ -20,17 +36,56 @@ export const Place = IDL.Record({
   'sport' : IDL.Text,
   'location' : GeoLocation,
 });
+export const UserProfile = IDL.Record({ 'name' : IDL.Text });
 
 export const idlService = IDL.Service({
+  '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+  'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+  'getAllEnrollments' : IDL.Func([], [IDL.Vec(Enrollment)], ['query']),
   'getAllPlaces' : IDL.Func([], [IDL.Vec(Place)], ['query']),
+  'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
+  'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+  'getEnrollmentsByAcademy' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(Enrollment)],
+      ['query'],
+    ),
   'getPlaceById' : IDL.Func([PlaceId], [IDL.Opt(Place)], ['query']),
   'getPlacesBySport' : IDL.Func([IDL.Text], [IDL.Vec(Place)], ['query']),
+  'getUserProfile' : IDL.Func(
+      [IDL.Principal],
+      [IDL.Opt(UserProfile)],
+      ['query'],
+    ),
   'initializePlaces' : IDL.Func([], [], []),
+  'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+  'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
+  'submitEnrollment' : IDL.Func(
+      [IDL.Text, IDL.Text, IDL.Text, IDL.Nat, IDL.Text, IDL.Text],
+      [EnrollmentId],
+      [],
+    ),
 });
 
 export const idlInitArgs = [];
 
 export const idlFactory = ({ IDL }) => {
+  const UserRole = IDL.Variant({
+    'admin' : IDL.Null,
+    'user' : IDL.Null,
+    'guest' : IDL.Null,
+  });
+  const EnrollmentId = IDL.Nat64;
+  const Enrollment = IDL.Record({
+    'id' : EnrollmentId,
+    'age' : IDL.Nat,
+    'academyName' : IDL.Text,
+    'fullName' : IDL.Text,
+    'submittedAt' : IDL.Int,
+    'sport' : IDL.Text,
+    'address' : IDL.Text,
+    'phone' : IDL.Text,
+  });
   const PlaceId = IDL.Nat64;
   const GeoLocation = IDL.Record({ 'lat' : IDL.Float64, 'long' : IDL.Float64 });
   const Place = IDL.Record({
@@ -40,12 +95,35 @@ export const idlFactory = ({ IDL }) => {
     'sport' : IDL.Text,
     'location' : GeoLocation,
   });
+  const UserProfile = IDL.Record({ 'name' : IDL.Text });
   
   return IDL.Service({
+    '_initializeAccessControlWithSecret' : IDL.Func([IDL.Text], [], []),
+    'assignCallerUserRole' : IDL.Func([IDL.Principal, UserRole], [], []),
+    'getAllEnrollments' : IDL.Func([], [IDL.Vec(Enrollment)], ['query']),
     'getAllPlaces' : IDL.Func([], [IDL.Vec(Place)], ['query']),
+    'getCallerUserProfile' : IDL.Func([], [IDL.Opt(UserProfile)], ['query']),
+    'getCallerUserRole' : IDL.Func([], [UserRole], ['query']),
+    'getEnrollmentsByAcademy' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(Enrollment)],
+        ['query'],
+      ),
     'getPlaceById' : IDL.Func([PlaceId], [IDL.Opt(Place)], ['query']),
     'getPlacesBySport' : IDL.Func([IDL.Text], [IDL.Vec(Place)], ['query']),
+    'getUserProfile' : IDL.Func(
+        [IDL.Principal],
+        [IDL.Opt(UserProfile)],
+        ['query'],
+      ),
     'initializePlaces' : IDL.Func([], [], []),
+    'isCallerAdmin' : IDL.Func([], [IDL.Bool], ['query']),
+    'saveCallerUserProfile' : IDL.Func([UserProfile], [], []),
+    'submitEnrollment' : IDL.Func(
+        [IDL.Text, IDL.Text, IDL.Text, IDL.Nat, IDL.Text, IDL.Text],
+        [EnrollmentId],
+        [],
+      ),
   });
 };
 

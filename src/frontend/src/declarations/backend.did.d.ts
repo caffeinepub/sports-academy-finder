@@ -10,6 +10,17 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
+export interface Enrollment {
+  'id' : EnrollmentId,
+  'age' : bigint,
+  'academyName' : string,
+  'fullName' : string,
+  'submittedAt' : bigint,
+  'sport' : string,
+  'address' : string,
+  'phone' : string,
+}
+export type EnrollmentId = bigint;
 export interface GeoLocation { 'lat' : number, 'long' : number }
 export interface Place {
   'id' : PlaceId,
@@ -19,11 +30,28 @@ export interface Place {
   'location' : GeoLocation,
 }
 export type PlaceId = bigint;
+export interface UserProfile { 'name' : string }
+export type UserRole = { 'admin' : null } |
+  { 'user' : null } |
+  { 'guest' : null };
 export interface _SERVICE {
+  '_initializeAccessControlWithSecret' : ActorMethod<[string], undefined>,
+  'assignCallerUserRole' : ActorMethod<[Principal, UserRole], undefined>,
+  'getAllEnrollments' : ActorMethod<[], Array<Enrollment>>,
   'getAllPlaces' : ActorMethod<[], Array<Place>>,
+  'getCallerUserProfile' : ActorMethod<[], [] | [UserProfile]>,
+  'getCallerUserRole' : ActorMethod<[], UserRole>,
+  'getEnrollmentsByAcademy' : ActorMethod<[string], Array<Enrollment>>,
   'getPlaceById' : ActorMethod<[PlaceId], [] | [Place]>,
   'getPlacesBySport' : ActorMethod<[string], Array<Place>>,
+  'getUserProfile' : ActorMethod<[Principal], [] | [UserProfile]>,
   'initializePlaces' : ActorMethod<[], undefined>,
+  'isCallerAdmin' : ActorMethod<[], boolean>,
+  'saveCallerUserProfile' : ActorMethod<[UserProfile], undefined>,
+  'submitEnrollment' : ActorMethod<
+    [string, string, string, bigint, string, string],
+    EnrollmentId
+  >,
 }
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];
