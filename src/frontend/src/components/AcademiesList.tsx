@@ -3,12 +3,208 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { AlertCircle, Trophy } from "lucide-react";
 import { useGetAllPlaces, useGetPlacesBySport } from "../hooks/useQueries";
 import { AcademyCard } from "./AcademyCard";
+import type { AcademyContactInfo } from "./AcademyCard";
 
-const academyImages = [
-  "academy-1.dim_600x400.png",
-  "academy-2.dim_600x400.png",
-  "academy-3.dim_600x400.png",
-];
+// Sport-specific thumbnails per location (area -> sport -> image)
+const academyImageMap: Record<string, Record<string, string>> = {
+  Basketball: {
+    Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
+    Anna: "basketball-academy.dim_600x400.jpg",
+    Kolathur: "basketball-academy.dim_600x400.jpg",
+    Mylapore: "basketball-academy.dim_600x400.jpg",
+    Santhome: "basketball-academy.dim_600x400.jpg",
+  },
+  Soccer: {
+    Ramapuram: "soccer-academy.dim_600x400.jpg",
+    Anna: "soccer-annanagar.dim_600x400.jpg",
+    Kolathur: "soccer-academy.dim_600x400.jpg",
+    Mylapore: "soccer-academy.dim_600x400.jpg",
+    Santhome: "soccer-academy.dim_600x400.jpg",
+  },
+  Tennis: {
+    Ramapuram: "tennis-academy.dim_600x400.jpg",
+    Anna: "tennis-academy.dim_600x400.jpg",
+    Kolathur: "tennis-kolathur.dim_600x400.jpg",
+    Mylapore: "tennis-academy.dim_600x400.jpg",
+    Santhome: "tennis-academy.dim_600x400.jpg",
+  },
+  Swimming: {
+    Ramapuram: "swimming-academy.dim_600x400.jpg",
+    Anna: "swimming-academy.dim_600x400.jpg",
+    Kolathur: "swimming-academy.dim_600x400.jpg",
+    Mylapore: "swimming-mylapore.dim_600x400.jpg",
+    Santhome: "swimming-academy.dim_600x400.jpg",
+  },
+  Volleyball: {
+    Ramapuram: "volleyball-academy.dim_600x400.jpg",
+    Anna: "volleyball-academy.dim_600x400.jpg",
+    Kolathur: "volleyball-academy.dim_600x400.jpg",
+    Mylapore: "volleyball-academy.dim_600x400.jpg",
+    Santhome: "volleyball-santhome.dim_600x400.jpg",
+  },
+};
+
+// Contact details per location per sport
+const academyContactMap: Record<string, Record<string, AcademyContactInfo>> = {
+  Basketball: {
+    Ramapuram: {
+      phone: "+91 98400 11201",
+      email: "basketball@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Anna: {
+      phone: "+91 98400 11202",
+      email: "basketball@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Kolathur: {
+      phone: "+91 98400 11203",
+      email: "basketball@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Mylapore: {
+      phone: "+91 98400 11204",
+      email: "basketball@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Santhome: {
+      phone: "+91 98400 11205",
+      email: "basketball@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+  },
+  Soccer: {
+    Ramapuram: {
+      phone: "+91 98400 22201",
+      email: "soccer@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Anna: {
+      phone: "+91 98400 22202",
+      email: "soccer@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Kolathur: {
+      phone: "+91 98400 22203",
+      email: "soccer@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Mylapore: {
+      phone: "+91 98400 22204",
+      email: "soccer@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Santhome: {
+      phone: "+91 98400 22205",
+      email: "soccer@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+  },
+  Tennis: {
+    Ramapuram: {
+      phone: "+91 98400 33201",
+      email: "tennis@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Anna: {
+      phone: "+91 98400 33202",
+      email: "tennis@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Kolathur: {
+      phone: "+91 98400 33203",
+      email: "tennis@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Mylapore: {
+      phone: "+91 98400 33204",
+      email: "tennis@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Santhome: {
+      phone: "+91 98400 33205",
+      email: "tennis@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+  },
+  Swimming: {
+    Ramapuram: {
+      phone: "+91 98400 44201",
+      email: "swimming@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Anna: {
+      phone: "+91 98400 44202",
+      email: "swimming@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Kolathur: {
+      phone: "+91 98400 44203",
+      email: "swimming@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Mylapore: {
+      phone: "+91 98400 44204",
+      email: "swimming@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Santhome: {
+      phone: "+91 98400 44205",
+      email: "swimming@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+  },
+  Volleyball: {
+    Ramapuram: {
+      phone: "+91 98400 55201",
+      email: "volleyball@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Anna: {
+      phone: "+91 98400 55202",
+      email: "volleyball@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Kolathur: {
+      phone: "+91 98400 55203",
+      email: "volleyball@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Mylapore: {
+      phone: "+91 98400 55204",
+      email: "volleyball@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+    Santhome: {
+      phone: "+91 98400 55205",
+      email: "volleyball@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll",
+    },
+  },
+};
+
+const fallbackContact: AcademyContactInfo = {
+  phone: "+91 98400 00000",
+  email: "info@sports-hub.in",
+  enrollmentUrl: "https://forms.google.com/sports-enroll",
+};
+
+const fallbackImage = "basketball-academy.dim_600x400.jpg";
+
+function getAreaKey(name: string): string {
+  // Place name format: "Ramapuram Basketball Academy"
+  return name.split(" ")[0];
+}
+
+function getImageForPlace(sport: string, name: string): string {
+  const areaKey = getAreaKey(name);
+  return academyImageMap[sport]?.[areaKey] ?? fallbackImage;
+}
+
+function getContactForPlace(sport: string, name: string): AcademyContactInfo {
+  const areaKey = getAreaKey(name);
+  return academyContactMap[sport]?.[areaKey] ?? fallbackContact;
+}
 
 function LoadingGrid() {
   return (
@@ -70,7 +266,8 @@ function FilteredAcademies({ sport }: FilteredAcademiesProps) {
         <AcademyCard
           key={place.id.toString()}
           place={place}
-          imageFilename={academyImages[index % academyImages.length]}
+          imageFilename={getImageForPlace(place.sport, place.name)}
+          contact={getContactForPlace(place.sport, place.name)}
           data-ocid={`academies.item.${index + 1}`}
         />
       ))}
@@ -116,7 +313,8 @@ function AllAcademies() {
         <AcademyCard
           key={place.id.toString()}
           place={place}
-          imageFilename={academyImages[index % academyImages.length]}
+          imageFilename={getImageForPlace(place.sport, place.name)}
+          contact={getContactForPlace(place.sport, place.name)}
           data-ocid={`academies.item.${index + 1}`}
         />
       ))}

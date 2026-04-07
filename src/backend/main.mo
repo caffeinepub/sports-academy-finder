@@ -4,9 +4,9 @@ import Nat "mo:core/Nat";
 import Nat64 "mo:core/Nat64";
 import Order "mo:core/Order";
 import Text "mo:core/Text";
-import Migration "migration";
 
-(with migration = Migration.run)
+
+
 actor {
   type PlaceId = Nat64;
 

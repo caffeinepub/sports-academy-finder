@@ -17433,12 +17433,51 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$6 = [
+const __iconNode$9 = [
   ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
   ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
   ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
 ];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$6);
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$9);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$8 = [
+  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
+  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+];
+const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$8);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$7 = [
+  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
+  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
+  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
+];
+const ExternalLink = createLucideIcon("external-link", __iconNode$7);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$6 = [
+  [
+    "path",
+    {
+      d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
+      key: "c3ymky"
+    }
+  ]
+];
+const Heart = createLucideIcon("heart", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17446,10 +17485,10 @@ const CircleAlert = createLucideIcon("circle-alert", __iconNode$6);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$5 = [
-  ["path", { d: "M21.801 10A10 10 0 1 1 17 3.335", key: "yps3ct" }],
-  ["path", { d: "m9 11 3 3L22 4", key: "1pflzl" }]
+  ["path", { d: "m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7", key: "132q7q" }],
+  ["rect", { x: "2", y: "4", width: "20", height: "16", rx: "2", key: "izxlao" }]
 ];
-const CircleCheckBig = createLucideIcon("circle-check-big", __iconNode$5);
+const Mail = createLucideIcon("mail", __iconNode$5);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17460,12 +17499,13 @@ const __iconNode$4 = [
   [
     "path",
     {
-      d: "M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z",
-      key: "c3ymky"
+      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
+      key: "1r0f0z"
     }
-  ]
+  ],
+  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const Heart = createLucideIcon("heart", __iconNode$4);
+const MapPin = createLucideIcon("map-pin", __iconNode$4);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17473,16 +17513,11 @@ const Heart = createLucideIcon("heart", __iconNode$4);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$3 = [
-  [
-    "path",
-    {
-      d: "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0",
-      key: "1r0f0z"
-    }
-  ],
-  ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
+  ["path", { d: "M4 12h16", key: "1lakjw" }],
+  ["path", { d: "M4 18h16", key: "19g7jn" }],
+  ["path", { d: "M4 6h16", key: "1o0s65" }]
 ];
-const MapPin = createLucideIcon("map-pin", __iconNode$3);
+const Menu = createLucideIcon("menu", __iconNode$3);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -17490,11 +17525,15 @@ const MapPin = createLucideIcon("map-pin", __iconNode$3);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$2 = [
-  ["path", { d: "M4 12h16", key: "1lakjw" }],
-  ["path", { d: "M4 18h16", key: "19g7jn" }],
-  ["path", { d: "M4 6h16", key: "1o0s65" }]
+  [
+    "path",
+    {
+      d: "M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384",
+      key: "9njp5v"
+    }
+  ]
 ];
-const Menu = createLucideIcon("menu", __iconNode$2);
+const Phone = createLucideIcon("phone", __iconNode$2);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -30522,6 +30561,48 @@ function Badge({
     }
   );
 }
+const buttonVariants = cva(
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+        outline: "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
+        link: "text-primary underline-offset-4 hover:underline"
+      },
+      size: {
+        default: "h-9 px-4 py-2 has-[>svg]:px-3",
+        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+        icon: "size-9"
+      }
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default"
+    }
+  }
+);
+function Button({
+  className,
+  variant,
+  size,
+  asChild = false,
+  ...props
+}) {
+  const Comp = asChild ? Slot$1 : "button";
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    Comp,
+    {
+      "data-slot": "button",
+      className: cn(buttonVariants({ variant, size, className })),
+      ...props
+    }
+  );
+}
 function Card({ className, ...props }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
     "div",
@@ -30578,6 +30659,7 @@ function extractArea(name) {
 function AcademyCard({
   place,
   imageFilename,
+  contact,
   "data-ocid": dataOcid
 }) {
   const [imageLoaded, setImageLoaded] = reactExports.useState(false);
@@ -30586,7 +30668,7 @@ function AcademyCard({
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     Card,
     {
-      className: "overflow-hidden hover:shadow-lg transition-all duration-300",
+      className: "overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col",
       "data-ocid": dataOcid,
       children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative aspect-[3/2] overflow-hidden bg-muted", children: [
@@ -30604,23 +30686,248 @@ function AcademyCard({
           ),
           place.sport && /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute top-3 left-3", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Badge, { className: "bg-primary/90 text-primary-foreground text-xs font-semibold shadow", children: place.sport }) })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-xl", children: place.name }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "space-y-3", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(CardHeader, { className: "pb-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(CardTitle, { className: "text-lg leading-snug", children: place.name }) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs(CardContent, { className: "space-y-3 flex-1 flex flex-col", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-muted-foreground text-sm", children: place.description }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx(MapPin, { className: "h-4 w-4 text-primary flex-shrink-0" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-muted-foreground font-medium", children: area })
-          ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border-t pt-3 space-y-2", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs font-semibold text-muted-foreground uppercase tracking-wider", children: "Contact" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Phone, { className: "h-4 w-4 text-primary flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "a",
+                {
+                  href: `tel:${contact.phone}`,
+                  className: "text-foreground hover:text-primary transition-colors font-medium",
+                  children: contact.phone
+                }
+              )
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Mail, { className: "h-4 w-4 text-primary flex-shrink-0" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                "a",
+                {
+                  href: `mailto:${contact.email}`,
+                  className: "text-foreground hover:text-primary transition-colors font-medium truncate",
+                  children: contact.email
+                }
+              )
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-auto pt-2", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { asChild: true, className: "w-full", size: "sm", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            "a",
+            {
+              href: contact.enrollmentUrl,
+              target: "_blank",
+              rel: "noopener noreferrer",
+              children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { className: "h-4 w-4 mr-2" }),
+                "Enroll Now"
+              ]
+            }
+          ) }) })
         ] })
       ]
     }
   );
 }
-const academyImages = [
-  "academy-1.dim_600x400.png",
-  "academy-2.dim_600x400.png",
-  "academy-3.dim_600x400.png"
-];
+const academyImageMap = {
+  Basketball: {
+    Ramapuram: "basketball-ramapuram.dim_600x400.jpg",
+    Anna: "basketball-academy.dim_600x400.jpg",
+    Kolathur: "basketball-academy.dim_600x400.jpg",
+    Mylapore: "basketball-academy.dim_600x400.jpg",
+    Santhome: "basketball-academy.dim_600x400.jpg"
+  },
+  Soccer: {
+    Ramapuram: "soccer-academy.dim_600x400.jpg",
+    Anna: "soccer-annanagar.dim_600x400.jpg",
+    Kolathur: "soccer-academy.dim_600x400.jpg",
+    Mylapore: "soccer-academy.dim_600x400.jpg",
+    Santhome: "soccer-academy.dim_600x400.jpg"
+  },
+  Tennis: {
+    Ramapuram: "tennis-academy.dim_600x400.jpg",
+    Anna: "tennis-academy.dim_600x400.jpg",
+    Kolathur: "tennis-kolathur.dim_600x400.jpg",
+    Mylapore: "tennis-academy.dim_600x400.jpg",
+    Santhome: "tennis-academy.dim_600x400.jpg"
+  },
+  Swimming: {
+    Ramapuram: "swimming-academy.dim_600x400.jpg",
+    Anna: "swimming-academy.dim_600x400.jpg",
+    Kolathur: "swimming-academy.dim_600x400.jpg",
+    Mylapore: "swimming-mylapore.dim_600x400.jpg",
+    Santhome: "swimming-academy.dim_600x400.jpg"
+  },
+  Volleyball: {
+    Ramapuram: "volleyball-academy.dim_600x400.jpg",
+    Anna: "volleyball-academy.dim_600x400.jpg",
+    Kolathur: "volleyball-academy.dim_600x400.jpg",
+    Mylapore: "volleyball-academy.dim_600x400.jpg",
+    Santhome: "volleyball-santhome.dim_600x400.jpg"
+  }
+};
+const academyContactMap = {
+  Basketball: {
+    Ramapuram: {
+      phone: "+91 98400 11201",
+      email: "basketball@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Anna: {
+      phone: "+91 98400 11202",
+      email: "basketball@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 11203",
+      email: "basketball@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 11204",
+      email: "basketball@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 11205",
+      email: "basketball@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Soccer: {
+    Ramapuram: {
+      phone: "+91 98400 22201",
+      email: "soccer@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Anna: {
+      phone: "+91 98400 22202",
+      email: "soccer@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 22203",
+      email: "soccer@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 22204",
+      email: "soccer@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 22205",
+      email: "soccer@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Tennis: {
+    Ramapuram: {
+      phone: "+91 98400 33201",
+      email: "tennis@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Anna: {
+      phone: "+91 98400 33202",
+      email: "tennis@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 33203",
+      email: "tennis@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 33204",
+      email: "tennis@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 33205",
+      email: "tennis@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Swimming: {
+    Ramapuram: {
+      phone: "+91 98400 44201",
+      email: "swimming@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Anna: {
+      phone: "+91 98400 44202",
+      email: "swimming@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 44203",
+      email: "swimming@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 44204",
+      email: "swimming@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 44205",
+      email: "swimming@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  },
+  Volleyball: {
+    Ramapuram: {
+      phone: "+91 98400 55201",
+      email: "volleyball@ramapuram-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Anna: {
+      phone: "+91 98400 55202",
+      email: "volleyball@annanagar-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Kolathur: {
+      phone: "+91 98400 55203",
+      email: "volleyball@kolathur-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Mylapore: {
+      phone: "+91 98400 55204",
+      email: "volleyball@mylapore-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    },
+    Santhome: {
+      phone: "+91 98400 55205",
+      email: "volleyball@santhome-sports.in",
+      enrollmentUrl: "https://forms.google.com/sports-enroll"
+    }
+  }
+};
+const fallbackContact = {
+  phone: "+91 98400 00000",
+  email: "info@sports-hub.in",
+  enrollmentUrl: "https://forms.google.com/sports-enroll"
+};
+const fallbackImage = "basketball-academy.dim_600x400.jpg";
+function getAreaKey(name) {
+  return name.split(" ")[0];
+}
+function getImageForPlace(sport, name) {
+  var _a3;
+  const areaKey = getAreaKey(name);
+  return ((_a3 = academyImageMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackImage;
+}
+function getContactForPlace(sport, name) {
+  var _a3;
+  const areaKey = getAreaKey(name);
+  return ((_a3 = academyContactMap[sport]) == null ? void 0 : _a3[areaKey]) ?? fallbackContact;
+}
 function LoadingGrid() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6", children: [1, 2, 3, 4, 5].map((i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -30665,7 +30972,8 @@ function FilteredAcademies({ sport }) {
         AcademyCard,
         {
           place,
-          imageFilename: academyImages[index2 % academyImages.length],
+          imageFilename: getImageForPlace(place.sport, place.name),
+          contact: getContactForPlace(place.sport, place.name),
           "data-ocid": `academies.item.${index2 + 1}`
         },
         place.id.toString()
@@ -30699,7 +31007,8 @@ function AllAcademies() {
         AcademyCard,
         {
           place,
-          imageFilename: academyImages[index2 % academyImages.length],
+          imageFilename: getImageForPlace(place.sport, place.name),
+          contact: getContactForPlace(place.sport, place.name),
           "data-ocid": `academies.item.${index2 + 1}`
         },
         place.id.toString()
@@ -30752,48 +31061,6 @@ function Footer() {
       )
     ] })
   ] }) }) });
-}
-const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
-  {
-    variants: {
-      variant: {
-        default: "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
-        destructive: "bg-destructive text-destructive-foreground shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
-        outline: "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
-        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "text-primary underline-offset-4 hover:underline"
-      },
-      size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9"
-      }
-    },
-    defaultVariants: {
-      variant: "default",
-      size: "default"
-    }
-  }
-);
-function Button({
-  className,
-  variant,
-  size,
-  asChild = false,
-  ...props
-}) {
-  const Comp = asChild ? Slot$1 : "button";
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    Comp,
-    {
-      "data-slot": "button",
-      className: cn(buttonVariants({ variant, size, className })),
-      ...props
-    }
-  );
 }
 function composeEventHandlers(originalEventHandler, ourEventHandler, { checkForDefaultPrevented = true } = {}) {
   return function handleEvent(event) {
@@ -32833,27 +33100,27 @@ const sports = [
   {
     name: "Basketball",
     description: "Fast-paced team sport focusing on agility, coordination, and teamwork",
-    imageFilename: "basketball.dim_800x600.png"
+    imageFilename: "basketball-academy.dim_600x400.jpg"
   },
   {
     name: "Soccer",
     description: "The world's most popular sport, building endurance and strategic thinking",
-    imageFilename: "soccer.dim_800x600.png"
+    imageFilename: "soccer-academy.dim_600x400.jpg"
   },
   {
     name: "Tennis",
     description: "Individual or doubles sport developing precision, speed, and mental focus",
-    imageFilename: "tennis.dim_800x600.png"
+    imageFilename: "tennis-academy.dim_600x400.jpg"
   },
   {
     name: "Swimming",
     description: "Full-body workout improving cardiovascular health and muscle strength",
-    imageFilename: "swimming.dim_800x600.png"
+    imageFilename: "swimming-academy.dim_600x400.jpg"
   },
   {
     name: "Volleyball",
     description: "Dynamic team sport enhancing reflexes, jumping ability, and communication",
-    imageFilename: "volleyball.dim_800x600.png"
+    imageFilename: "volleyball-academy.dim_600x400.jpg"
   }
 ];
 function SportsGrid({ onSelectSport, selectedSport }) {

@@ -5,31 +5,31 @@ const sports = [
     name: "Basketball",
     description:
       "Fast-paced team sport focusing on agility, coordination, and teamwork",
-    imageFilename: "basketball.dim_800x600.png",
+    imageFilename: "basketball-academy.dim_600x400.jpg",
   },
   {
     name: "Soccer",
     description:
       "The world's most popular sport, building endurance and strategic thinking",
-    imageFilename: "soccer.dim_800x600.png",
+    imageFilename: "soccer-academy.dim_600x400.jpg",
   },
   {
     name: "Tennis",
     description:
       "Individual or doubles sport developing precision, speed, and mental focus",
-    imageFilename: "tennis.dim_800x600.png",
+    imageFilename: "tennis-academy.dim_600x400.jpg",
   },
   {
     name: "Swimming",
     description:
       "Full-body workout improving cardiovascular health and muscle strength",
-    imageFilename: "swimming.dim_800x600.png",
+    imageFilename: "swimming-academy.dim_600x400.jpg",
   },
   {
     name: "Volleyball",
     description:
       "Dynamic team sport enhancing reflexes, jumping ability, and communication",
-    imageFilename: "volleyball.dim_800x600.png",
+    imageFilename: "volleyball-academy.dim_600x400.jpg",
   },
 ];
 
