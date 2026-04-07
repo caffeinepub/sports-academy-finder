@@ -1,11 +1,10 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Skeleton } from "@/components/ui/skeleton";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useState } from "react";
 import type { Place } from "../backend";
 import { EnrollmentFormDialog } from "./EnrollmentFormDialog";
+import { SportIllustration } from "./SportIllustration";
 
 export interface AcademyContactInfo {
   phone: string;
@@ -15,62 +14,44 @@ export interface AcademyContactInfo {
 
 interface AcademyCardProps {
   place: Place;
-  imageSrc: string;
   contact: AcademyContactInfo;
   "data-ocid"?: string;
 }
 
+const KNOWN_AREAS = [
+  "Anna Nagar",
+  "Ramapuram",
+  "Kolathur",
+  "Mylapore",
+  "Santhome",
+];
+
 function extractArea(name: string): string {
-  const knownAreas = [
-    "Anna Nagar",
-    "Ramapuram",
-    "Kolathur",
-    "Mylapore",
-    "Santhome",
-  ];
-  for (const area of knownAreas) {
-    if (name.startsWith(area)) return `${area}, Chennai`;
+  for (const area of KNOWN_AREAS) {
+    if (name.startsWith(area)) return area;
   }
-  return "Chennai";
+  return "";
 }
 
 export function AcademyCard({
   place,
-  imageSrc,
   contact,
   "data-ocid": dataOcid,
 }: AcademyCardProps) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
   const area = extractArea(place.name);
+  const locationLabel = area ? `${area}, Chennai` : "Chennai";
 
   return (
     <Card
       className="overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col"
       data-ocid={dataOcid}
     >
-      <div className="relative aspect-[3/2] overflow-hidden bg-muted">
-        {!imageLoaded && !imageError && (
-          <Skeleton className="absolute inset-0" />
-        )}
-        {imageError ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-muted">
-            <span className="text-muted-foreground text-sm">
-              Image unavailable
-            </span>
-          </div>
-        ) : (
-          <img
-            src={imageSrc}
-            alt={`${place.name} academy`}
-            className={`w-full h-full object-cover transition-transform duration-300 hover:scale-105 ${
-              imageLoaded ? "opacity-100" : "opacity-0"
-            }`}
-            onLoad={() => setImageLoaded(true)}
-            onError={() => setImageError(true)}
-            loading="lazy"
-          />
-        )}
+      <div className="relative aspect-[3/2] overflow-hidden">
+        <SportIllustration
+          sport={place.sport}
+          location={area}
+          className="absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-300"
+        />
         {place.sport && (
           <div className="absolute top-3 left-3">
             <Badge className="bg-primary/90 text-primary-foreground text-xs font-semibold shadow">
@@ -86,7 +67,9 @@ export function AcademyCard({
         <p className="text-muted-foreground text-sm">{place.description}</p>
         <div className="flex items-center gap-2 text-sm">
           <MapPin className="h-4 w-4 text-primary flex-shrink-0" />
-          <span className="text-muted-foreground font-medium">{area}</span>
+          <span className="text-muted-foreground font-medium">
+            {locationLabel}
+          </span>
         </div>
 
         {/* Contact Details */}

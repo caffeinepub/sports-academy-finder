@@ -1625,10 +1625,6 @@ video {
 .fill-primary {
   fill: oklch(var(--primary) / 1);
 }
-.object-cover {
-  -o-object-fit: cover;
-     object-fit: cover;
-}
 .p-0 {
   padding: 0px;
 }
@@ -1924,9 +1920,6 @@ video {
 }
 .opacity-0 {
   opacity: 0;
-}
-.opacity-100 {
-  opacity: 1;
 }
 .opacity-50 {
   opacity: 0.5;

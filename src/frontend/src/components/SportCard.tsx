@@ -1,11 +1,9 @@
-import { Skeleton } from "@/components/ui/skeleton";
 import { CheckCircle } from "lucide-react";
-import { useState } from "react";
+import { SportIllustration } from "./SportIllustration";
 
 interface SportCardProps {
   name: string;
   description: string;
-  imageSrc: string;
   onClick: () => void;
   isSelected: boolean;
 }
@@ -13,13 +11,9 @@ interface SportCardProps {
 export function SportCard({
   name,
   description,
-  imageSrc,
   onClick,
   isSelected,
 }: SportCardProps) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError] = useState(false);
-
   return (
     <button
       type="button"
@@ -33,27 +27,10 @@ export function SportCard({
       data-ocid={`sport.${name.toLowerCase()}.card`}
     >
       <div className="relative aspect-[4/3] overflow-hidden bg-muted rounded-t-xl">
-        {!imageLoaded && !imageError && (
-          <Skeleton className="absolute inset-0" />
-        )}
-        {imageError ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-muted">
-            <span className="text-muted-foreground text-sm">
-              Image unavailable
-            </span>
-          </div>
-        ) : (
-          <img
-            src={imageSrc}
-            alt={`${name} sport`}
-            className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 ${
-              imageLoaded ? "opacity-100" : "opacity-0"
-            }`}
-            onLoad={() => setImageLoaded(true)}
-            onError={() => setImageError(true)}
-            loading="lazy"
-          />
-        )}
+        <SportIllustration
+          sport={name}
+          className="absolute inset-0 w-full h-full group-hover:scale-105 transition-transform duration-300"
+        />
         {isSelected && (
           <div className="absolute inset-0 bg-primary/10 flex items-end justify-end p-3">
             <CheckCircle className="h-6 w-6 text-primary drop-shadow" />
