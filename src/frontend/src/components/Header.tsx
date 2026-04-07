@@ -22,9 +22,9 @@ export function Header({ isAdmin, showAdminPanel, onAdminPanel }: HeaderProps) {
             <span className="text-primary-foreground font-bold text-lg">S</span>
           </div>
           <span className="font-bold text-xl hidden sm:inline">
-            SPORTS MANAGEMENT HUB
+            SPORTS MANAGEMENT SYSTEM
           </span>
-          <span className="font-bold text-base sm:hidden">SMH</span>
+          <span className="font-bold text-base sm:hidden">SMS</span>
         </div>
 
         {/* Desktop nav */}

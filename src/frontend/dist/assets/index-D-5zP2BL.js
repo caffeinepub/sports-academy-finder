@@ -34010,12 +34010,12 @@ function AdminPanel() {
 }
 function Footer() {
   const currentYear = (/* @__PURE__ */ new Date()).getFullYear();
-  const appIdentifier = typeof window !== "undefined" ? encodeURIComponent(window.location.hostname) : "sports-academy-finder";
+  const appIdentifier = typeof window !== "undefined" ? encodeURIComponent(window.location.hostname) : "sports-management-system";
   return /* @__PURE__ */ jsxRuntimeExports.jsx("footer", { className: "border-t bg-muted/30 py-8 px-4", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "container mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col md:flex-row justify-between items-center gap-4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-sm text-muted-foreground", children: [
       "© ",
       currentYear,
-      " Sports Academy Finder. All rights reserved."
+      " Sports Management System. All rights reserved."
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 text-sm text-muted-foreground", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Built with" }),
@@ -34101,8 +34101,8 @@ function Header({ isAdmin, showAdminPanel, onAdminPanel }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "container mx-auto flex h-16 items-center justify-between px-4", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-primary/60 flex items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-primary-foreground font-bold text-lg", children: "S" }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-xl hidden sm:inline", children: "SPORTS MANAGEMENT HUB" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-base sm:hidden", children: "SMH" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-xl hidden sm:inline", children: "SPORTS MANAGEMENT SYSTEM" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-bold text-base sm:hidden", children: "SMS" })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden md:flex items-center gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(

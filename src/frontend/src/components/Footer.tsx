@@ -5,14 +5,14 @@ export function Footer() {
   const appIdentifier =
     typeof window !== "undefined"
       ? encodeURIComponent(window.location.hostname)
-      : "sports-academy-finder";
+      : "sports-management-system";
 
   return (
     <footer className="border-t bg-muted/30 py-8 px-4">
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Sports Academy Finder. All rights reserved.
+            © {currentYear} Sports Management System. All rights reserved.
           </div>
           <div className="flex items-center gap-2 text-sm text-muted-foreground">
             <span>Built with</span>
